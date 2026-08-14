@@ -1,0 +1,709 @@
+// Prisma schema for the job search tracker.
+//
+// Status/type/recommendation fields are plain Strings (not native Prisma
+// enums) and list-like fields are JSON-encoded Strings - a holdover from
+// when this also ran against SQLite locally; kept as-is now that both local
+// dev and production point at the same Neon Postgres database. Allowed
+// values are enforced at the application layer (see src/lib/constants.ts).
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Profile {
+  id                   String   @id @default("singleton")
+  positioning          String
+  careerNarrative      String
+  personalLogistics    String
+  standingPreferences  String
+  evaluationFramework  String
+  ruledOutCompanies    String // JSON string[]
+  // The real resume, pasted in once: contact block, every role with dates and
+  // achievement bullets, education, skills. Generation TAILORS this rather
+  // than writing a resume out of the positioning summary, which produced
+  // documents with invented placeholders where the contact details belong.
+  masterResume         String?
+  // The contact block is assembled in code from these, never written by the
+  // model, which is what previously produced "[email/phone placeholders]".
+  contactName          String?
+  contactPhone         String?
+  contactLinks         String? // free text: LinkedIn, portfolio, etc.
+  contactAddresses     String? // JSON [{label,value}] - CT / VT / GA
+  contactEmails        String? // JSON [{label,value}]
+  defaultAddressLabel  String?
+  defaultEmailLabel    String?
+  icsCalendarUrl       String? // read-only calendar subscription (e.g. Proton Calendar), used for interview conflict checks
+  preferredModel       String? // Claude model id used for evaluations/drafting; falls back to CLAUDE_MODEL env var when unset
+  // Drive folder generated documents are filed under: the existing "Jobs"
+  // folder, so Counsel files into the company folders already there. Also the
+  // boundary on an account-wide Drive grant, since nothing is written outside
+  // it. Left unset, a "Counsel" folder is created at the Drive root instead.
+  driveRootFolderId    String?
+  /// The line under the name on a resume letterhead. It was hardcoded in
+  /// general-documents as "Commercial Technology Executive · Marketing
+  /// Technology, Data & CRM · Revenue & Customer Platforms", which is Dan's
+  /// positioning written into a source file.
+  resumeTagline        String?
+  /// The short answers given during setup, as JSON, kept so the long-form
+  /// profile prose can be re-derived later without asking again. The prose
+  /// fields are the record; this is the input they were built from.
+  setupAnswers         String?
+  updatedAt            DateTime @updatedAt
+}
+
+// Several base resumes, one per lane. Tailoring from the wrong base produces a
+// weak document however good the tailoring is: a guest-experience role needs a
+// digital/CX starting point, not the technology-delivery one.
+model ResumeVariant {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String? // when to reach for this one; also what the model picks on
+  content     String
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Company {
+  id              String   @id @default(cuid())
+  name            String   @unique
+  driveFolderName String?
+  driveFolderId   String?
+  createdAt       DateTime @default(now())
+  // Where this employer actually posts. Discovered once by probing the ATS
+  // platforms and reading the careers page, then cached: the discovery step is
+  // several network round trips and the answer effectively never changes.
+  atsProvider     String? // greenhouse | lever | ashby | smartrecruiters | workday
+  atsBoardUrl     String? // provider-specific base needed to query it
+  atsCheckedAt    DateTime?
+
+  applications JobApplication[]
+  mailMessages MailMessage[]
+}
+
+model JobApplication {
+  id            String    @id @default(cuid())
+  companyId     String
+  company       Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  roleTitle     String
+  postingLink   String?
+  salaryRange   String?
+  status        String // see JOB_STATUSES in src/lib/constants.ts
+  notes         String?
+  lastCheckedAt DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Per-application Drive folder, nested under the company's. Several roles at
+  // one employer are normal here and the document filenames carry only the
+  // company, so without this they would overwrite each other in Drive.
+  driveFolderId String?
+
+  dismissedCalendarEventUids String? // JSON string[] - calendar-match suggestions the user dismissed for this application
+  // Derived exports kept in sync with Drive: one file per kind per
+  // application, rewritten in place, holding every evaluation / every
+  // interview round. A file per row would bury the folder, and these are read
+  // on a phone before a call rather than edited, so PDF only.
+  driveEvalFileId            String?
+  driveNotesFileId           String?
+
+  // Deleting is a soft delete: a real job search cannot afford an unrecoverable
+  // one-click delete, and an application taken out by mistake once could not be
+  // recovered or even explained. Every read filters on deletedAt: null.
+  deletedAt DateTime?
+
+  jobDescriptions JobDescription[]
+  evaluations     Evaluation[]
+  documents       Document[]
+  contacts        Contact[]
+  interviewNotes  InterviewNote[]
+  followUps       FollowUp[]
+  correspondence  Correspondence[]
+  uploadedFiles   UploadedFile[]
+  mailMessages    MailMessage[]
+  activityLog     ActivityLog[]
+
+  @@index([status])
+  @@index([deletedAt])
+  applicationAnswers ApplicationAnswer[]
+}
+
+model JobDescription {
+  id            String         @id @default(cuid())
+  applicationId String
+  application   JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  rawText       String
+  pastedAt      DateTime       @default(now())
+}
+
+model Evaluation {
+  id             String         @id @default(cuid())
+  applicationId  String
+  application    JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  fitSummary     String
+  strengths      String // JSON string[]
+  gaps           String // JSON string[]
+  recommendation String // swing | stretch | pass
+  model          String
+  generatedAt    DateTime       @default(now())
+}
+
+model Document {
+  id            String         @id @default(cuid())
+  applicationId String
+  application   JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  type          String // resume | cover_letter
+  content       String
+  isAtsSafe     Boolean        @default(false)
+  driveFileIdDocx String?
+  driveFileIdPdf  String?
+  // Which model wrote this version. Null on everything written before this
+  // column existed, and on documents adopted from Drive, which nothing here
+  // generated. The review pass reads it to pick a reviewer from the other
+  // provider, since a model checking its own work is the weakest form of it.
+  model         String?
+  generatedAt   DateTime       @default(now())
+}
+
+// Arbitrary files a recruiter or contact sends directly (offer letters, role
+// summaries, etc.) - distinct from Document, which is content this app
+// generated/rendered itself.
+model UploadedFile {
+  id            String         @id @default(cuid())
+  applicationId String
+  application   JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  fileName      String
+  mimeType      String
+  size          Int
+  data          Bytes
+  uploadedAt    DateTime       @default(now())
+  // Uploaded files already are files, so they go to Drive verbatim with their
+  // own mime type rather than being rendered.
+  driveFileId   String?
+}
+
+model Contact {
+  id            String          @id @default(cuid())
+  applicationId String?
+  application   JobApplication? @relation(fields: [applicationId], references: [id], onDelete: SetNull)
+  name          String
+  role          String?
+  email         String?
+  phone         String?
+  relationship  String?
+  notes         String?
+  // Carried over from WarmThread, which was a Contact with no application and
+  // two extra fields. A person you owe something to is a contact with a next
+  // action, not a separate concept with its own model, routes and nav item.
+  nextAction    String?
+  // active | dormant | closed. Null for an ordinary contact attached to a role.
+  threadStatus  String?
+  createdAt     DateTime        @default(now())
+
+  correspondence      Correspondence[]
+  interviewsAttended InterviewNote[] @relation("InterviewAttendees")
+  // Where they actually work, which is not the same question as which role
+  // they are relevant to. `applicationId` answers the second. Conflating the
+  // two filed a former colleague under the employer she had introduced
+  // somebody to, rather than the one she works for: the contacts list read her
+  // application link as an employer. A connector is exactly the contact worth having, so the model
+  // has to be able to say "knows someone at" without saying "works at".
+  company String?
+  mailMessages    MailMessage[]
+}
+
+model InterviewNote {
+  id               String         @id @default(cuid())
+  applicationId    String
+  application      JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  roundName        String
+  date             DateTime?
+  notes            String
+  calendarConflict String? // set at creation time if `date` overlapped an event on the profile's ICS calendar
+  calendarEventUid String? // set when this note was created by linking a matched calendar event, for dedup
+  // Set when Counsel *created* an event on the connected Google Calendar,
+  // which is the opposite direction from calendarEventUid above. Kept so the
+  // same interview is never written to the calendar twice.
+  googleEventId    String?
+  googleEventLink  String?
+  createdAt        DateTime       @default(now())
+
+  correspondence Correspondence[]
+  interviewers   Contact[]        @relation("InterviewAttendees")
+}
+
+// The connected job-search mailbox. Deliberately separate from login: sign-in
+// is one Google account (ALLOWED_EMAIL) and the mailbox is another, so they
+// hold different tokens and are authorised independently.
+model GoogleConnection {
+  id            String    @id @default("singleton")
+  email         String
+  accessToken   String
+  refreshToken  String
+  expiresAt     DateTime
+  scopes        String
+  lastSyncedAt  DateTime?
+  lastHistoryId String? // Gmail history cursor, so a sync only fetches what is new
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+// Raw mail pulled from Gmail. Kept as its own record rather than forced into
+// Correspondence, because a message may not belong to any known application
+// (applicationId null = unmatched) and still needs to be visible and routable.
+model MailMessage {
+  id            String          @id @default(cuid())
+  gmailId       String          @unique
+  threadId      String?
+  fromEmail     String
+  fromName      String?
+  subject       String
+  snippet       String
+  body          String
+  receivedAt    DateTime
+  // received | sent. The sync used to pull the inbox only, so a thank-you note
+  // sent by hand from Gmail never appeared anywhere in Counsel.
+  direction     String    @default("received")
+  applicationId String?
+  application   JobApplication? @relation(fields: [applicationId], references: [id], onDelete: SetNull)
+  /// Filed against a person rather than a role or an employer.
+  ///
+  /// A networking thread could attach to the company but not to the person
+  /// the whole conversation is with. A company is
+  /// where somebody works; the relationship is with the person, and that is
+  /// what carries forward when a role finally appears.
+  contactId     String?
+  contact       Contact?        @relation(fields: [contactId], references: [id], onDelete: SetNull)
+  /// Filed against the employer rather than a specific role.
+  ///
+  /// A networking introduction has no role behind it: Brian at TransUnion is a
+  /// person Dan was introduced to, not an application. Filing that under a job
+  /// would invent one and leaving it unfiled loses it, so when a role does turn
+  /// up later the history is already sitting on the company.
+  companyId     String?
+  company       Company?        @relation(fields: [companyId], references: [id], onDelete: SetNull)
+  category      String? // see MAIL_CATEGORIES in src/lib/constants.ts
+  summary       String?
+  // What the message is about, even when it matches no tracked application.
+  // An employer match with no matching role is the strongest signal there is -
+  // it usually means an opportunity that is not being tracked at all.
+  detectedCompany String?
+  detectedRole    String?
+  dismissedAt     DateTime?
+  // A time the sender proposed, read out of an interview invitation. Held as a
+  // suggestion only: nothing reaches the calendar until it is confirmed,
+  // because a time parsed out of prose is a guess and a wrong entry on a real
+  // calendar is worse than no entry at all.
+  proposedStart   DateTime?
+  proposedLabel   String? // the wording it was read from, so the guess can be checked
+  scheduledAt     DateTime? // set once it has actually been put on the calendar
+  processedAt   DateTime? // when Claude classified and routed it
+  archivedAt    DateTime?
+  createdAt     DateTime        @default(now())
+
+  @@index([applicationId])
+  @@index([companyId])
+  @@index([receivedAt])
+  @@index([processedAt])
+  // Dan is migrating from his personal address, so a large part of the back
+  // catalogue arrives as forwards from himself. The real correspondent is in
+  // the body; `forwarded-mail.ts` recovers it and it is stored rather than
+  // re-parsed, so contact matching stays a single indexed query.
+  forwardedFromEmail String?
+  forwardedFromName  String?
+}
+
+model Correspondence {
+  id              String         @id @default(cuid())
+  applicationId   String?
+  application     JobApplication? @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  contactId       String?
+  contact         Contact?       @relation(fields: [contactId], references: [id], onDelete: SetNull)
+  interviewNoteId String?
+  interviewNote   InterviewNote? @relation(fields: [interviewNoteId], references: [id], onDelete: SetNull)
+  type            String // see CORRESPONDENCE_TYPES in src/lib/constants.ts (thank_you | follow_up | general)
+  // outbound | inbound. Mail Dan received used to be logged here as status
+  // "sent" with a "RECEIVED from" prefix in the body, which was survivable
+  // while this was a flat list and wrong the moment the thread started showing
+  // direction.
+  direction       String   @default("outbound")
+  recipientName   String
+  recipientRole   String?
+  recipientEmail  String? // required before this can actually be sent
+  /// Comma-separated additional recipients. Kept as typed rather than as
+  /// contact ids: a cc is frequently someone who is not a contact and never
+  /// will be, and forcing a Contact row to cc an assistant is friction on the
+  /// one path where friction costs a real relationship.
+  cc              String?
+  bcc             String?
+  subject         String?
+  /// Everything Dan has told Claude while writing this note, oldest first, as
+  /// a JSON array of strings.
+  ///
+  /// It lived in component state, which meant it survived exactly as long as
+  /// the page did. Reopening a saved draft started the conversation over, so
+  /// "make it shorter" and then "mention the referral" produced a short note
+  /// with no referral - and he reported the drafting forgetting him twice.
+  /// The instructions belong to the note, not to the tab.
+  instructions    String?
+  gmailMessageId  String? // set once dispatched, so a draft can never be sent twice
+  gmailThreadId   String?
+  // JSON [{documentId,format}] - documents to render and attach when this is
+  // sent. Held as a reference rather than a blob so the attachment is always
+  // the current version of that document at send time.
+  attachments     String?
+  content         String
+  // The plain-text `content` above stays the record: Claude reads it for
+  // context, the activity timeline quotes it, and a message must survive with
+  // no markup at all. `contentHtml` is the formatted version when there is one,
+  // sent as the rich half of a multipart/alternative so a client that wants
+  // plain text still gets a readable message.
+  contentHtml     String?
+  status          String // draft | sent
+  sentAt          DateTime?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+model FollowUp {
+  id            String         @id @default(cuid())
+  applicationId String
+  application   JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  dueDate       DateTime?
+  note          String
+  completed     Boolean        @default(false)
+  createdAt     DateTime       @default(now())
+}
+
+// Things that happen but leave no trace anywhere else: a status moving from
+// Applied to Interviewing, a role title being corrected, a follow-up being
+// closed. Everything else on the timeline is derived from the rows it already
+// created (see src/lib/activity.ts), which is why this table is deliberately
+// small - if an action already writes a dated row somewhere, it does not need
+// one here as well.
+//
+// Append-only. Nothing updates or deletes an entry: a log you can edit is not
+// a log. Writes are best-effort and must never fail the action they describe.
+model ActivityLog {
+  id            String          @id @default(cuid())
+  // Null for changes that are not about one application (profile edits).
+  applicationId String?
+  application   JobApplication? @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  action        String // see ACTIVITY_ACTIONS in src/lib/constants.ts
+  summary       String // the sentence shown on the timeline
+  // JSON { from, to } where the change was a transition worth seeing.
+  detail        String?
+  createdAt     DateTime        @default(now())
+
+  @@index([applicationId, createdAt])
+  @@index([createdAt])
+}
+
+// When a commit actually went live, as opposed to when it was written. The
+// changelog can only say what is in the repository; this is the record of it
+// reaching an environment.
+//
+// Written on the first request an instance serves after a deploy, so
+// `deployedAt` is "first seen serving traffic" rather than the instant Vercel
+// finished building. On a live site those are close; on a preview nobody opens
+// for a day, they are not, which is why deploymentId is kept - it is the handle
+// for checking the exact build in Vercel.
+//
+// Unique per (sha, environment): the same commit reaching preview and then
+// production is two events worth having, but redeploying identical code is not
+// a new release.
+model Release {
+  id           String   @id @default(cuid())
+  sha          String
+  branch       String?
+  environment  String // production | preview | development
+  deploymentId String?
+  deployedAt   DateTime @default(now())
+
+  @@unique([sha, environment])
+  @@index([deployedAt])
+}
+
+model WarmThread {
+  id         String   @id @default(cuid())
+  personName String
+  company    String?
+  notes      String?
+  nextAction String?
+  status     String // active | dormant | closed
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+/// A question put to the Ask box and the answer it gave.
+///
+/// Kept because the answers are judgement calls and they vary: without a record
+/// there is no way to tell whether it changed its mind or Dan misremembered.
+/// Over a months-long search across sixty roles it is also a decision log, which
+/// is the more valuable thing.
+///
+/// `subjects` holds the ids the answer was about, so an exchange can surface on
+/// the role or contact it concerned rather than only in a list nobody visits.
+/// A prompt Dan ran from the settings console, with what came back.
+///
+/// Kept rather than being ephemeral for the same reason AskLog is: these are
+/// judgement calls he will want to compare, and a design critique he liked is
+/// worth finding again. Deliberately its own table rather than a flag on
+/// AskLog - that one is advice about the job search, grounded in the search
+/// snapshot, and overloading it would make both harder to read.
+/// A document that belongs to no application.
+///
+/// The master resume and the introduction letter exist for the networking call
+/// where somebody says "send me your resume" and there is no role to tailor
+/// to. Deliberately not a `Document`: that model requires an applicationId and
+/// every list read filters on the relation, so making it nullable would mean
+/// auditing every one of those queries to keep general documents out of a
+/// role's history. One small table is cheaper and cannot leak into the
+/// pipeline.
+model GeneralDocument {
+  /// "master_resume" or "intro_letter" - one row each, upserted.
+  id              String   @id
+  content         String
+  driveFileIdDocx String?
+  driveFileIdPdf  String?
+  updatedAt       DateTime @updatedAt
+}
+
+model ConsoleRun {
+  id        String   @id @default(cuid())
+  prompt    String
+  response  String
+  model     String
+  /// The app page whose rendered content was attached, if any.
+  contextPath String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model AskLog {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String
+  /// JSON [{label,href}] - the same links the panel offers.
+  subjects  String?
+  /// Turns of one conversation share this. A follow-up should not have to
+  /// re-establish which role is being discussed, and Dan should be able to
+  /// return to a thread rather than start again.
+  threadId  String
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([threadId, createdAt])
+}
+
+/// An answer to a supplemental question on an employer's application form.
+///
+/// Forms ask things the resume does not cover - "in a brief statement, explain
+/// why you are an ideal fit" - and the answer is a deliverable Dan pastes into
+/// their portal, not advice he reads and discards. It is kept because the same
+/// questions recur across employers, because a form can time out and lose what
+/// was typed, and because what he told one company is worth knowing when the
+/// next one asks something similar.
+///
+/// Separate from Document deliberately: those are the resume and cover letter,
+/// versioned and synced to Drive as files. These are short answers to a
+/// question, and the question is half the record.
+model ApplicationAnswer {
+  id            String         @id @default(cuid())
+  applicationId String
+  application   JobApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  question      String
+  answer        String
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  @@index([applicationId, createdAt])
+}
+
+/// A failure that was deliberately swallowed, kept so it is knowable.
+///
+/// The app has 44 catch blocks that never rethrow, and that is mostly right:
+/// a Drive upload, an activity log entry or a status advance must not make a
+/// save report as failed. But "must not fail loudly" was being read as "must
+/// vanish", and with no logging and no error reporting there was no way to
+/// learn that a background write had stopped working. You would find out the
+/// way the 9:30 interview was found: by noticing.
+model FailureLog {
+  id        String   @id @default(cuid())
+  at        DateTime @default(now())
+  /// The named operation, e.g. "advanceOnMeeting". Grouped on in the UI.
+  operation String
+  message   String
+  /// JSON: whatever identifiers make the failure reproducible.
+  context   String?
+  /// Set when the failure has been looked at, so the count means "new".
+  seenAt    DateTime?
+
+  @@index([at])
+}
+
+/// Events from the subscribed ICS feed, stored so a page render never waits on it.
+///
+/// The feed is a remote HTTP call that took roughly 1.75 seconds, and Today and
+/// Pipeline both made it on every load. An in-memory cache fixed that on a warm
+/// instance and did nothing on a cold one, which on serverless is most of the
+/// time. Persisting the events moves the network call out of the render path
+/// entirely: pages read rows, and the feed is refreshed by the same background
+/// sync that already pulls mail.
+model CalendarEventCache {
+  /// Keyed on uid AND start, not uid alone.
+  ///
+  /// A recurring event expands to one instance per occurrence and every
+  /// instance carries the SAME uid, so a `uid`-only primary key silently
+  /// collapses a weekly meeting into a single row. Caught by the numbers on the
+  /// first run: 61 events fetched, 55 stored.
+  uid       String
+  summary   String
+  start     DateTime
+  end       DateTime
+  isFullDay Boolean  @default(false)
+  /// When this row was last confirmed present in the feed. Anything older than
+  /// the newest sync has been deleted from the calendar upstream.
+  syncedAt  DateTime @default(now())
+
+  @@id([uid, start])
+  @@index([start])
+}
+
+/// A credential the user supplied, encrypted at rest.
+///
+/// The whole point of the stand-alone model is that nobody else's hands are on
+/// this data, and that argument collapses if the keys sit in plaintext in a
+/// database. Values are sealed with AES-256-GCM under a key that lives only in
+/// the environment, so a database dump on its own is not enough to use them.
+///
+/// Deliberately not on `Profile`: that row is read constantly and passed into
+/// prompts, and a secret has no business travelling with it.
+model Credential {
+  /// The service: "anthropic", "gemini". One row per service per deployment.
+  kind      String   @id
+  /// Base64 of iv:ciphertext:authTag, produced by lib/secrets.
+  sealed    String
+  /// The last four characters of the plaintext, so the UI can show which key
+  /// is configured without ever decrypting it for display.
+  hint      String
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+}
+
+/// Who owns this deployment, and how they prove it.
+///
+/// Sign-in used to be Google OAuth only, locked to `ALLOWED_EMAIL`. That works
+/// for Dan and makes the app impossible to hand to anybody: they would need to
+/// create a Google Cloud project, configure a consent screen and register a
+/// redirect URI before they could see a single screen. Fifteen minutes of
+/// console work no deploy button can do for them, in front of the value.
+///
+/// So an instance can be claimed from the web instead. The claim is only
+/// offered while `claimable()` is true, which requires that no Owner row
+/// exists AND `ALLOWED_EMAIL` is unset. That second condition is what keeps
+/// Dan's live instance safe: it has `ALLOWED_EMAIL` set, so it can never be
+/// claimed by whoever finds the URL, and Google sign-in there is untouched.
+///
+/// One row, like Profile. This is not multi-tenancy and must not become it:
+/// the isolation story is one deployment per person.
+model Owner {
+  id           String   @id @default("singleton")
+  email        String
+  /// bcrypt. Never the password, and never reversible.
+  passwordHash String
+  claimedAt    DateTime @default(now())
+  /// When the owner accepted the license terms, and which version they saw.
+  /// Recorded rather than assumed: an acknowledgment with no timestamp is an
+  /// assertion, and the whole point is to have a record.
+  acknowledgedAt      DateTime?
+  acknowledgedVersion String?
+  updatedAt    DateTime @updatedAt
+}
+
+/// A cover letter worth learning from.
+///
+/// Resumes had four base variants and the cover letter had NOTHING: letters
+/// were generated from the profile prose plus whichever resume variant was
+/// chosen plus the job description, so the voice came from nowhere and every
+/// rule about how a letter should read lived in prompt text.
+///
+/// Deliberately symmetric with ResumeVariant, because it is the same idea: the
+/// thing generation starts from, rather than a description of that thing. The
+/// content is a real letter the person is happy with, and it is used as a
+/// voice reference, never copied.
+model CoverLetterSample {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  /// When to reach for this one, and what the model picks on.
+  description String?
+  content     String
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+/// An instance provisioned for somebody else.
+///
+/// Kept so the page can show what has been handed out, and so the setup token
+/// can be read back: it is generated once and is the only thing standing
+/// between an unclaimed URL and whoever finds it, so "I closed the tab" must
+/// not mean the invite is lost.
+///
+/// The token is sealed with the same AES-256-GCM helper as the model keys. It
+/// is a credential, briefly, and it does not belong in the database in clear.
+model ProvisionedInstance {
+  id           String    @id @default(cuid())
+  /// The Vercel project name, which is also the subdomain.
+  name         String    @unique
+  url          String
+  /// Who it was made for. Free text, usually an email address.
+  recipient    String?
+  /// Sealed SETUP_TOKEN, or null when provisioned without one.
+  sealedToken  String?
+  vercelId     String?
+  deploymentId String?
+  /// The commit this instance is pinned to. Instances are created with no git
+  /// link, so nothing you push reaches them until you say so; this is what
+  /// makes "six instances are four releases behind" answerable.
+  sha          String?
+  /// When it was last pushed an update, as distinct from when it was created.
+  updatedAt    DateTime?
+  /// Set when the invite email actually went out, never before.
+  invitedAt    DateTime?
+  createdAt    DateTime  @default(now())
+}
+
+/// Something somebody asked for, from their instance.
+///
+/// This is the only thing that crosses between instances, and the crossing is
+/// deliberate and narrow: exactly the words they typed, plus which instance
+/// they came from. Nothing about their pipeline, their profile or their search
+/// travels with it, and their page says so before they send.
+///
+/// Statuses are decisions rather than progress: `new` has not been looked at,
+/// `queued` and `approved` differ only in urgency, `declined` is a no that
+/// stays visible so the same thing is not re-litigated, and `done` is set when
+/// it ships.
+model FeatureRequest {
+  id         String    @id @default(cuid())
+  /// The instance it came from. Self-reported, and only ever used as a label.
+  instance   String
+  requester  String?
+  title      String
+  body       String
+  status     String    @default("new")
+  /// The ship subject it went out under, once it has.
+  shippedAs  String?
+  decidedAt  DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  @@index([status, createdAt])
+}

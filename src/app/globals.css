@@ -1,0 +1,383 @@
+@import "tailwindcss";
+
+/*
+  Counsel's design system.
+
+  The whole app is themed from this one file. Rather than adding `dark:`
+  variants to several thousand lines of existing markup, the *token layer*
+  flips: Tailwind's `--color-neutral-*` scale and `--color-white` are redefined
+  per theme, so an existing `bg-white border-neutral-200 text-neutral-500`
+  panel becomes a dark panel with the right borders and muted text for free.
+
+  Consequently the neutral scale is semantic, not literal. neutral-900 means
+  "strongest text" and neutral-200 means "hairline border" in both themes -
+  in dark mode 900 resolves to near-white. Do not read these as brightness.
+
+  Theme selection: the server sets data-theme="light" | "dark" on <html> from a
+  cookie. When the user is on "system" no attribute is set at all and the
+  prefers-color-scheme block below decides. Doing it server-side means no
+  flash of the wrong theme on load.
+*/
+
+:root,
+:root[data-theme="light"] {
+  --bg: #f6f5f3;
+  --surface: #ffffff;
+  --surface-2: #f1f0ed;
+  --line: rgba(20, 22, 26, 0.085);
+  --line-2: rgba(20, 22, 26, 0.16);
+
+  --tx: #16181c;
+  --tx-2: #4e545c;
+  --tx-3: #666c74;
+
+  /* Ember is reserved for time pressure and live conversations. It darkens in
+     light mode so it holds contrast against white rather than glowing. */
+  --amber: #c2491a;
+  /* Error. Distinct from --amber, which means 'needs attention': a warning
+     and a failure are different states and were sharing one colour, which
+     is why every error in the app reached for a hardcoded red-600. */
+  --danger: #b3261e;
+  --danger-dim: rgba(179, 38, 30, 0.10);
+  --danger-line: rgba(179, 38, 30, 0.28);
+  --amber-dim: rgba(194, 73, 26, 0.09);
+  --amber-line: rgba(194, 73, 26, 0.26);
+  --mint: #1d7a50;
+  --mint-dim: rgba(29, 122, 80, 0.09);
+  --mint-line: rgba(29, 122, 80, 0.24);
+  --violet: #6d4fd6;
+
+  --glow: radial-gradient(900px 460px at 12% -10%, rgba(194, 73, 26, 0.055), transparent 62%);
+  --shadow-panel: 0 1px 2px rgba(20, 22, 26, 0.04);
+
+  --n-50: #faf9f7;
+  --n-100: #f1f0ed;
+  --n-200: #e6e4e0;
+  --n-300: #d5d3ce;
+  --n-400: #8a9098;
+  --n-500: #666c74;
+  --n-600: #4e545c;
+  --n-700: #383d44;
+  --n-800: #24282e;
+  --n-900: #16181c;
+  --n-950: #0a0b0d;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0a0b0d;
+  --surface: #121418;
+  --surface-2: #181b20;
+  --line: rgba(255, 255, 255, 0.075);
+  --line-2: rgba(255, 255, 255, 0.13);
+
+  --tx: #f5f6f7;
+  --tx-2: #a8afb9;
+  --tx-3: #8a919b;
+
+  --amber: #ff7a45;
+  --danger: #ff6b60;
+  --danger-dim: rgba(255, 107, 96, 0.13);
+  --danger-line: rgba(255, 107, 96, 0.32);
+  --amber-dim: rgba(255, 122, 69, 0.12);
+  --amber-line: rgba(255, 122, 69, 0.26);
+  --mint: #4ade9b;
+  --mint-dim: rgba(74, 222, 155, 0.11);
+  --mint-line: rgba(74, 222, 155, 0.22);
+  --violet: #a78bfa;
+
+  /* A single warm light source, top left, so the canvas is never flat black.
+     This is the signature of the dark theme. */
+  --glow: radial-gradient(900px 500px at 12% -8%, rgba(255, 122, 69, 0.1), transparent 60%),
+    radial-gradient(700px 500px at 90% 0%, rgba(167, 139, 250, 0.06), transparent 55%);
+  --shadow-panel: none;
+
+  --n-50: #101216;
+  --n-100: #181b20;
+  --n-200: #22262c;
+  --n-300: #2e333a;
+  --n-400: #8a919b;
+  --n-500: #a8afb9;
+  --n-600: #c2c8d0;
+  --n-700: #dde1e6;
+  --n-800: #ebeef1;
+  --n-900: #f5f6f7;
+  --n-950: #ffffff;
+}
+
+/* "System" is the absence of an explicit choice, so it must not out-specify
+   the [data-theme] blocks above. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0a0b0d;
+    --surface: #121418;
+    --surface-2: #181b20;
+    --line: rgba(255, 255, 255, 0.075);
+    --line-2: rgba(255, 255, 255, 0.13);
+    --tx: #f5f6f7;
+    --tx-2: #a8afb9;
+    --tx-3: #8a919b;
+    --amber: #ff7a45;
+    --danger: #ff6b60;
+    --danger-dim: rgba(255, 107, 96, 0.13);
+    --danger-line: rgba(255, 107, 96, 0.32);
+    --amber-dim: rgba(255, 122, 69, 0.12);
+    --amber-line: rgba(255, 122, 69, 0.26);
+    --mint: #4ade9b;
+    --mint-dim: rgba(74, 222, 155, 0.11);
+    --mint-line: rgba(74, 222, 155, 0.22);
+    --violet: #a78bfa;
+    --glow: radial-gradient(900px 500px at 12% -8%, rgba(255, 122, 69, 0.1), transparent 60%),
+      radial-gradient(700px 500px at 90% 0%, rgba(167, 139, 250, 0.06), transparent 55%);
+    --shadow-panel: none;
+    --n-50: #101216;
+    --n-100: #181b20;
+    --n-200: #22262c;
+    --n-300: #2e333a;
+    --n-400: #8a919b;
+    --n-500: #a8afb9;
+    --n-600: #c2c8d0;
+    --n-700: #dde1e6;
+    --n-800: #ebeef1;
+    --n-900: #f5f6f7;
+    --n-950: #ffffff;
+  }
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--tx);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+
+  /* bg-white is used on every panel in the app. Pointing it at the surface
+     token is what makes those panels theme-aware without being edited. */
+  --color-white: var(--surface);
+
+  --color-muted: var(--tx-2);
+  --color-faint: var(--tx-3);
+
+  --color-amber: var(--amber);
+  --color-amber-dim: var(--amber-dim);
+  --color-amber-line: var(--amber-line);
+  --color-mint: var(--mint);
+  --color-mint-dim: var(--mint-dim);
+  --color-mint-line: var(--mint-line);
+  --color-violet: var(--violet);
+
+  /* Legacy tokens, kept because they are referenced widely. Accent is now the
+     strongest text colour (near-black on light, near-white on dark) so primary
+     buttons read as solid ink rather than corporate blue. */
+  --color-accent: var(--tx);
+  --color-accent-dark: var(--tx);
+  --color-accent-light: var(--surface-2);
+  --color-ink: var(--tx);
+  --color-ink-soft: var(--tx-2);
+  --color-flame: var(--amber);
+  --color-flame-bright: var(--amber);
+  --color-flame-light: var(--amber-dim);
+
+  --color-neutral-50: var(--n-50);
+  --color-neutral-100: var(--n-100);
+  --color-neutral-200: var(--n-200);
+  --color-neutral-300: var(--n-300);
+  --color-neutral-400: var(--n-400);
+  --color-neutral-500: var(--n-500);
+  --color-neutral-600: var(--n-600);
+  --color-neutral-700: var(--n-700);
+  --color-neutral-800: var(--n-800);
+  --color-neutral-900: var(--n-900);
+  --color-neutral-950: var(--n-950);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-panel: 16px;
+}
+
+html {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--tx);
+  font-family: var(--font-geist-sans), -apple-system, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* The light source. Fixed rather than scrolling, so it behaves like a lamp on
+   the page instead of a texture that slides away. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: var(--glow);
+}
+/* The glow sits behind everything rather than content being lifted above it.
+   `body > *` used to force position:relative and z-index:1 onto every direct
+   child, which quietly overrode the header's own `sticky top-0 z-40`: the
+   header was not sticky, and `main` - same z-index, later in the DOM - painted
+   on top of it, so the Ask dropdown rendered underneath the page. A blanket
+   rule on `body > *` cannot know what its children need. */
+body::before {
+  z-index: -1;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.028em;
+  font-weight: 600;
+}
+
+/* Big figures used as anchors. Tabular so they never jitter between renders. */
+.stat {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-panel);
+}
+
+/* Live indicator. Only ever used for a genuinely time-sensitive count. */
+.pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  animation: pulse 2.4s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 69, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(255, 122, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 122, 69, 0);
+  }
+}
+
+/* Loading skeletons. Every page here is force-dynamic and reads the live
+   database, so a navigation always costs a server round trip. The skeleton is
+   what stands in the shape of the page until it lands - without one the old
+   page just sits there and the click looks like it did nothing. */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--line-2) 37%, var(--surface-2) 63%);
+  background-size: 400% 100%;
+  animation: skeleton 1.4s ease-in-out infinite;
+  border-radius: 6px;
+}
+@keyframes skeleton {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* A clicked row is on its way somewhere. Rows navigate through the router
+   rather than an <a>, so nothing in the browser acknowledges the click on its
+   own: this does it, on the element that was actually clicked. Background
+   colour only, deliberately - a table row is not a reliable containing block
+   for an overlay, and a border or spacer would shift the row it sits in. */
+.is-navigating {
+  cursor: progress;
+  animation: navigating 1s ease-in-out infinite;
+}
+@keyframes navigating {
+  0%,
+  100% {
+    background-color: var(--surface-2);
+  }
+  50% {
+    background-color: var(--amber-dim);
+  }
+}
+
+input,
+textarea,
+select {
+  background: var(--bg);
+  color: var(--tx);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--tx-3);
+}
+/*
+ * Form fields get the same visible ring as buttons and links.
+ *
+ * This used to kill the outline and replace it with a 3px box-shadow in
+ * `--surface-2`, which is a near-background grey, so the indicator was already
+ * faint. `inputClass` then made `--surface-2` the field's own background, and
+ * the ring became a shadow of the field painted on the field: keyboard focus
+ * was, in practice, invisible. Buttons and links have had a proper
+ * `:focus-visible` outline all along, so fields were the odd one out as well
+ * as a WCAG 2.4.7 failure.
+ *
+ * `:focus` rather than `:focus-visible` here on purpose. A text field is being
+ * edited whether it was reached by keyboard or by mouse, and knowing which box
+ * you are typing into is useful in both cases.
+ */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--amber);
+  outline-offset: 1px;
+  border-color: var(--line-2);
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary .chevron {
+  transition: transform 0.15s ease;
+}
+details[open] > summary .chevron {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

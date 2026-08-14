@@ -1,0 +1,1605 @@
+{
+  "generatedAt": "2026-08-14T15:03:31.823Z",
+  "entries": [
+    {
+      "sha": "489f36f244b2b737dbcb6b3e5d590feae332d88f",
+      "shortSha": "489f36f",
+      "author": "Dan Curis",
+      "date": "2026-08-14T10:26:41-04:00",
+      "subject": "Prompts stop naming one person",
+      "body": ""
+    },
+    {
+      "sha": "17a84d743fa827cb67e7761960722d00db44978a",
+      "shortSha": "17a84d7",
+      "author": "Dan Curis",
+      "date": "2026-08-14T10:19:46-04:00",
+      "subject": "Close the two routes the gate could not see",
+      "body": ""
+    },
+    {
+      "sha": "d7e2e8287a7aa9b42c4386af83b528210b959e64",
+      "shortSha": "d7e2e82",
+      "author": "Dan Curis",
+      "date": "2026-08-14T10:12:50-04:00",
+      "subject": "Release history survives a change of repository",
+      "body": ""
+    },
+    {
+      "sha": "e75a5e9ab3b5e4806d6ed07a1b7d5ba0363118a6",
+      "shortSha": "e75a5e9",
+      "author": "Dan Curis",
+      "date": "2026-08-14T10:09:08-04:00",
+      "subject": "Make identifying detail a gate, not a grep",
+      "body": ""
+    },
+    {
+      "sha": "fb93e7ca4b42efe2927340b844996ec5c0f02fea",
+      "shortSha": "fb93e7c",
+      "author": "Dan Curis",
+      "date": "2026-08-14T09:38:37-04:00",
+      "subject": "The release notes stop naming people",
+      "body": ""
+    },
+    {
+      "sha": "319a3e22a3e45082bd25f70b142f24000e496c92",
+      "shortSha": "319a3e2",
+      "author": "Dan Curis",
+      "date": "2026-08-14T09:30:38-04:00",
+      "subject": "Split the working notes from the engineering rules",
+      "body": ""
+    },
+    {
+      "sha": "0bdea7db6a1b98fce26ce192e0dfa1aad6cf7e3d",
+      "shortSha": "0bdea7d",
+      "author": "Dan Curis",
+      "date": "2026-08-13T20:33:35-04:00",
+      "subject": "One deploy path, and one copy of the code behind it",
+      "body": ""
+    },
+    {
+      "sha": "ebcf2eaede42ff4f80dad3e9d5a4b19114670fe5",
+      "shortSha": "ebcf2ea",
+      "author": "Dan Curis",
+      "date": "2026-08-13T20:27:17-04:00",
+      "subject": "People can ask for things, and asking reaches the work",
+      "body": ""
+    },
+    {
+      "sha": "67976bb7c39700735aea205601b84c2ab1c587e9",
+      "shortSha": "67976bb",
+      "author": "Dan Curis",
+      "date": "2026-08-13T20:16:08-04:00",
+      "subject": "Instances are pinned, and updated on purpose",
+      "body": ""
+    },
+    {
+      "sha": "32bcc7265e54623ec499c30b01c5a00f0281c72f",
+      "shortSha": "32bcc72",
+      "author": "Dan Curis",
+      "date": "2026-08-13T19:54:01-04:00",
+      "subject": "Provision a whole instance with one command",
+      "body": ""
+    },
+    {
+      "sha": "2847d801133c40a8aa022f4a3cb8c16626eb6c74",
+      "shortSha": "2847d80",
+      "author": "Dan Curis",
+      "date": "2026-08-13T16:18:34-04:00",
+      "subject": "Only a production deploy may migrate the database",
+      "body": ""
+    },
+    {
+      "sha": "b3d3f2115049fd9a56047703396a83a03d2b9edb",
+      "shortSha": "b3d3f21",
+      "author": "Dan Curis",
+      "date": "2026-08-13T16:15:49-04:00",
+      "subject": "A fresh deployment creates its own tables",
+      "body": ""
+    },
+    {
+      "sha": "32ead27e82da6026dcc455fd5e476eb6d4ec77f9",
+      "shortSha": "32ead27",
+      "author": "Dan Curis",
+      "date": "2026-08-13T16:06:46-04:00",
+      "subject": "Set an instance up from the web, with your own career in it",
+      "body": ""
+    },
+    {
+      "sha": "411edd8fae648dd16a66b6185df1b5ddb9088912",
+      "shortSha": "411edd8",
+      "author": "Dan Curis",
+      "date": "2026-08-13T15:08:47-04:00",
+      "subject": "A setup page, and instances that know when they are behind",
+      "body": ""
+    },
+    {
+      "sha": "78db02cc794d0afb8daa18dccb44ba13aa65e8bf",
+      "shortSha": "78db02c",
+      "author": "Dan Curis",
+      "date": "2026-08-13T14:44:33-04:00",
+      "subject": "Bring your own model keys",
+      "body": ""
+    },
+    {
+      "sha": "82f82b6a19aaaa7166ef6d0be279c83dc072d38e",
+      "shortSha": "82f82b6",
+      "author": "Dan Curis",
+      "date": "2026-08-13T14:04:14-04:00",
+      "subject": "The calendar stops blocking every page render",
+      "body": ""
+    },
+    {
+      "sha": "2ef964cc20c270f9de538afa5697075676a9139a",
+      "shortSha": "2ef964c",
+      "author": "Dan Curis",
+      "date": "2026-08-13T13:33:08-04:00",
+      "subject": "Today and Pipeline load ten times faster",
+      "body": ""
+    },
+    {
+      "sha": "7b1c5f111f839a613c09ca1e2020009ace454990",
+      "shortSha": "7b1c5f1",
+      "author": "Dan Curis",
+      "date": "2026-08-13T13:22:51-04:00",
+      "subject": "Every AI feature survives a dead balance except one",
+      "body": ""
+    },
+    {
+      "sha": "7548279366974ebcde56f4d5f82c36d23b912534",
+      "shortSha": "7548279",
+      "author": "Dan Curis",
+      "date": "2026-08-13T13:07:37-04:00",
+      "subject": "Every page opens the same way",
+      "body": ""
+    },
+    {
+      "sha": "c525d1a0a87ddf7f556e52ebf76eccace6231011",
+      "shortSha": "c525d1a",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:56:20-04:00",
+      "subject": "One data layer, one tenant, one header block",
+      "body": ""
+    },
+    {
+      "sha": "079cfc69bf05ff7a4a190fd015c48cc1299916cd",
+      "shortSha": "079cfc6",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:47:43-04:00",
+      "subject": "The spelling pass cannot rename a company",
+      "body": ""
+    },
+    {
+      "sha": "51b3e5b84d424b50b0c7f2b47b826f31812cbde4",
+      "shortSha": "51b3e5b",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:40:37-04:00",
+      "subject": "Errors look like errors, in one shape and a real color",
+      "body": ""
+    },
+    {
+      "sha": "5fb89e9a2ffb98e193b7e762c14d4f946d53db63",
+      "shortSha": "5fb89e9",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:33:34-04:00",
+      "subject": "The phone nav shows all five destinations",
+      "body": ""
+    },
+    {
+      "sha": "9b43e0d8d7c9f40705e84a4b6256613f23835aad",
+      "shortSha": "9b43e0d",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:25:18-04:00",
+      "subject": "A visible focus ring, two empty states, one section rhythm",
+      "body": ""
+    },
+    {
+      "sha": "44a91b68c9332594a1e46b6ed6dbb98dc2dfcd19",
+      "shortSha": "44a91b6",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:18:52-04:00",
+      "subject": "One input, one radius, two page widths",
+      "body": ""
+    },
+    {
+      "sha": "fb43be01f8d5617183cdd443f9c8b6aae73000e4",
+      "shortSha": "fb43be0",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:09:42-04:00",
+      "subject": "Sync the mail even when the classifier cannot run",
+      "body": ""
+    },
+    {
+      "sha": "b73afa9eff811425132a0b9e6a14381b7466c01a",
+      "shortSha": "b73afa9",
+      "author": "Dan Curis",
+      "date": "2026-08-13T12:01:30-04:00",
+      "subject": "One type scale, so pages stop changing size",
+      "body": ""
+    },
+    {
+      "sha": "e487adbffd61dc8598652ba1e7fe3143ca3d782d",
+      "shortSha": "e487adb",
+      "author": "Dan Curis",
+      "date": "2026-08-13T11:52:00-04:00",
+      "subject": "Interview prep belongs with the documents",
+      "body": ""
+    },
+    {
+      "sha": "2869f655a767b8799e4cd3ce676014cc6ffdfb17",
+      "shortSha": "2869f65",
+      "author": "Dan Curis",
+      "date": "2026-08-13T11:46:42-04:00",
+      "subject": "Try the default, fall back to Gemini when Anthropic is dry",
+      "body": ""
+    },
+    {
+      "sha": "c92f83d30cccb5479669958be87f16464f162787",
+      "shortSha": "c92f83d",
+      "author": "Dan Curis",
+      "date": "2026-08-13T11:29:26-04:00",
+      "subject": "The model picker actually picks the model",
+      "body": ""
+    },
+    {
+      "sha": "259cf6c7d23d4f9f0892e408fd3ccc69d30dbcea",
+      "shortSha": "259cf6c",
+      "author": "Dan Curis",
+      "date": "2026-08-13T11:18:45-04:00",
+      "subject": "Cache the profile prefix on every model call",
+      "body": ""
+    },
+    {
+      "sha": "3eae5fc724eed9e6789340dda653b580f855f738",
+      "shortSha": "3eae5fc",
+      "author": "Dan Curis",
+      "date": "2026-08-13T11:12:17-04:00",
+      "subject": "Quiet failures are recorded, and the lint gate actually fires",
+      "body": ""
+    },
+    {
+      "sha": "159dbdb7a6d60bcacc81b388c5755c601dccee5e",
+      "shortSha": "159dbdb",
+      "author": "Dan Curis",
+      "date": "2026-08-13T11:01:46-04:00",
+      "subject": "Tests, CI, and a date bug the compiler now catches",
+      "body": ""
+    },
+    {
+      "sha": "17b2c289ee0878a2708cd1624cce47d45c4607a3",
+      "shortSha": "17b2c28",
+      "author": "Dan Curis",
+      "date": "2026-08-13T09:22:22-04:00",
+      "subject": "Stop Tailwind generating CSS from the style guide's own examples",
+      "body": ""
+    },
+    {
+      "sha": "92a47ba138045b55cb3a29874d7b3dbb0bfc99cc",
+      "shortSha": "92a47ba",
+      "author": "Dan Curis",
+      "date": "2026-08-13T09:13:00-04:00",
+      "subject": "US English applies to the app's own screens, not just its output",
+      "body": ""
+    },
+    {
+      "sha": "a0929d067c4c1009c14d53a3fc37a77e397d8b23",
+      "shortSha": "a0929d0",
+      "author": "Dan Curis",
+      "date": "2026-08-13T09:12:24-04:00",
+      "subject": "US spelling in the app's own interface, not just what it sends",
+      "body": ""
+    },
+    {
+      "sha": "88e0f6a4018d09b5eece9422c90935fbc20dbfbe",
+      "shortSha": "88e0f6a",
+      "author": "Dan Curis",
+      "date": "2026-08-13T08:59:14-04:00",
+      "subject": "A style guide, and every release carries a story",
+      "body": ""
+    },
+    {
+      "sha": "9215cc4824b1c2ff5b063dbea1a836f9dd20c9d7",
+      "shortSha": "9215cc4",
+      "author": "Dan Curis",
+      "date": "2026-08-13T08:50:01-04:00",
+      "subject": "Audit: house rules on employer answers, one timezone, one person test",
+      "body": ""
+    },
+    {
+      "sha": "098b280f186696d6eccfe4b4f3068f1868477a8a",
+      "shortSha": "098b280",
+      "author": "Dan Curis",
+      "date": "2026-08-12T16:34:33-04:00",
+      "subject": "US spelling: fix the sources, and the two bugs in the normaliser",
+      "body": ""
+    },
+    {
+      "sha": "c3231af17587df6053d537c82d38808b0682f4b5",
+      "shortSha": "c3231af",
+      "author": "Dan Curis",
+      "date": "2026-08-12T15:48:13-04:00",
+      "subject": "A Workday page: the resume as the fields their parser mangles",
+      "body": ""
+    },
+    {
+      "sha": "6c63c18a577240bf983a8dd307681f6d36828c16",
+      "shortSha": "6c63c18",
+      "author": "Dan Curis",
+      "date": "2026-08-12T15:40:24-04:00",
+      "subject": "Pipeline controls stay on the pipeline",
+      "body": ""
+    },
+    {
+      "sha": "34d2b0c88664db5d00d952055610a52146808277",
+      "shortSha": "34d2b0c",
+      "author": "Dan Curis",
+      "date": "2026-08-12T15:13:19-04:00",
+      "subject": "Record the datetime-local and meeting-status lessons",
+      "body": ""
+    },
+    {
+      "sha": "f8fa0583adfc390ae1687e188e5f86213b114d92",
+      "shortSha": "f8fa058",
+      "author": "Dan Curis",
+      "date": "2026-08-12T15:10:14-04:00",
+      "subject": "A booked meeting sets the stage, and datetime-local is read as Eastern",
+      "body": ""
+    },
+    {
+      "sha": "3e1d36c81abb9b2769bb3b5bb2134553e4be5878",
+      "shortSha": "3e1d36c",
+      "author": "Dan Curis",
+      "date": "2026-08-12T12:29:14-04:00",
+      "subject": "Suppress the subject only when one can actually be inherited",
+      "body": ""
+    },
+    {
+      "sha": "d759643c10a936aea63b6ffb9c437f900d371154",
+      "shortSha": "d759643",
+      "author": "Dan Curis",
+      "date": "2026-08-12T12:13:59-04:00",
+      "subject": "Record today's three lessons in CLAUDE.md",
+      "body": ""
+    },
+    {
+      "sha": "4ade577cce1c17d1594a25dddcbe4ec05952e989",
+      "shortSha": "4ade577",
+      "author": "Dan Curis",
+      "date": "2026-08-12T12:10:46-04:00",
+      "subject": "Asking Claude for a different subject changes the subject",
+      "body": ""
+    },
+    {
+      "sha": "fefd382eb7b24195fde2e063b3ac813d0411d414",
+      "shortSha": "fefd382",
+      "author": "Dan Curis",
+      "date": "2026-08-12T12:01:50-04:00",
+      "subject": "Queue rows land on the thing they name, not near it",
+      "body": ""
+    },
+    {
+      "sha": "5b693492bd8fd9ad57bc5217d109b92ac8b17a7a",
+      "shortSha": "5b69349",
+      "author": "Dan Curis",
+      "date": "2026-08-12T11:58:28-04:00",
+      "subject": "Match calendar events to people, not just companies",
+      "body": ""
+    },
+    {
+      "sha": "686db67c612792436b563bb14aa21913c208d21b",
+      "shortSha": "686db67",
+      "author": "Dan Curis",
+      "date": "2026-08-12T11:53:05-04:00",
+      "subject": "File mail to a person, not just a role or company",
+      "body": ""
+    },
+    {
+      "sha": "1c925c90383308c2977e065aa3e96fd7acfea386",
+      "shortSha": "1c925c9",
+      "author": "Dan Curis",
+      "date": "2026-08-12T11:42:53-04:00",
+      "subject": "One composer. The role page had two more and neither was any good",
+      "body": "Dan: 'we have a real consistency problem when i want to draft and send notes.\nit should be universal and it should be the same container. its way too\nfragmented. i have asked for rich text capabilities always.'\n\nHe is right, and CLAUDE.md already said so - 'people-work happens on the\ncontact page, do not grow a second correspondence UI on the role'. It had grown\ntwo. CorrespondenceEditor was a plain textarea with its own save, refine, send\nand mark-as-sent. CorrespondenceDraftForm drafted with Claude straight into it.\nNeither had rich text, a signature, attachments or copies, all of which the\ncontact composer has had all along.\n\nMy response for most of today was to bolt escapes onto them rather than remove\nthem: an Open in composer link, and then a second copy of that link because the\nfirst sat below the fold of a 60vh textarea. Two patches to avoid one deletion.\n\nBoth surfaces are now records with doors. The editor shows the note and links\nto the composer; the draft form is a row of Write to X links. Deleting stays on\nthe role, since that is history rather than writing.\n\nAlso fixed the memory he raised twice. Instructions lived in component state,\nso they survived exactly as long as the page did - reopening a saved draft\nstarted the conversation over, and he had been reopening it all afternoon.\nCorrespondence.instructions stores them with the note and the composer seeds\nfrom it. Verified end to end: two instructions written to a draft, and both\nreach the client on reopen.\n\nThe declaration order bit again on the way, the same temporal dead zone as the\nsignature this morning. TypeScript caught this one; React would not have."
+    },
+    {
+      "sha": "05ecc0b837609e69bd4bb0f2b33601b1acb1a06a",
+      "shortSha": "05ecc0b",
+      "author": "Dan Curis",
+      "date": "2026-08-12T11:32:11-04:00",
+      "subject": "A saved draft the page never showed you",
+      "body": "Dan asked whether the notes being drafted for him were meant not to appear in\nthe UI. They were not meant to disappear; they were simply unreachable. A\nsaved draft could only be opened at /contacts/<id>?write=1&edit=<id>, a URL\nnobody has unless something hands it to them, and the contact page listed\nnothing. Same fault as a page nothing links to, which he caught earlier today\non /linkedin.\n\nSaved drafts are listed on the contact page now, with their subject, an opening\nline and a link that opens them in the composer.\n\nTwo things I was doing that made it worse. I deleted and recreated the draft\neach time I revised it, so the id changed and any link he already had went\ndead - and had he edited one, I would have destroyed the edit. And I kept\nhanding him URLs instead of noticing that the page had no way to surface what I\nwas creating."
+    },
+    {
+      "sha": "8741810cd7d86cd605c7198a09fa14f5533be640",
+      "shortSha": "8741810",
+      "author": "Dan Curis",
+      "date": "2026-08-12T11:28:42-04:00",
+      "subject": "An outreach asks for something. I invented the rule that it should not",
+      "body": "Dan hated the draft, and the fault was mine at the design level rather than in\nthe wording. He said Maya suggested he tell a contact he was applying. I decided\nthe tasteful move was courtesy with no request, wrote 'Make NO request' into\nthe prompt as a hard rule, and added 'do not restate how they met' - which\nblocked the exact opening he wanted. He never asked for either. What he wants\nis for her to push him through the process.\n\nThe drafts then did the two things he called out. 'I wanted you to hear it from\nme' presumes a friendship after one conversation. And the closing offered to\nsend HER things, which is the ask pointing backwards.\n\nSo role_outreach now says the ask is the point, to state it once without\napologising, and that a note carefully avoiding the request wastes the\nrelationship and reads as coy. It opens from the conversation they actually\nhad, warmly and specifically. And it must calibrate to how well they know each\nother, with 'I wanted you to hear it from me' named as the thing not to write.\n\nWarmth about the conversation is encouraged; invoking a favour Dan did for them\nstays banned. Those are different, and the previous prompt collapsed them.\n\nThe lesson worth keeping: I encoded my own etiquette judgement as a constraint\nin a prompt, where it was invisible and applied to every future note. A\npreference of mine is not a rule of his."
+    },
+    {
+      "sha": "34da12cec257d8a92a75f4440be516a32b47ac87",
+      "shortSha": "34da12c",
+      "author": "Dan Curis",
+      "date": "2026-08-12T11:18:31-04:00",
+      "subject": "A prompt nobody can select is not a feature",
+      "body": "Dan asked where to send the a contact outreach and said the contact page looked\nthe same as before. It did. I added a role_outreach type with its own prompt,\nand the only place a type can be chosen is the role page's draft form - so the\npage he actually writes from was unchanged, and the draft I showed him existed\nonly because I called the API directly.\n\nWorse, the contact draft route ignored type entirely. A thank-you, a check-in\nand an 'I am applying' note all came out of the same prompt in the same\nregister.\n\nSo the composer has a type picker, and that route honours it. role_outreach is\nthe one with real rules and they are all prohibitions, because the failure mode\nis a note that asks for something.\n\nTwo things the first real drafts exposed:\n\nThe prompt said never to mention a favour between them, while the context\nhanded one over: a contact's contact record says Dan gave her a reference for Maya\na former colleague, and the route feeds contact notes to the model. It duly opened with\n'after we spoke when I gave a reference for Maya a former colleague' and then credited Maya\nwith an introduction a contact made. The prompt now says the context WILL contain\nfavours, that they are there so it knows who the person is, and that naming one\nis the worst thing it can do - with the real failing sentence quoted, which is\nthe only thing that has ever worked on this model.\n\nAnd the subject came back empty because unsent DRAFTS were being counted as\nconversation. One saved draft was enough to convince the route a thread existed,\nso it skipped drafting a subject for a first message. It also meant Claude was\nreading Dan's unsent words back as though the recipient had seen them. Sent and\nsent_externally only now.\n\nSubject parsing also only existed on one of the two routes, so a note drafted\nfrom a role arrived with 'Subject:' sitting at the top of its body."
+    },
+    {
+      "sha": "bae6bebc0b65691351377fa74e86ec86092456b0",
+      "shortSha": "bae6beb",
+      "author": "Dan Curis",
+      "date": "2026-08-12T11:03:52-04:00",
+      "subject": "Clear the never-consider list, and stop the LinkedIn page being unreachable",
+      "body": "A Starz role came back as a pass 'regardless of fit' because Starz was on the\nruled-out list. Dan did not remember putting it there, and the list explains\nwhy: 'Mars (Director-level step-down)', 'Ford Director AI', 'Marvin Love hotel'.\nThose are roles he declined once, recorded as employers he refuses. Sixteen of\nthem, and only four were ever tracked in the pipeline.\n\nThe distinction he wants is real: ruled out should mean a company he would\nnever work for, and that is his to set rather than something accumulated from\nold decisions. The list is empty, the mechanism stays, and the sixteen are kept\nin personalLogistics as history explicitly marked as not a rule.\n\nRe-evaluated Starz on the merits: swing, not pass. The honest gaps are domain\n(aviation and telecom against a posting scoped to media and streaming),\ncampaign orchestration for entertainment releases, and 220 to 260 against a\nManaging Director seat. Never a pass on the merits, and not obviously a yes -\nwhich is the point of it being his call.\n\nAlso: /linkedin was reachable only by typing the URL. Dan asked whether it was\nan orphan; it was. It sits under Profile now, not Settings, because Settings is\naccounts and configuration and this is his career record.\n\nAnd it takes the export files rather than a paste. The download arrives as a\nzip of CSVs, and asking him to open each one and paste it is asking him to do\nthe computer's job. Read in the browser and concatenated with their filenames,\nso there is no upload endpoint and nothing about his career sits on a disk it\ndid not need to touch."
+    },
+    {
+      "sha": "f44f4261bd814b30d76568ef76780ff392aadf0f",
+      "shortSha": "f44f426",
+      "author": "Dan Curis",
+      "date": "2026-08-12T10:58:52-04:00",
+      "subject": "A note saying you are applying is its own kind of note",
+      "body": "Dan gave the a retailer's CMO a reference for a friend, she introduced him to someone\non her team, and a a department store's posting then appeared. Telling her is\ncourtesy. Asking her for anything, days after she did him a favour, converts a\nrelationship into a transaction - and the existing types could not express the\ndifference, so the drafts came out as either a cover letter or a request.\n\nrole_outreach names the exact posting, makes no request, and never mentions the\nfavour in either direction. Four sentences at the outside, because the length\nis part of the message.\n\nThe first real draft then did something worth catching: it ended with\n'[Dan: add a line here with one specific detail from your conversation...]'.\nGood advice, addressed to the wrong person, sitting inside an email body bound\nfor a CMO. general-documents already refuses bracket placeholders before filing\na document; correspondence never checked, and correspondence is the path that\nreaches a stranger. stripDraftNotes removes whole lines wrapped in brackets and\nleaves inline parentheticals alone, so 'the CDP (Adobe Experience Platform)\nmigration' survives and a note to himself does not.\n\nAlso recorded the relationships, which existed only in Dan's head: a contact\na contact as CMO of a retailer's rather than a department store's - the posting is a sibling\nbrand, so she is a route in and not the decision - Erin a contact as the person\nshe introduced, and Maya a former colleague as where the whole chain started."
+    },
+    {
+      "sha": "6403f163b119fcd4145a828fc254a9d602fa4427",
+      "shortSha": "6403f16",
+      "author": "Dan Curis",
+      "date": "2026-08-12T10:27:07-04:00",
+      "subject": "An evaluation that ran out of tokens threw away 22 seconds and said nothing",
+      "body": "Dan pasted a a department store's posting and got no evaluation. The role, the job\ndescription and the document were all created; the verdict was not.\n\nmax_tokens was 1200. That posting produced a long fitSummary and ten strengths,\nthe response hit the ceiling mid-object, and the tool input arrived with gaps\nempty and recommendation missing entirely. Prisma refused the insert and the\nroute 500'd, so real model work was discarded and the UI reported nothing\nuseful.\n\nstrict: true and a required list do not survive truncation. The JSON simply\nstops, and what arrives is a well-formed object with its most important field\nabsent - which is exactly why this codebase already has a rule about validating\ntool output before persisting. The evaluate route was interpolating\nrecommendation straight into a create.\n\nSo: 3000 tokens, a usability check on the verdict before it can reach the\ndatabase, one retry at 4000 because truncation is a length accident rather than\na disagreement, and a clear 502 saying nothing was saved if it still comes back\nwithout one. The compare path skips a truncated verdict rather than letting it\ntake the other model's good one down with it.\n\nVerified by re-running the exact posting that failed: HTTP 200,\nrecommendation swing.\n\nAlso added the LinkedIn comparison Dan asked for. Profile pages return an\nauthwall and HTTP 999 to any reader, and no API exposes profile content, so it\ntakes a paste or the LinkedIn data export. The model only extracts; whether two\ndate ranges agree is checked in code, because that is checkable and a tenure is\nthe one claim a recruiter can verify in ten seconds. Tested against the real\nvariant: an exact match with different month spellings, a wrong start year, a\npromotion where only the newer title is listed, and Delta still showing Present."
+    },
+    {
+      "sha": "e6ce2278f13e3263c4d8c8043ee29ff90dc92f9b",
+      "shortSha": "e6ce227",
+      "author": "Dan Curis",
+      "date": "2026-08-12T09:21:10-04:00",
+      "subject": "Draft a subject, remember the instructions, and actually write US English",
+      "body": "Four things Dan hit while drafting a note to Marie.\n\nThe subject stayed blank on a new thread. It is derived from what a reply\nanswers, and a first message answers nothing, so nothing downstream could\nproduce one. The model is asked for a leading 'Subject:' line when there is no\nthread, which the existing parser already strips - rather than adding a second\nfield to the tool, since asking one call for a subject and a body is what put\nthe whole body in the subject once before.\n\nEach instruction arrived alone, so the previous one was forgotten: 'make it\nshorter' then 'mention the referral' produced a short note with no referral.\nThe composer keeps what he has asked for while writing one message and sends\nall of it, capped at six so a sitting's nudges cannot crowd out the thread that\nkeeps the draft factual. Recorded only on success, cleared when the composer\nresets.\n\nBritish spellings kept arriving despite the prompt. toUSSpelling was too short\nto be the enforcement it claimed to be: whilst, amongst, towards, colour,\nfavour, catalogue, practise, cancelled and twenty more sailed through. The\ndictionary is roughly three times the size now and covers -our, -ise, -ence,\ndoubled-l participles and the common adverbs.\n\nAnd the rules he keeps repeating - US English, complete sentences, never\nending on a preposition - were in one route's prompt. They are in\nstandingPreferences now, which buildProfileContext feeds to every model call,\nso the resume, the cover letter, the assistant and the Ask box all get them\nrather than just this one."
+    },
+    {
+      "sha": "42b04f4238bac722f2f9695c268375c2a13abfd6",
+      "shortSha": "42b04f4",
+      "author": "Dan Curis",
+      "date": "2026-08-12T09:16:28-04:00",
+      "subject": "Keep the signature when Claude rewrites the body",
+      "body": "Dan composed a note to Marie with the box ticked and no signature in the draft.\nHe had to untick and retick to get it back. Third loss for this feature, second\nfrom a different path.\n\ndraftWithClaude did a bare setHtml with the model's text, discarding the\nsignature block while includeSignature stayed true. The checkbox was telling\nthe truth about intent and lying about the document, which is the same failure\nas the first two wearing different clothes.\n\nThree times in one feature is a design signal rather than three bugs. The\nsignature lives inside the body, so every writer of the body owns it.\nreplaceBody is now the single writer that does; an append is deliberately not\none, since a forward adds to what is there.\n\naudit.ts fails on a bare setHtml that neither takes an updater nor builds the\nsignature itself. Its first version reported all five call sites because it read\nonly to end of line and the safe ones wrap across several - tightened to a\nwindow, then verified both ways: silent on the fixed code, and it catches the\nexact bug when reintroduced."
+    },
+    {
+      "sha": "d0ff428c13a0f139da51840ff70f02e849ede2a6",
+      "shortSha": "d0ff428",
+      "author": "Dan Curis",
+      "date": "2026-08-12T09:13:40-04:00",
+      "subject": "Check the share intake's own failures, and gate shipping on the checks",
+      "body": "The share-target change went to production with a lint error and an unchecked\nfetch in it. Both were caught by eslint and audit.ts - which were running on the\nsame shell line as the push, so their output arrived after the deploy had\nalready happened. Running a check and passing it looked identical.\n\nThe unchecked fetch is the fault this codebase already has a rule about. A\nfailed document generation left the role tracked and evaluated, which is\nindistinguishable from success until he opens it to apply and finds no resume.\nIt reports now, and so does a failed evaluation, matching what the paste box\nalready does. The <a> to a local route became a Link.\n\nscripts/ship.sh runs build, lint and audit and exits before committing\nanything. A check whose result you read afterwards is not a gate.\n\nIts own first run failed, on 'grep -E \"[0-9]+ error\"' matching '0 errors'."
+    },
+    {
+      "sha": "aa9b24c49094d3d319c8a39eb198fdb1d7e0c1e8",
+      "shortSha": "aa9b24c",
+      "author": "Dan Curis",
+      "date": "2026-08-12T09:10:50-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "7a3d02aca83ed77e1eb1c621151d76258acadb06",
+      "shortSha": "7a3d02a",
+      "author": "Dan Curis",
+      "date": "2026-08-12T09:10:50-04:00",
+      "subject": "Share a job link into the app instead of copying it",
+      "body": "Dan noticed LinkedIn mobile can share a job by email or text and desktop\ncannot, and that Counsel never appears in the share sheet.\n\n/share runs the whole intake on a link from outside: track, evaluate, and draft\nunless the verdict is a pass. Three doors point at it, because only one is a\nstandard.\n\nshare_target in the manifest covers Android and desktop Chrome. It is GET\nrather than POST deliberately: a GET target is an ordinary navigation so the\nsession cookie travels with it, where a POST target arrives without one,\nbounces to /login and loses the link.\n\niOS does not implement share_target at all, so the PWA can never appear in an\niPhone share sheet however the manifest is written. Worth stating plainly\nrather than shipping something that quietly does not work there. A Shortcut is\nthe answer on the phone and a bookmarklet on desktop, and both reach the same\npage.\n\nShare sheets disagree about which field holds the link - Android often puts it\nin text beside the title, url is frequently empty - so firstUrl takes the first\nmatch across all three. Verified against every shape including a share with no\nlink, which lands on the paste box rather than erroring about something the\nuser cannot see."
+    },
+    {
+      "sha": "4e3ddc7981353edd6582bcd46a7b0c47b2035251",
+      "shortSha": "4e3ddc7",
+      "author": "Dan Curis",
+      "date": "2026-08-11T19:13:51-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "67d8dd849289f51a12e0eb9432ec4764232c221b",
+      "shortSha": "67d8dd8",
+      "author": "Dan Curis",
+      "date": "2026-08-11T19:13:22-04:00",
+      "subject": "Stop remembering that the signature is off",
+      "body": "Dan's note to Matt Menough at a hospitality employer went out unsigned. Second one today, and\nthis time caused by the fix for the first.\n\nThis morning he asked for the signature to be on by default with the state\npreserved. Preserving it was the mistake. Unticking once while we were building\nthe feature wrote \"0\" to localStorage, and from then on every note opened\nunsigned, silently. The saved HTML carries no signature marker at all, so it\nwas never a send-time loss: the composer never put one there.\n\nWorse, it looks fine for a moment. The server renders the default, so the\nsignature appears, and the stored preference arrives after hydration and takes\nit away. He saw it, went back to send, and it had gone.\n\nThe state worth keeping was ON. Off is a decision about one message, so it\nlasts exactly as long as that message, and no stored value can quietly stop the\napp signing his mail.\n\nAn unticked checkbox is also not a warning. It was sitting there, correctly\nunticked, both times. \"This note has no signature on it\" now appears beside the\nbutton that acts, because state belongs where the decision is.\n\nVerified with the broken state deliberately reproduced: with \"0\" still in\nlocalStorage the composer opens ticked and signed, unticking shows the warning\nand removes exactly the signature, reticking restores one copy."
+    },
+    {
+      "sha": "3f9ed28466f11dcfd721391366f10d30e2f7ce6c",
+      "shortSha": "3f9ed28",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:32:56-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "2ec76aea7da955484593e17416cab4bc0186c570",
+      "shortSha": "2ec76ae",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:32:56-04:00",
+      "subject": "Reply into the existing thread, not just Dan's copy of it",
+      "body": "Dan asked whether replying in the app would land in the thread Matt already\nstarted. It would not have.\n\nThe send route passed Gmail's threadId, which keeps the message in the right\nconversation in Dan's mailbox and does nothing for the recipient. Every other\nclient, and every ATS, threads on In-Reply-To and References, which carry the\nRFC Message-ID and were never being set. His reply would have arrived as a\nbrand new message with no quoted history, and for an iCIMS address nothing\ntying it to the requisition it answers.\n\nlatestMessageRef reads the newest Message-ID in the thread at send time rather\nthan storing it, so it stays right when messages have arrived since the draft\nwas written, and it needs no migration for something Gmail already holds. It\nreturns null on any failure, because threading is a nicety and sending is not.\n\nThe a hospitality employer draft is attached to Matt's thread. A survey found no other\nunsent draft with the same gap, so this is a fix for the next one rather than a\nbacklog."
+    },
+    {
+      "sha": "3dee3569e11c84ab30697f520891e1fb37ea9ef7",
+      "shortSha": "3dee356",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:28:09-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "b7fd367dae4a7c23c7b82f9a86748da8b1095455",
+      "shortSha": "b7fd367",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:28:08-04:00",
+      "subject": "Correct a false tenure in CLAUDE.md, and pin the real dates",
+      "body": "This file said \"Nine years at Delta\". Delta is Aug 2022 to Jun 2026, three\nyears and ten months. The nine years is Charter, Jan 2013 to May 2022.\n\nI read that sentence back and put \"Nine years at Delta\" into a draft note to a\nrecruiter at a hospitality employer. Dan caught it. A tenure is a verifiable claim about his\ncareer: wrong in front of an employer it is checkable on LinkedIn in ten\nseconds and reads as careless or dishonest, which is worse than any formatting\nfault this file catalogues.\n\nThe data was right the whole time. Both variants carry the correct dates, and\na tight sweep of 347 documents, 4 variants and the profile found no wrong Delta\nduration anywhere - the letters say \"four years at Delta\" and \"nine years at\nCharter\" correctly, including one that states both in the same sentence. The\nerror existed only in the prose describing the data, which is what gets skimmed.\n\nSo the dates are now stated once, near the top, as the thing to read rather\nthan recall, with the rule that a duration must be computed from them and never\nremembered."
+    },
+    {
+      "sha": "7fd5d8ebae46cd9ad383d5893a4a78202df0c474",
+      "shortSha": "7fd5d8e",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:23:48-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "e27ad4d69331de35f585fbae0748b466469f79c1",
+      "shortSha": "e27ad4d",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:23:47-04:00",
+      "subject": "Strip em-dashes from correspondence in code, not by asking",
+      "body": "Dan has told me twice today never to use em-dashes, and I put one in a draft\nnote to a recruiter anyway. Worth fixing the app rather than only the habit.\n\nAll three correspondence prompts already say no em-dashes, and nothing checked.\nThat is precisely the pattern this codebase has a rule about: a prompt\ninstruction is a request, and when the model getting it wrong produces\nsomething silently wrong rather than an error, repair it in code.\n\nenforceHouseLanguage already does exactly this - dashes to hyphens, British\nspelling to US - and was wired only to the document routes. It now runs on the\ncontact draft, on correspondence creation and on correspondence refine, so\nanything the app writes to a person goes out in house style whether or not the\nmodel cooperated."
+    },
+    {
+      "sha": "da9e6fa8f5725e2c93839d026bf0af94f64745f4",
+      "shortSha": "da9e6fa",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:15:52-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "32afd2f15874b1a685a30bed7c76a7dfde3d3cc6",
+      "shortSha": "32afd2f",
+      "author": "Dan Curis",
+      "date": "2026-08-11T18:15:51-04:00",
+      "subject": "Stop letting Gmail's Promotions tab decide what is a job",
+      "body": "a hospitality employer's talent acquisition manager invited Dan to an initial call at 5:57pm.\nThe sync never saw it, and answered \"nothing found\" twice while he asked where\nit was. He found it himself, in Promotions.\n\nThe sync query excluded -category:promotions -category:social, which was added\nto cut noise and quietly handed Gmail's tab heuristic the decision \"is this\nabout a job\". Gmail is worst at precisely the mail that matters: Matt's message\ncame through iCIMS, and anything sent by an ATS carries tracking and\nunsubscribe headers, which is what Gmail sorts on. The misfiling is systematic.\n\nMeanwhile this app runs a classifier whose entire job is that decision, and the\nInbox already hides whatever it marks not_job_related. Filtering upstream was\ndoing the same work twice, worse, and invisibly.\n\nRemoving it pulled in 7 messages the sync had never been able to see. Six were\nnoise the classifier binned correctly - LinkedIn invitations, a cupcake sale -\nand one was the interview invitation. The filter was buying six ignored rows a\nday and costing that.\n\nAlso recorded what only existed in Dan's head: Matt's outreach is warm. Marie\nBenton told her father, Dan's neighbour, that Matt would be in touch, so the\nATS email is the front-door version of an introduction already made. That is on\nthe role, on Marie's record, and Matt is a contact now."
+    },
+    {
+      "sha": "76522574d810fce0d702ea8f7dcfaeb8474760b1",
+      "shortSha": "7652257",
+      "author": "Dan Curis",
+      "date": "2026-08-11T17:54:56-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "cbbc926702f32bd0f8f8967522ab1cdc97066707",
+      "shortSha": "cbbc926",
+      "author": "Dan Curis",
+      "date": "2026-08-11T17:54:55-04:00",
+      "subject": "Seed ruledOutCompanies as JSON, not prose",
+      "body": "Every AI route on the demo returned 500 with \"Unexpected token 'N', 'None.' is\nnot valid JSON\". I had seeded ruledOutCompanies as the sentence \"None.\" and\nthat field is JSON.parsed in two places - profile-context.ts, which builds the\ncontext for every model call, and the Profile page.\n\nThe failure surfaced nowhere near its cause: a bad string in the seed took out\nevaluation, drafting, Ask and the assistant equally, with a parser error naming\nnone of them. Seeded as \"[]\" now, and the live demo's row was repaired in\nplace.\n\nWorth noting for anything else that seeds this table: several Profile columns\nhold JSON in a String, and nothing in the schema says so.\n\nConfirmed after the fix by running a real evaluation against the deployed\ndemo: HTTP 200, and the row records\nmodel=claude-haiku-4-5-20251001, so the demo override is genuinely in force\nrather than merely compiled in."
+    },
+    {
+      "sha": "6976f1a6d1373f9f7584fa86ecc0289f233d36aa",
+      "shortSha": "6976f1a",
+      "author": "Dan Curis",
+      "date": "2026-08-11T17:50:47-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "533abf9da4d2d62f10d309442bbc601c02c3078f",
+      "shortSha": "533abf9",
+      "author": "Dan Curis",
+      "date": "2026-08-11T17:50:47-04:00",
+      "subject": "Demo runs on the cheap model, with a daily cap that is the real protection",
+      "body": "Dan asked whether the demo should mock the AI or use the cheapest model.\nCheapest model, because the evaluation and the drafting ARE the product.\nSomebody trying the demo will paste a job link and expect a real verdict, and a\ncanned paragraph is either obviously fake or - worse - looks real while being\nthe same text for every posting. Haiku is roughly a fifth of Opus per token and\nstill visibly does the job.\n\nBut the model choice only changes the cost per call, and volume is the actual\nexposure: the demo runs on Dan's API key, so an open link is an open invoice.\nHence a daily cap of 60 generations, counted off rows the demo actually wrote\ntoday rather than an in-process tally, which resets on every cold start and\ntherefore caps nothing on serverless.\n\nBoth live in resolveModel, because every AI route already calls it before it\nspends - the same reasoning that put the outbound guards inside sendMail and\ndriveFetch rather than in each of a dozen callers. generateStructured gets its\nown, since the Gemini path does not pass through resolveModel and would\notherwise be an uncapped way to spend.\n\nDemo mode also ignores the model picker outright. Letting a visitor select Opus\nwould hand them a five-times-more-expensive button on Dan's key.\n\nVerified in both modes: the cap fires at 60 and above with DEMO_MODE=1, and\nnever fires without it."
+    },
+    {
+      "sha": "da7e51935ffc192be621652856e40b46fe86bdba",
+      "shortSha": "da7e519",
+      "author": "Dan Curis",
+      "date": "2026-08-11T17:08:49-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "083fbec163a46a74151eafcc85b2b8e51dbe5a44",
+      "shortSha": "083fbec",
+      "author": "Dan Curis",
+      "date": "2026-08-11T17:08:48-04:00",
+      "subject": "Give the demo its own way in, since Google login is locked to one address",
+      "body": "Real login is Google OAuth restricted to ALLOWED_EMAIL, which is right for a\nsingle-user app and useless for a link Dan hands to somebody: they would have\nto be him. Registering a second redirect URI for a demo domain would also drag\nGoogle Cloud into it, and the demo is meant to stand alone.\n\nSo demo mode swaps the Google button for a shared password. Not to protect the\ndata - it is invented and worth nothing - but to protect the spend. Every page\nin here can call Claude, and an open URL is an open invoice.\n\n`/api/auth/demo` 404s when IS_DEMO is false, so it is not a second door into\nthe real app. Verified rather than assumed, since that is the whole security\nclaim: with DEMO_MODE=1 a wrong password redirects to ?error=bad_password and\nthe right one issues the ordinary session cookie; without it, the same POST\nreturns 404 and the real landing page still offers Google and nothing else.\nSigned out, the demo shows the password form and none of the pipeline.\n\nTwo bugs of mine on the way here, both fixed:\n\nThe setup script wrote the connection string unquoted. Neon URLs end in\n\"&channel_binding=require\", and an unquoted ampersand makes the shell\nbackground the assignment when the file is sourced - the variable silently\nnever gets set, with no error until something reads it.\n\nAnd my first attempt at running the demo set DEMO_MODE=1 and let `next dev`\nload .env.local, which points at production. That would have served Dan's real\npipeline under a banner saying it was sample data, which is precisely the\nfailure this mode exists to prevent. scripts/demo-dev.sh exports the demo\nvalues explicitly and refuses if they match production; relying on file-loading\norder was the wrong instinct for something this consequential."
+    },
+    {
+      "sha": "54e538bb1d8d37bc97eb82b5d06cd26865eef103",
+      "shortSha": "54e538b",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:41:43-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "38b412c1b2ac9472a53d8ddb608ab051ab638220",
+      "shortSha": "38b412c",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:41:43-04:00",
+      "subject": "One command to stand the demo database up, with the URL never in chat",
+      "body": "Dan picked a separate Neon database over a shared schema, which is the right\ncall if this is going anywhere: the demo becomes independent infrastructure\nrather than a naming convention.\n\nscripts/demo-setup.sh reads the connection string off the clipboard, so it\nnever passes through the conversation or a shell argument that would land in\nhistory. It refuses anything that is not a Postgres URL, and refuses outright\nif the clipboard matches the string already in .env.local - pointing the demo\nseeder at production is the one mistake this whole setup exists to prevent, and\nit is now caught three times over: here, by DEMO_MODE, and by the seeder's own\nreal-records check.\n\n.env.demo is covered by the existing .env* ignore.\n\nNo dotenv-cli. The script reads .env.demo into the environment itself, since\nPrisma takes DATABASE_URL from there and a dependency for one line is a\ndependency to keep updated forever."
+    },
+    {
+      "sha": "bd90e3b6277fce996a2e1dc853f4322f23af0eab",
+      "shortSha": "bd90e3b",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:38:20-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "c446d8994e88edaa44209920da7ce144addd5f84",
+      "shortSha": "c446d89",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:38:20-04:00",
+      "subject": "A demo instance, with two independent reasons it cannot reach anything real",
+      "body": "Dan wants to show this to people without exposing a live executive job search:\nreal recruiters, real salary conversations, a real mailbox.\n\nThe demo runs on its own database with an invented candidate at invented\nemployers, and `DEMO_MODE=1` refuses every outbound action regardless of what\nthat database holds. Either would probably be enough. Together, a mistyped\nenvironment variable cannot email a stranger from Dan's Gmail, which is the\nonly failure here that would actually matter.\n\nThe guards are in sendMail, driveFetch and fetchRecentMessages rather than in\nthe routes above them, so a caller added later inherits them without knowing.\nDrive needs exactly one because everything already goes through driveFetch -\nthat existing rule is what makes a single guard sufficient.\n\nseed-demo.ts refuses twice: if DEMO_MODE is unset, and if the database holds\nreal records. Both were verified against the live database rather than\nreasoned about - it declined both times and the 97 applications, 28 contacts\nand 86 companies are untouched.\n\nThe sample search is shaped like one in flight rather than a tidy one: roles at\nevery stage, silence of different ages so the follow-up cadence has something\nto say, one thread where the candidate owes a reply and one where the employer\ndoes, one networking contact with no role behind them, one unfiled message. A\ndemo where nothing needs doing demonstrates none of the product.\n\nEmployers are fictional. Real brands read as more convincing for about five\nseconds and then raise a question about endorsement.\n\nAll of this is inert without DEMO_MODE, so production is unaffected."
+    },
+    {
+      "sha": "0b29289d497ac26dd8991e9aec82a3242a987b44",
+      "shortSha": "0b29289",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:33:30-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "070e7860b3887d4a543da258ae966f5caf67c5f1",
+      "shortSha": "070e786",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:33:30-04:00",
+      "subject": "One card surface, the way there is now one button",
+      "body": "The Accounts section on Settings read as two white bubbles floating under a\nheading, because the cards were hand-rolled - \"rounded-xl border border-line\nbg-[var(--surface)] p-4 shadow-sm\" - beside a .panel class that already says\nexactly that, at a different radius.\n\nEighteen of them across eleven files, all now .panel. Same fault as the ten\nbutton sizes: the token existed, nothing pointed at it, and each new card was\nmatched by eye to whichever one was nearby.\n\nVerified on Settings: both account cards at 16px radius on the panel surface,\nno nesting."
+    },
+    {
+      "sha": "10f68aad55f57fba33cb29571ac33a93411f7151",
+      "shortSha": "10f68aa",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:00:02-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "1e14badb6630e09d74536f1c4ac49fecdf3d37df",
+      "shortSha": "1e14bad",
+      "author": "Dan Curis",
+      "date": "2026-08-11T16:00:02-04:00",
+      "subject": "Audit every button, and fix the three faults it found",
+      "body": "122 buttons across 85 files. None were dead, which was the good news; two\nstatic flags were false positives (ApplicationPicker's submit is always inside\na parent form, ThemeSetting's onClick sat past a comment my parser stopped at).\nThree real classes came out of it.\n\nTwo native dialogs were still live, on the two highest-stakes actions in the\napp: confirming a send, and deleting a role. CLAUDE.md says these were all\nremoved. They were not, and the send one was the worst place for it - the\ndialog covered the row holding the address and the attachment list it was\nasking you to check.\n\nFour destructive actions had no confirmation at all. Delete correspondence,\ndelete a contact, delete a document and all its versions, delete an uploaded\nfile. One click, no undo, in an app that stops to confirm sending an email. On\nthe role page the inconsistency sat inside a single row: Save was a proper\nSubmitButton with \"Saving...\", and Delete beside it was a raw button with\nnothing. All six now arm in place and name the thing - \"Delete Michele\nStewart?\" - with Escape to back out.\n\nSeven submits had no pending state. SubmitButton gained a formAction prop,\nwhich is the only reason they were hand-rolled to begin with. Log out keeps its\nraw button; it navigates away.\n\nAnd the primary fill was written ten different ways - eleven at text-xs, eight\nat text-sm, four at text-[12px], seven more shapes once or twice each. Nothing\nwas broken by it, but there was no answer to how big a primary button is, so\nevery new one was measured against whatever was nearby. buttonClass() is the\nanswer across 28 files; zero hand-rolled accent fills remain.\n\nVerified in the browser: the confirm arms with the recipient's name, the\nconfirm control is red, Escape disarms and restores the original."
+    },
+    {
+      "sha": "71ef9810256cb5ee2211b88c956cfb1e3c7067cd",
+      "shortSha": "71ef981",
+      "author": "Dan Curis",
+      "date": "2026-08-11T15:48:33-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "d68406f8a7d7ec6a0847de4922db1eefb2c2c880",
+      "shortSha": "d68406f",
+      "author": "Dan Curis",
+      "date": "2026-08-11T15:48:32-04:00",
+      "subject": "Decide once what may be rewritten, and confirm the saves that work",
+      "body": "Two reports, and both turned out to be the app knowing something and not\nsaying it.\n\n\"How do I edit a mail I already sent\" had three answers depending on the page.\nThe contact page refused anything but a draft. The role page's textarea saved\nstraight through with no check whatsoever, so history was quietly editable\nthere. And \"Mark as sent\" wrote status \"sent\" directly, which CLAUDE.md\nreserves for the send route after Gmail returns an id - so a note posted from\nProton was recorded as though the app had proof.\n\n`canEditCorrespondence` follows the authority the statuses actually carry. A\n`sent` row has a Gmail id: the stored copy IS the message, so it is locked, the\ntextarea is read-only and it says why. A `sent_externally` row is Dan's word\nthat he sent it from Proton, where he may have changed a line first - the copy\nhere is a transcription with no independent authority, so correcting it makes\nthe record more accurate rather than less. That one is editable on purpose,\nwhich is the thing he was actually asking for. A Gmail id locks a row whatever\nits status claims. \"Mark as sent\" now writes sent_externally and reads \"I sent\nthis myself\".\n\nVerified against his real an airline thread: the Proton note stays editable, the\nthree Gmail-sent ones are read-only with the reason.\n\nThe contact save was never broken. His edit to a recruiter's title and\nphone is in the database; the form simply never said so, which is\nindistinguishable from a dead button. The button is the status now - \"Save\nchanges\" while the boxes differ from the server, \"Saved\" once they match. It\nalso had a real silent refusal: an empty name made the action return early, so\nclearing it and pressing Save genuinely did nothing. Disabled, with the reason."
+    },
+    {
+      "sha": "a15c300868d4843c62892dc3be4f8b192120f176",
+      "shortSha": "a15c300",
+      "author": "Dan Curis",
+      "date": "2026-08-11T15:00:46-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "7879f9ec782ec676d59ad1f616ee6d5233e37f8d",
+      "shortSha": "7879f9e",
+      "author": "Dan Curis",
+      "date": "2026-08-11T15:00:46-04:00",
+      "subject": "Give Track a role the same surface as the other two",
+      "body": "It was bare markup on the page background while Needs you and the Inbox sat on\npanels, so the way roles enter the app read as chrome rather than as one of the\npage's three things. Same `.panel`, same width, aligned left with Needs you.\n\nThe home page is three cards now: what needs you, what came in, and how a role\ngets in.\n\nThat immediately exposed a nested card - JobSearchBox carried its own `.panel`,\nwhich was invisible against the page background and became a white box inside a\nwhite box the moment the parent had a surface. It uses the recessed\n`--surface-2` fill instead, which is the right relationship for something\ninside a card.\n\nChecked in both themes, since the panel colour is a token and a literal would\nonly have failed in dark: three panels, no nesting, #fff light and #121418 dark."
+    },
+    {
+      "sha": "4a50490785d2268a4d829466caa15fe84303cddf",
+      "shortSha": "4a50490",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:41:48-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "c297429b41076665a188f997468853f41cc7877c",
+      "shortSha": "c297429",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:41:48-04:00",
+      "subject": "Make the Inbox row say which control is the point",
+      "body": "Five controls in one line, all about the same size, and the loudest of them\ncreated a job record. Dan called it: the button was in a weird spot, then it\nwas too small, then the whole row looked wack.\n\nIt is two tiers now. Filing is the only action that takes a message out of the\nInbox, so it gets its own line and the only accent button on the row - 152x36\nand flush to the right edge, where it was previously a 60px afterthought. The\nquiet tier underneath carries enrichment and dismissal, with \"Not relevant\"\nfurthest from the thing you came to do.\n\nLabels name what they file to. \"File it\" said nothing about which of the two\nthings you had just chosen, so it is \"File to this company\" against \"File to\nthis role\" across the toggle. \"Track this role\" became a plain link reading\n\"Track it as a new role\", offered only when a role was actually detected.\n\n\"Add as contact\" was doing more than it said. It redirected to the new contact's\npage, abandoning the Inbox with the message still unfiled - the one thing the\nrow exists to resolve. Adding somebody is enrichment, not navigation, so it\nstays put, and a sender already in the book renders as a link to them rather\nthan offering to add them twice. Erin a contact and Kimberly Baker are in, so the\na retailer's row proves it.\n\nAlso on the pipeline: a second role at the same employer put its title in the\nCOMPANY column, so Marriott's \"On-Site Digital Products\" started where\n\"Marriott International\" started instead of under the first role's title. Chase\nand Coca-Cola read the same way. The company column is rendered for siblings\nnow, just empty - an omitted column collapses and everything after it slides\nleft. Verified at 1280: company at 89, both titles at 429. Siblings also\ndropped their salary entirely, which hid a real $182,100-$305,000 range on the\nsecond Marriott role."
+    },
+    {
+      "sha": "98b5722df5e8f709cf5da85c8676a3f748d605e7",
+      "shortSha": "98b5722",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:28:02-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "672085db6e5b306af02947e381d603d61a816aef",
+      "shortSha": "672085d",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:28:01-04:00",
+      "subject": "Stop the Inbox assuming every message is a job",
+      "body": "Dan flagged the placement of \"Track this role\" and, in passing, the thing that\nactually mattered: the message in his Inbox is a networking coffee with a VP at\na retailer's, and there is no role behind it.\n\nThe button would have created one. `createApplicationFromMail` fell back to\n`mail.subject.slice(0, 120)` for the job title, so clicking it would have put a\nrole called \"Fw: Re: Finding Time\" at a retailer's into the live pipeline at\nLIVE_POSTING_FOUND and redirected him into it. Seven messages in the mailbox\nhave a detected company and no detected role, which is the exact shape company\nfiling exists for.\n\nSo: the action refuses without a detected role, the button is only rendered\nwhen there is one, and FileMailControl stops defaulting its toggle to \"role\" on\na message that has an employer and no job - which was asking him to pick a job\nthat does not exist.\n\nThe layout request is the easy half. Dismiss sits left, everything\nconstructive right, primary last, verified at 1100px: \"Not relevant\" at 33 and\nthe filing actions at 978 and beyond."
+    },
+    {
+      "sha": "cae0be21d307c1b982727189fff9090e6f62b239",
+      "shortSha": "cae0be2",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:23:22-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "6e2417a8773928a8bae4d383573e3d6cdbdb1d75",
+      "shortSha": "6e2417a",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:23:21-04:00",
+      "subject": "Name who you are writing to, and put the recruiter first",
+      "body": "\"Write to them\" on the AT&T role opened a hiring contact, who is vacating the job,\ninstead of a recruiter, who is the recruiter. It took `contacts[0]` under\ncreatedAt desc, and both were created the same day, so it was not a choice at\nall - the tie broke arbitrarily.\n\nSorting the recruiter first fixes this instance: a cadence follow-up asks where\nthe process stands, and that is the recruiter's to answer on every role here -\nMichele at AT&T, Brian a search consultant at a search firm, Josephine at United, Marcelo at\na hotel group.\n\nBut the ordering is the smaller half. The real defect was the label. An app\ndeciding between a hiring manager and a recruiter will be wrong regularly, and\n\"them\" made it wrong invisibly - the mistake only surfaced when the composer\nopened on the wrong person. Every contact is named now, capped at three, each\ncarrying their role on hover: \"Write to a recruiter or a hiring contact\". A\nnamed link that guesses wrong costs nothing, because you can see it first.\n\n`recruiterFirst` is pure and covers the five real shapes in his pipeline plus\nthe no-recruiter case, where it leaves the order alone."
+    },
+    {
+      "sha": "c99e0d191b991effeb06c23b9346a061518fcdc7",
+      "shortSha": "c99e0d1",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:01:59-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "e1517b87bc7c8b2205f1a0da97596188f14bc426",
+      "shortSha": "e1517b8",
+      "author": "Dan Curis",
+      "date": "2026-08-11T14:01:59-04:00",
+      "subject": "Put the way out of the plain editor where the eye already is",
+      "body": "\"When I hit expand its that large window thats it.\" Expand turns the draft into\na full-screen overlay with a 60vh textarea, and every control - Save edits,\nOpen in composer, refine - sits below it. The composer link was there; it was\n741px down a 342px viewport, reachable by scrolling and invisible in practice.\n\nIt is in the expanded header now, beside Done. That bar is the only thing on\nscreen when the overlay opens, so the way from a plain textarea into the real\neditor is the second thing you see rather than something you scroll for.\n\nSame fault as ApplicationPicker: a control that opens in flow puts its own\naffordances off-screen. The rule in CLAUDE.md covers closing; this is the same\nidea one step further, that the actions have to be reachable too.\n\nAlso swept the em-dashes. Dan's standing preference is that they never appear\nand sixteen had accumulated across eight files - picker separators, role\nlabels, meeting dates, the privacy page. The audit checks rendered markup for\nthem now, comments exempted, so the sweep does not have to be repeated."
+    },
+    {
+      "sha": "769e1c9433113346cc280a51e43d5ee46e963166",
+      "shortSha": "769e1c9",
+      "author": "Dan Curis",
+      "date": "2026-08-11T13:56:19-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "720ec408763ee9ecdc6748365c0052c8b3b1018a",
+      "shortSha": "720ec40",
+      "author": "Dan Curis",
+      "date": "2026-08-11T13:56:18-04:00",
+      "subject": "Route the role page's note-writing to the composer that works",
+      "body": "Dan drafted a check-in to Brian a search consultant from the an airline role and found no\nsignature control and no rich editor. He was in \"Or write your own\" on the role\npage: a bare textarea with no formatting, no signature, no attachments and no\nClaude. CLAUDE.md already says people-work happens on the contact page and not\nto grow a second correspondence UI on the role. This is that second UI; it\npredates the rule.\n\nThe note was also stranded, which is the part that had no workaround.\n`addManualCorrespondence` never set `contactId`, and the contact page opens a\ndraft via `?edit=`, whose query requires one. A note written on the role could\nnot be reopened anywhere capable of finishing it. It resolves the recipient\nagainst that role's own contacts now - by name, and scoped to the role, so one\nBrian cannot resolve to another - and his existing draft was linked by hand so\nit opens today.\n\n\"Or write your own\" is a link rather than a form, and draft rows carry\n\"Open in composer\". Nothing was gained by rebuilding a worse editor next to the\ngood one. The plain textarea on an existing draft stays: fixing a typo without\nleaving the role is worth one control, it just cannot be the only way out.\n\nVerified his actual draft: it loads into the composer with the signature\nattached, exactly one copy, and the role page offers both routes."
+    },
+    {
+      "sha": "7e8715ada6bc0d2c49299649c4c7c762d1c1d59d",
+      "shortSha": "7e8715a",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:55:37-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "1c22d60aa5f39e0417e1e33f34d73b26fc95537f",
+      "shortSha": "1c22d60",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:55:37-04:00",
+      "subject": "Fix the composer crash the signature change shipped this morning",
+      "body": "Dan clicked \"Write to them\" from an airline and got \"This page couldn't load\".\nEvery contact page with the composer on it was broken, and had been since this\nmorning's signature commit.\n\nThe `html` state initialiser reads `signaturePreference`, which was declared\nthirty-five lines below it. A `const` is not hoisted, so the read hit the\ntemporal dead zone and the component threw\n\"Cannot access 'signaturePreference' before initialization\" on every render.\nIt typechecks, it builds, and it fails only when the component actually runs -\nwhich is why a passing build and a test of the pure helpers proved nothing. I\nverified the signature logic and never opened the page.\n\nThe same line held a second fault: it read localStorage during render. The\nserver has no storage and must assume the default, so the two renders would\nhave disagreed even once the ordering was fixed. It is a `useSyncExternalStore`\nnow, with `true` as the server snapshot, and the stored preference is applied\non the pass after hydration by adjusting during render - not in an effect,\nwhich is a lint error here for exactly this reason.\n\nVerified in the browser rather than by reasoning about it: the page loads, the\nsignature is in the editor from first paint, unticking removes it, reticking\nrestores exactly one, and a reload with the preference off comes up unticked\nwith an empty editor and nothing left behind."
+    },
+    {
+      "sha": "68bf51416776d9e2465e6575c88f0445f268951d",
+      "shortSha": "68bf514",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:47:38-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "71c57033b042510c041079f9a5dff317dc1e9a16",
+      "shortSha": "71c5703",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:47:38-04:00",
+      "subject": "Label the paste box, which had a label all along",
+      "body": "Dan asked whether the tracker needs a header saying what it is. It has one -\n\"Paste a LinkedIn job link\", with two sentences explaining that the paste also\nevaluates the role and drafts both documents - and `compact` suppressed the\nwhole block. Compact is the mode Today uses, so the only surface anyone types\ninto showed a bare input and a button reading \"Track it\".\n\nThat hid the part worth knowing. Pasting here is not the same as opening the\nposting in a tab: it reads it, judges the fit, and writes the resume and cover\nletter unless the verdict is a pass. Nothing on screen said so.\n\nCompact now renders the same two sentences at a smaller size rather than a\nshorter rewording, because two versions of one explanation drift apart."
+    },
+    {
+      "sha": "5a22fbd8c1f30ac377f1f713a2a4ceea7138fb26",
+      "shortSha": "5a22fbd",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:44:03-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "deac8fce940ca3d0aa871df57b30efffe71f2554",
+      "shortSha": "deac8fc",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:44:03-04:00",
+      "subject": "Say when to follow up, instead of waiting to be asked",
+      "body": "Dan asked yesterday whether to chase a search firm about an airline and we agreed not\nyet. This morning he asked whether the UI should indicate that somehow. Two\nthings made the answer bigger than a badge.\n\nThe conversation is not in the app - AskLog is empty, so the decision exists\nonly in a terminal transcript. And it had already expired: an airline crossed from\nsix days quiet to seven overnight, which under the app's own cadence is the\ndifference between waiting and checking in. A remembered answer to a question\nabout elapsed time is wrong by morning.\n\nThe cadence existed the whole time as prose inside the Ask prompt, reachable\nonly by typing a question about one role. It is a pure function now, read by\nthe role page, the Today queue and that prompt - which interpolates the\nconstants rather than restating them, so the advice and the line on the page\ncannot disagree about what day 10 means.\n\nThe hard part was not the day count. The first version asserted four replies\nowed and was wrong about all four: Brian did write last on the an airline thread,\nto thank Dan for the resume, and a hotel group's last word was \"we will be in\ntouch soon\". A category tells you the kind of message, not whether anything in\nit asked a question. Mail sorts three ways now - a message that asks something,\none that merely proves the thread is alive, and noise - which matters more than\nit sounds, because 17 of the 19 roles with any mail have a robot as their most\nrecent sender. American Express needed two passes: careers@recruitment.\namericanexpress.com defeats any no-reply test, and even once downgraded it left\nthe role reading \"a short check-in is fine\" with nobody to check in with.\n\nDeciding to wait now writes a dated follow-up, which is what makes \"he decided\nthere is nothing to do\" different from \"there is nothing to do\". That only\nworks because Today stopped counting commitments that are days away: snoozing\nused to convert an urgent row into a calm row that still counted, which is a\nsnooze that silences nobody.\n\n46 pure-function cases cover the boundaries, the branch precedence, and every\nsender shape in his real mailbox. Verified end to end in the browser, including\na snooze round trip, and the test row it wrote was removed afterwards.\n\nThe audit gets a fix on the way past: it read comments as code and reported the\nnew component for naming --flame in the comment warning against it."
+    },
+    {
+      "sha": "f0a1c7a7d309a0934a089567d360262ad17b00f7",
+      "shortSha": "f0a1c7a",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:20:13-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "bb97a79b807e8082909f32d9ddae845facf1414c",
+      "shortSha": "bb97a79",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:20:12-04:00",
+      "subject": "One definition of filed, because two of the three were wrong",
+      "body": "The Today page said a message needed filing and the Inbox it linked to said\nnothing did. Both were reading the same row: Dan's note to Brian Silver, filed\nto TransUnion the day before. The Inbox knew that counted; Today and Pipeline\nwere still matching on applicationId alone, so a message filed to an employer\nstayed in their counts permanently. The only way to clear the badge was to file\nthe message somewhere it did not belong.\n\nFiling to a company exists precisely because Brian's introduction belongs to\nTransUnion whether or not TransUnion ever posts a role. A count that disagrees\nwith the page behind it teaches him to stop trusting counts, which is the one\nthing the Today page cannot afford.\n\nThe query was written out three times and fixed in one of them. It is a single\nexported predicate now, so the next fix reaches every caller. Verified against\nthe database first (the Inbox already said zero) and then in the browser: the\nheadline went from two things to one and the Inbox card reads clean."
+    },
+    {
+      "sha": "2370a0af9dcdadba01752b51983173db5558cc36",
+      "shortSha": "2370a0a",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:05:07-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "638fae492261eb1481afaa93803ba2fc803dfb04",
+      "shortSha": "638fae4",
+      "author": "Dan Curis",
+      "date": "2026-08-11T12:05:07-04:00",
+      "subject": "The signature is in the editor, so the checkbox stops being a promise",
+      "body": "Dan's thank-you to Ted went out unsigned with the box ticked. The cause was a\nrule that reads sensibly and is wrong for one case: editing a draft switched\nthe signature off, on the reasoning that a draft already contains one. A\nFORWARDED draft does not. It carries a signature inside the quote and none of\nits own, so the note went out with his sign-off nowhere in the part he wrote.\n\nThe deeper fault is that the signature was appended at save and never shown.\nThe checkbox was a claim about what would happen later, so when it was wrong\nthere was nothing on screen to contradict it. It is real text in the editor\nnow, present from the first paint the way a mail client shows it, and what\ngoes out is what he can see.\n\nThe original design existed to stop two failure modes, and both are now the\ntoggle's job rather than avoided by not trying. A marked block plus\nstrip-from-the-marker-to-the-end covers them, verified on six cases: on, on\ntwice, off, switching the address label, off again, and a forward whose quoted\noriginal contains an unmarked signature of its own. Turning it off restores\nthe body byte for byte, including the quote.\n\nEditing a draft now asks whether it is signed instead of assuming, which the\nmarker makes answerable. On by default, remembered in localStorage, and the\ncomposer resets to a signed empty message after a save rather than an empty\none with the box ticked and nothing under it."
+    },
+    {
+      "sha": "f3569bd17be841ad4189e5f0850b189aeafcf653",
+      "shortSha": "f3569bd",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:47:29-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "29589797aeedb2b1801ea861624eebaa1620714d",
+      "shortSha": "2958979",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:47:29-04:00",
+      "subject": "Forward to anyone, including someone who is not a contact yet",
+      "body": "Two things Dan asked for, and the second is what makes the first useful.\n\nForwarding now offers \"Someone new...\", which takes a name, an email and a\ncompany. With an introduction that is the normal case rather than the\nexception: the person being thanked is often newer to the search than the\nperson who was written to, and requiring them to exist first means leaving the\nthread, making a contact, coming back and finding the message again.\n\nThe employer is recorded on the contact AND created as a Company row when it\nis new, so the person appears under an employer that exists rather than under\na name nothing else knows about. Matched case-insensitively, like mail filing,\nso a typed \"transunion\" joins the real TransUnion instead of forking it -\nverified: creating a contact at TransUnion left the company count unchanged.\nAn address already on file resolves to that contact rather than a second copy,\nsince duplicates are how a thread ends up split in two.\n\nAnd forwarding lands IN the draft. It used to leave one on somebody else's\npage and Dan on the page he started from, with the actual point of a forward\nstill to do on a screen he had to go and find: the note written on top is the\nonly part addressed to the new recipient. The action redirects to\n?edit=<draftId>, the page loads that draft, and the composer holds it on first\npaint - seeded from the prop rather than in an effect, so the empty box never\nrenders first."
+    },
+    {
+      "sha": "73e901fd3cf7fb4caef46a9634ceebd87697539b",
+      "shortSha": "73e901f",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:29:14-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "9e9bb58c2685e25bc95ee9430fbc24a6764a9a76",
+      "shortSha": "9e9bb58",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:29:14-04:00",
+      "subject": "Companies are reachable, and filing to one that has no posting works",
+      "body": "Dan filed a message to a company and nothing appeared to happen. It had\nworked: the row stayed in the inbox because \"filed\" was defined as\napplicationId being set, so a company-filed message still matched the to-file\nquery. A write that leaves the screen unchanged is the same as a broken\nbutton. Filed now means filed against either, the Filed list carries both, and\na company-filed row links to the company rather than to an application it does\nnot have.\n\nHe also asked the question the feature could not survive: what if the company\nhas no posting? The picker listed only employers with a live application,\nwhich excludes by definition the case this exists for - an introduction to\nsomebody at a company he has never applied to. It lists every company now, and\n\"A company not listed...\" creates one, matched case-insensitively first so\n\"transunion\" does not become a second TransUnion.\n\nAnd there was no way to reach a company at all except by opening one of its\npostings and clicking the name, which makes an employer with no posting\nunreachable. /companies now exists and is in the nav: 85 employers, the ones\nwith no roles tracked included, with their people and message counts.\n\nFiling is one control with a toggle rather than two forms side by side. They\nare one decision with two answers - filing to a company clears the role - and\ntwo forms implied you might do both.\n\nMail filed to a company links to a person. The sender match alone was not\nenough: half of what lands here is Dan's own sent mail synced back, so the\nsender is him and there is nobody to open. It falls back to the sole contact\nat that employer, and only when there is exactly one, since guessing between\ntwo people is worse than not linking."
+    },
+    {
+      "sha": "81f49dc96c77a88f004b52451a4654c3b571c473",
+      "shortSha": "81f49dc",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:15:04-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "db69673afef251dd9c485fe16735323304d83199",
+      "shortSha": "db69673",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:15:04-04:00",
+      "subject": "Forward a sent note, and file mail against a company with no role behind it",
+      "body": "Two gaps Dan hit within an hour of using the app for real.\n\nFORWARDING. Ted introduced him to Brian, Dan wrote to Brian, and Ted deserves\nthanking. Copying Ted would have been the lazy version and a worse one: it\nturns a one-to-one note into a three-way conversation, Brian answers more\ncarefully knowing the introducer is reading, and a cc is not a thank-you, it\nis evidence. Forward opens a draft on the other person with the original\nquoted and its attachments carried, because \"here is what I sent him\" without\nthe resume is not what was sent. It creates a draft rather than sending, since\nthe note on top is the entire point. A draft cannot be forwarded: that would\nshow someone a message its supposed recipient has never seen.\n\nCOMPANY FILING. A networking introduction has no application behind it. Brian\nis a person at TransUnion, not a job, so filing that mail under a role would\ninvent one and leaving it unfiled loses it. MailMessage takes a companyId, the\ninbox offers \"File to company\" beside the role picker, and the company page\ngrows a section for mail that belongs to the employer rather than to one of\nits roles - without somewhere to show it, filing would be the same as losing.\n\nFiling to a role now records the company too, through one helper rather than\nat each of the three call sites that set applicationId. Any one of them that\nforgot would leave a message the company page cannot see."
+    },
+    {
+      "sha": "047278b84031bf68c925a4d82c6f3f57c091f7af",
+      "shortSha": "047278b",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:02:39-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "a18802565b85ffd561a496ce400865f3efc5d112",
+      "shortSha": "a188025",
+      "author": "Dan Curis",
+      "date": "2026-08-11T11:02:39-04:00",
+      "subject": "Cc, Bcc, and a copy to yourself before it goes to a stranger",
+      "body": "Dan is drafting a note to a TransUnion executive and wanted to copy people and\ncheck the message first. Both are on the draft row, where the send decision is\nactually made, so an existing draft gets them without being rewritten.\n\nCc and Bcc are typed or picked from a datalist of every contact plus his own\naddresses. Deliberately free text rather than contact ids: a cc is often an\nassistant who is not a contact and never will be, and forcing a Contact row to\ncopy someone is friction on the one path where friction costs a relationship.\nThey are stored on the draft, so what he decided while writing survives until\nhe sends, which can be days.\n\nEvery address is validated at send time and one bad entry stops the whole\nsend. Gmail will accept a header containing a malformed address and simply not\ndeliver to it, which is the worst available outcome: the message goes, the app\nreports success, and neither Dan nor the person he meant to copy ever knows.\n\n\"Send me a copy\" sends the assembled message - same subject, body, formatting\nand attachments, same code path - to one of his own addresses. Two properties\nmake it safe. The destination is checked against his profile and the connected\nmailbox rather than taken from the request, so it cannot misfire into the real\nrecipient; verified by trying to test-send to Brian and being refused. And it\nreturns before the draft is marked sent, so a test leaves a draft a draft -\nthis route is the only thing allowed to claim something was sent, and a test\nwas not.\n\nThe Bcc header is asserted on the assembled message rather than trusted:\ngetting it wrong exposes an address that was meant to be hidden."
+    },
+    {
+      "sha": "2ad61d8fafde4acaf731f71558d2f6fa15baf2f4",
+      "shortSha": "2ad61d8",
+      "author": "Dan Curis",
+      "date": "2026-08-11T10:04:59-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "231b736c145b269991222f54aeb09aab106fa3bf",
+      "shortSha": "231b736",
+      "author": "Dan Curis",
+      "date": "2026-08-11T10:04:58-04:00",
+      "subject": "Stop the app writing its own letterhead, and refuse to send without a subject",
+      "body": "Dan sent the first email out of this app and both faults were mine.\n\nTHE SUBJECT. The send route fell back to \"Note to ${recipientName}\" when the\nsubject box was empty, and that is what a TransUnion executive received as the\nsubject line of a networking introduction. \"Company - Role\" is a defensible\ndefault for an application; an internal-sounding label for a person is not.\nThe route refuses to send with no subject now. It is the only code path\nallowed to claim something was sent, so it is the right place to refuse to\nsend something wrong.\n\nTHE PLACEHOLDERS. The master resume carried \"Southport, CT · [phone] ·\n[email] · [LinkedIn]\" as its contact line, because buildMasterResume asked the\nmodel to write the header. No other document here does that: every tailored\nresume gets its letterhead from buildContactBlock, from his actual profile.\nAsked for a contact line, a model writes brackets. The master and the\nintroduction letter both take the real header now, the model starts at\nEXECUTIVE PROFILE, and anything it writes above that is stripped. The letter\nhad a hardcoded address string, which is the same fault wearing different\nclothes - a second copy of his details that goes stale in silence.\n\nfileGeneralDocument refuses to file a document containing a bracket\nplaceholder at all. These are the two documents with no posting behind them\nand no review step in front, sent by hand to people, so the check belongs in\ncode and not in a prompt.\n\nAlso the name sat 2pt above the contact line, which at 17pt reads as touching.\n140 twips in docx, 7pt in the PDF."
+    },
+    {
+      "sha": "f993373cad2c0effbc003e39c09fa81bfc090833",
+      "shortSha": "f993373",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:49:31-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "871995c9a3121272ab68bd88ab9567f3d3e9a30d",
+      "shortSha": "871995c",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:49:30-04:00",
+      "subject": "Open the master letter on who he is, and attach both to a contact in one click",
+      "body": "Two things from Dan, plus the \"---\" that started it.\n\nThe horizontal rules were the model writing markdown out of habit into a\nformat that has no rule for them, so they fell through to \"paragraph\" and\nrendered as three literal hyphens with paragraph spacing. Dropped in the\nparser rather than at one call site, so an imported or adopted document gets\nthe same treatment, and the builder is told not to write them. Worth being\nstraight about the rest of it though: removing five lines did not take the\nmaster off page three. It is 1,595 words and 31 bullets, and the rendered PDF\nis three pages - counted from the PDF's own page objects rather than estimated\nfrom word count, which has been wrong here in both directions. Three pages is\nwhat \"deep, highlight all of my experience\" produces, and it is right for a\nmaster.\n\nThe letter now opens where Dan said it should: a seasoned executive with deep\nFortune 100 experience, naming Delta and Charter, and the agency years at\ndentsu McGarryBowen, VML and Ogilvy. Those were being left out entirely, and\nthey are the reason he can sit with a CMO and a CTO in the same meeting.\n\nAnd both documents attach to any contact in one click. This needed no change\nto the send route at all: it already resolves attachments by Drive file id,\nand that is exactly what a general document is. The composer offers the PDF,\nsince that is what a stranger opens without thinking and the Word copy is for\nediting rather than sending.\n\nBrian Silver at TransUnion added as a contact with the introduction from Ted\nrecorded, since that call is today."
+    },
+    {
+      "sha": "3f9245f1b3264e2ed2f1ec360a63b7557544923e",
+      "shortSha": "3f9245f",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:42:07-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "2baa9413e4090e08249dae3eb51df3c45e72ee45",
+      "shortSha": "2baa941",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:42:07-04:00",
+      "subject": "Put the send-anywhere documents in the UI, with the folder they live in",
+      "body": "Dan asked where they were and could he get at them from the app. Fair: I told\nhim they were \"at the top of your Jobs folder\" and handed over nothing, which\nis the same fault as a count that links nowhere.\n\nWorse, he could not find the folder at all, and the reason is structural\nrather than a mistake. The Drive connection is an address.com and the mailbox\nis an addressgmail.com - two accounts on purpose, because the archive already\nlived in the Workspace one. Opened from the other Google login the Jobs folder\nsimply is not there. Both Profile and Settings now link straight to it and say\nwhich account it belongs to, so the next person to wonder is not left guessing.\n\nThe documents themselves are a small model of their own rather than\nDocuments-with-a-null-application: every list read here filters through the\napplication relation, so making that nullable would mean auditing all of them\nto keep a general resume out of a role's history. GeneralDocument holds the\ncontent and the two Drive ids, upserted per kind, and rebuilding updates the\nsame files so a link already sent keeps working - verified by rebuilding the\nletter and getting the same two ids back.\n\nProfile now shows both with word counts, Word and PDF links and a Rebuild, and\nthe rebuild refuses anything under 600 characters. A short generation\noverwriting the one resume he hands out by hand is exactly the cover-letter\nloss again, on the document with the least margin for it."
+    },
+    {
+      "sha": "b44be4e603d3be4767bdf57b70dfd64e9a4a22a5",
+      "shortSha": "b44be4e",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:35:49-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "265104626c31d1537a19dc1084e31825f8a71216",
+      "shortSha": "2651046",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:35:48-04:00",
+      "subject": "A master resume and an introduction letter, and the house language rules enforced",
+      "body": "Dan has a networking call today and needed something to send when there is no\nrole to tailor to. Two documents now sit at the top of the Jobs folder rather\nthan inside a company folder, because they belong to no application:\n\nDan_Curis_Resume_Master - merged from all four lane variants rather than cut\nfrom one. A tailored resume selects sixteen bullets for a posting; the master\nis the opposite document, so it keeps every distinct fact and lands at 1,600\nwords, 31 bullets, about three pages. That is correct for what it is: the full\nrecord, and the thing every tailored version is cut from. Also written back to\nProfile.masterResume.\n\nDan_Curis_Introduction_General - the \"this is me\" letter, three paragraphs,\nno employer named and deliberately no greeting, since he adds one for the\nperson he has just spoken to. The first attempt opened \"Dear Hiring Team\" and\nsigned off twice, which is what happens when a letter builder written for\napplications is pointed at something that is not one.\n\nuploadGeneralDocument files both at the archive root and updates in place, so\nthe links stay stable.\n\nAnd the language rules are enforced instead of requested. \"No em-dashes\" and\n\"US spelling\" have been in the prompts from the start; toUSSpelling ran in\nexactly one route and nothing removed a literal em-dash anywhere.\nenforceHouseLanguage now runs on generation and on refine, the three rules are\nstated in standingPreferences, and audit.ts checks documents for both. It\nimmediately found four cover letters carrying 31 em-dashes between them, all\nadopted from Drive and written before Counsel existed; normalised, no words\nchanged.\n\nNot enforced mechanically: sentences ending in a preposition. That needs\njudgement about the whole clause and a mechanical fix would produce worse\nsentences than it repaired, so it is a prompt rule and a review finding.\n\nThe audit check needed tightening twice before it earned its place - a\n\"-ising\" suffix rule flagged \"raising\", and an \"analys\" stem flagged \"analyst\".\nAn audit that cries wolf gets ignored."
+    },
+    {
+      "sha": "a41d9d729528e8ed819c8c76cd79a40699186bd1",
+      "shortSha": "a41d9d7",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:21:41-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "c520f5865c27235b21a5bcab3dc41fef588c932c",
+      "shortSha": "c520f58",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:21:41-04:00",
+      "subject": "Act on Gemini's UI critique: four of five were right",
+      "body": "Dan ran the app past Gemini. Taking each in turn, because one was wrong and\nsaying so matters as much as fixing the rest.\n\nWRONG: that \"the date doesn't auto-update\" contradicts the app moving a status\nfrom mail. Those are different fields. Nothing writes lastCheckedAt - checked\nacross the whole source - so the copy is accurate. Gemini conflated the date\nwith the status, which the app does update automatically and says so in the\nactivity log.\n\nRIGHT, and the worst of them: \"Apply\" rendered on roles already at\nINTERVIEWING. FindPostingButton never received the status; it showed Apply\nwhenever a posting link existed. It now takes the status, offers Apply only\nbefore an application exists and \"Open the posting\" after, and the\ndownload-two-documents side effect fires only in the apply case - rereading a\nposting before an interview should not dump files into Downloads. Four labels\nacross two components collapsed to two clear ones: the posting button owns\n\"the posting\", LinkedIn search says LinkedIn.\n\nRIGHT: three model pickers on one page, the same five names rendered three\ntimes. Fixed in the shared component so all nine call sites change together\nand the next one cannot reintroduce it. But Dan pushed back on the first\nversion, and he was right: he uses this to send one resume to Gemini, so a\ncollapsed control labelled \"model\" would be a loss. It names the model that\nwill actually run - \"Sonnet 5\" until overridden, the override after - and\nexpands on click. Page went from three exposed pickers to zero.\n\nRIGHT, and it was my own inconsistency from this morning: Drive authentication\nsat on Profile while the folder it writes to sat on Settings. Moving only\nDrive would have left the same split, so the mailbox went too - connecting an\naccount is wiring, and Profile is what the app knows about Dan. Both sections\nnow live under Accounts in Settings and the OAuth callback returns there.\nProfile lost three connection queries it no longer feeds.\n\nFifth, on document buttons, is a real point I have not fixed yet: the repeated\n.docx/.pdf/Restore controls carry no accessible name distinguishing one\nversion from another."
+    },
+    {
+      "sha": "d2dc045536599a4c31af0416701310957d2f7f77",
+      "shortSha": "d2dc045",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:09:32-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "84782fe119a1103ae4cd2c74f12c93c1f0f8cfe4",
+      "shortSha": "84782fe",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:09:32-04:00",
+      "subject": "The never-consider list is Dan's, and it was quietly enforcing his non-compete",
+      "body": "He asked long ago that his non-compete not factor into evaluating roles. It\nwas, permanently and invisibly. \"Southwest Airlines (non-compete competitor)\"\nsat on the ruled-out list, and that list is handed to every model call as \"do\nnot recommend swinging at these\" - so the non-compete was filtering roles on\nevery evaluation, months after he said to stop. Removed. That entry existed\nfor no other reason, so leaving the company on the list would have kept the\nfilter and only hidden the justification.\n\nHis second point reframes what the list is for: it should be employers he\nwould never consider, and he alone should decide what is on it. It had drifted\ninto a graveyard for roles that were passed on or closed - REI, Kelly\nServices, Starz and Unilever are all PASSED or CLOSED in the pipeline anyway,\nand their presence here permanently suppresses any future role at those\ncompanies. A role that did not work out is a fact about the role, not the\nemployer.\n\nSo the prompt framing says that outright now: a permanent personal exclusion,\nnot a record of outcomes, do not infer a reason for an entry, do not extend it\nto related companies, and never add to it. The Profile control is relabelled\n\"Never consider\" with help text saying the same, since a list called \"ruled\nout\" invites exactly the drift that happened.\n\nThe remaining sixteen are his call. Several are role-level notes rather than\nemployers - \"Mars (Director-level step-down)\" suppresses Mars entirely though\na VP role there would be fine - but pruning those is his judgement, not mine."
+    },
+    {
+      "sha": "6d4adba97b292dd845bd5a303287654be491d945",
+      "shortSha": "6d4adba",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:02:39-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "1a873ad7ad5ec1aec6d30d79a2d14f666ad69643",
+      "shortSha": "1a873ad",
+      "author": "Dan Curis",
+      "date": "2026-08-11T09:02:38-04:00",
+      "subject": "The console crawls the app, and Settings holds the wiring",
+      "body": "Two corrections from Dan, both of which I had backwards.\n\nHe asked whether the console could go beyond a page he gave it. I read that as\na security worry and narrowed it. He meant it as a feature request. So it\ncrawls now: give it a starting path and it follows the links the app itself\nrenders, breadth first, up to twelve pages, with the whole context capped at\n90k characters and each page's share shrinking as more arrive. One page can\nanswer \"is this panel confusing\"; only several can answer \"is this app\ncoherent\", which is the question worth asking.\n\nBounded by what a person could click. Only <a> hrefs are followed - matching\nevery href attribute swept up the stylesheet, the HMR chunk, the manifest and\ntwo favicons, and the first six-page crawl came back having read one real page\nand five assets. Assets, /_next, /api and the sign-out link are all excluded;\nfollowing logout would have signed him out mid-prompt.\n\nAnd he was right that the calendar URL and the Drive folder id do not belong on\nProfile. Profile holds what the app knows about him; those are wiring, like the\nmodel. Moved, not copied, with the same formData.has() guard - a field absent\nfrom a form reads as empty, so without it, saving his profile would have\nblanked his calendar subscription and sent every future document to a brand new\nDrive folder. parseDriveFolderId moved to a shared module rather than being\ncopied, and the settings form now refuses a paste that does not parse instead\nof quietly clearing the folder Counsel has been filing into.\n\nEach of the four fields now has exactly one editor, verified by checking which\npage renders which input."
+    },
+    {
+      "sha": "2b01c1081084304646ae6ebcd1c367ebf996561d",
+      "shortSha": "2b01c10",
+      "author": "Dan Curis",
+      "date": "2026-08-11T08:52:37-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "b005bab26981abda73103b6cb9d6dafc5c35333f",
+      "shortSha": "b005bab",
+      "author": "Dan Curis",
+      "date": "2026-08-11T08:52:37-04:00",
+      "subject": "Block API paths in the console, and delete three queries nobody reads",
+      "body": "Dan asked whether giving the console a root path would let it go beyond that.\nIt would not - it fetches one page once, the model has no tools and cannot\nmake a request of its own, and the path is validated to a single leading slash\nso it cannot leave the origin. But \"a path\" is broader than \"a page\", and one\nGET handler here is not read-only: the Google OAuth callback upserts a\nconnection. It needs a valid code so a typed path could not really do\nanything, which is not a property worth relying on from a text box. /api is\nnow rejected outright - the console attaches pages, and an endpoint returns\nJSON that says nothing about the interface anyway.\n\nThe lint sweep then turned up something worth more than \"unused variable\".\nThree of those unused names were results of database queries inside the\nPromise.all on Today and Pipeline: every load of either page was fetching\ndeleted applications, recent job mail and a noise count, and discarding all\nthree. Residue from the route split, invisible because a wasted query looks\nexactly like a fast one.\n\nAlso removed, all dead since the pipeline table moved to its own route:\nrenderRow, renderCard, the archive grouping they fed, and six unused imports\nacross both pages. page.tsx is 787 lines to 726.\n\nVerified by diffing the rendered pages before and after: both are byte\nidentical, 80,327 and 172,877 bytes, same visible text, same role-link counts.\nNothing removed was reachable."
+    },
+    {
+      "sha": "3c9913db9b2c7f4b5837859e051802b7358fb6d4",
+      "shortSha": "3c9913d",
+      "author": "Dan Curis",
+      "date": "2026-08-11T08:34:32-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "5c346a0cbc3e1fc6ea275f83c673e7884b631406",
+      "shortSha": "5c346a0",
+      "author": "Dan Curis",
+      "date": "2026-08-11T08:34:32-04:00",
+      "subject": "A settings page with a console for asking a model about the app itself",
+      "body": "Every model surface here is grounded and narrow on purpose: the assistant sees\none role, Ask sees the search snapshot, the review sees a document. None of\nthem can see the app, which is why \"this panel has twenty-six controls and no\nstate\" was a diagnosis Dan had to drag out of me by getting confused first.\n\n/settings has a prompt box wired to any model, Claude or Gemini, with one\ncapability beyond a plain prompt: it can attach a real page from the app. The\nroute fetches it same-origin with the caller's own session, strips the scripts\nso the RSC payload cannot pass off unrendered props as content, and hands over\nthe visible text plus an inventory of every control in document order. Counting\nbuttons is exactly what a person will not do by hand.\n\nRead only, no tools, and the path is validated to a single leading slash - a\nconsole that will fetch any URL is an SSRF hole whether or not there is one\nuser. Runs are kept in ConsoleRun for the same reason AskLog exists: a critique\nworth having is worth finding again.\n\nAlso moved rather than copied: the default model control was on /profile, which\nholds the content that grounds the AI, not the machinery. Two editors over one\nfield is how a stale form silently reverts it. saveProfile now only writes\npreferredModel when the form actually carries it - without that guard, saving\nthe profile would have reset his model choice to the default every time, which\nis the same class of bug as a repair that rebuilds content from an empty\nstring.\n\nOn its first real run against the Coca-Cola role it found two things I had\nmissed: a zeroed \"Pay Range: 0 USD - 0 USD\" scrape artifact, which turns out to\naffect 3 job descriptions with 9 more carrying duplicate pay blocks, and the\nsplit-verdict UI shipped yesterday giving no cue which of two disagreeing\nverdicts is authoritative."
+    },
+    {
+      "sha": "cc9ec5a71690bd6cde0c6d8a2ba6850c7dd6786f",
+      "shortSha": "cc9ec5a",
+      "author": "Dan Curis",
+      "date": "2026-08-10T22:26:34-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "977f8331e44847f17ebf2af11c3b6305e814448f",
+      "shortSha": "977f833",
+      "author": "Dan Curis",
+      "date": "2026-08-10T22:26:33-04:00",
+      "subject": "Enforce the never-drop list in code, and put the narrative-only facts in the variants",
+      "body": "Dan: \"I think YOU should say this should be a global fix, I don't want to have\nto fix every single resume I generate.\" Correct, and two of the required\nproofs were still being dropped on every role.\n\nThe cause of one is the oldest lesson in CLAUDE.md. The PCI descoping, the\nprivacy work and the email and SMS portfolio existed ONLY in careerNarrative,\nand generation tailors from the VARIANT - so no prompt instruction could\nreliably surface them, the same way a variant missing LEGO produces a resume\nmissing LEGO. They are bullets in all four variants now, stated as scope with\nno figures and no outcomes, because none are recorded.\n\nChange and transformation management was already in every variant and named on\nthe never-drop list, and was still cut on three roles out of three. So the\nlist is now checked instead of asked for: MUST_INCLUDE tests the returned\nroles for eight required proofs and retries once naming what went missing,\nwith the instruction to merge rather than cut if the budget is tight. It does\nnot block the way a missing employer does - a resume light one proof is still\na resume, and the review catches the rest.\n\nThree roles went from 14/16 each to 15, 15 and 16 of 16, and the item that\nslips is now different each time rather than the same two every time."
+    },
+    {
+      "sha": "cdf71f6d7a39a63ce47971efe722b9af065459ed",
+      "shortSha": "cdf71f6",
+      "author": "Dan Curis",
+      "date": "2026-08-10T22:10:26-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "b502ce83158d42348473cee80679a855894cd4ec",
+      "shortSha": "b502ce8",
+      "author": "Dan Curis",
+      "date": "2026-08-10T22:10:26-04:00",
+      "subject": "Stop resumes silently dropping an employer, and stop selection re-dropping the same material",
+      "body": "Dan, on why every resume needs the same fixes: \"i am a 30+ year senior\nexecutive looking for a job in a market that is brutal, i want these resumes\nand cover letters to be the best and never omit the breth of what i did.\"\nThree faults were in the way.\n\nA WHOLE EMPLOYER GOING MISSING. Two identical requests for the Capital One\nrole: one returned Delta and Charter, the next returned Charter alone. Nine\nyears at Delta, gone, and the document would have saved and synced to Drive\nwithout complaint because a one-employer resume is structurally valid. It\nrecurs on roughly one generation in three and hit twice in a row once.\nmissingEmployers() now checks the output against the employers the base lists,\nretries up to three times naming what was dropped, and if it still comes back\nincomplete returns an error and saves nothing. A missing resume costs a click;\na resume missing a decade costs an application.\n\nSELECTION RE-DROPPING THE SAME MATERIAL. Across three roles, 10 of 17 review\nfindings were omissions of material the base already had - email and SMS gone\nfrom two of three, the marketing budget and org measures from two of three,\nplus the serviceability story, 24x7 operations, the Executive Readiness\nAccelerator and change management. All sixteen bullet slots were equal, so the\nmodel re-decided from scratch each time. standingPreferences now names the\nnever-drop material, with the rule that carries it: where the budget is tight,\nMERGE two facts into one bullet rather than cutting either. Breadth survives\nmerging and does not survive cutting.\n\nDUPLICATION I INTRODUCED. Vendor ownership was being claimed three times in\none draft and the agency years rendered both as a company block and under\nEarlier Experience. Both fixed by a say-each-thing-once rule; verified at 1 and\n2 mentions with no duplicate block.\n\nAlso raised max_tokens to 12,000, which was still set for a one-page resume.\n\nHonest state: the never-drop list took two roles from missing several items to\n13 and 14 of 16. It is a prompt, so it is a request - change management and the\nPCI/privacy proof still drop, and the review is what catches those."
+    },
+    {
+      "sha": "8f02c7d20fafed13332895400b301da9075844d0",
+      "shortSha": "8f02c7d",
+      "author": "Dan Curis",
+      "date": "2026-08-10T21:51:52-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "40263a01eccd8fd6ddd1cd04ffa8353613609efb",
+      "shortSha": "40263a0",
+      "author": "Dan Curis",
+      "date": "2026-08-10T21:51:52-04:00",
+      "subject": "Fixing one finding no longer throws away the rest",
+      "body": "Dan: \"fix is working but you have to run check it after each individual fix,\nit's odd.\" It was. Every refine cleared the whole findings list, so working\nthrough three findings cost three checks at about twenty-five seconds each,\nand the list vanished under him between them.\n\nA targeted single-finding fix rarely invalidates the other findings, so they\nnow stay and only the one just applied drops off. A bulk rewrite still clears\neverything, because everything moved.\n\nWhat it will not do is pretend the remainder is still verified: a line above\nthe list says a fix has landed since it was made, and an emptied list reads\n\"every finding has been fixed, none of it is verified yet\" rather than the\nclean bill of health that wording implied before."
+    },
+    {
+      "sha": "e860bc26667fe30170960d884d905cd6a93606db",
+      "shortSha": "e860bc2",
+      "author": "Dan Curis",
+      "date": "2026-08-10T21:37:56-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "a881254e51cce604bb74aab084c68970b7811474",
+      "shortSha": "a881254",
+      "author": "Dan Curis",
+      "date": "2026-08-10T21:37:56-04:00",
+      "subject": "The title guard was adding a title that was already there",
+      "body": "It compared the base's \"Vice President, Digital Marketing & eCommerce\" against\nthe model's \"VP, Digital Marketing & eCommerce\" as a plain substring, decided\nthe title was missing, and helpfully added it a second time - so the heading\nread \"Charter Communications | Vice President, Digital Marketing & eCommerce |\nVP, Digital Marketing & eCommerce | Cable and broadband operator\".\n\nMatching is normalised now: vice president and VP, senior and sr, & and and,\npunctuation and spacing folded away. Verified on three cases - abbreviated,\nspelled out, and genuinely absent - where only the last one repairs.\n\nWorth noting the shape of this, since it is the second time today. A guard\nwritten to catch a model omission introduced its own defect, because it\nassumed the model would phrase things exactly as the source does. A repair\nthat fires when it should not is not obviously safer than the bug it fixes."
+    },
+    {
+      "sha": "42d90baa7e355ada0dad57e82fc23a5f0fd63678",
+      "shortSha": "42d90ba",
+      "author": "Dan Curis",
+      "date": "2026-08-10T21:29:06-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "2994c5894f523dcbca42ffcd5cea768f8917e1ae",
+      "shortSha": "2994c58",
+      "author": "Dan Curis",
+      "date": "2026-08-10T21:29:05-04:00",
+      "subject": "A promotion reads as a diff: the scope line, and a title that cannot vanish",
+      "body": "Dan asked whether there was a more elegant way to show how his scope expanded\nfrom Director to Managing Director. There was, and building it turned up a\ndefect that had been shipping quietly.\n\nmarkdown-lite gains \"> Domain · Domain · Domain\": the remit under a title,\nsmaller and grey, directly above that title's bullets. Two titles with two\nbullet lists show that someone was promoted but not what changed; a sentence\nwould spend a bullet on org-chart mechanics. A scope line lets the reader do\nthe comparison - Strategy, Budget and Capability Delivery arrive, Email\nDeployment and Project Management go.\n\nThe shed is the point, and the narrative now says so. What Dan described is\nnot scope handed to him: as Director he ran project management and day-to-day\nemail deployment, began building the agile product delivery capability\nalongside the organisation it would replace, and deliberately transitioned the\nSalesforce architects into IT to stand up a COE. At the reorg he gave up the\nproject-management team and the email specialists and took on strategy and the\nbudget. Gaining strategy while shedding execution is the executive move and\nmust never be written as a reduction. Recorded with the exact claim protected:\nDelta's first MARKETING agile product delivery capability - Delta had agile in\nIT, so the qualifier is what makes it defensible.\n\nThe defect: a role returned with no subroles renders its bullets straight\nunder the employer line, so nine years as VP, Digital Marketing & eCommerce\ncame out as \"Charter Communications\" and a list of bullets, with the title\nnowhere on the page. The schema asks for it now, and asking is not a\nguarantee, so withTitle() repairs it deterministically from the base variant's\n\"### Title | Employer\" lines. It refuses when an employer has two titles,\nbecause the bullets could belong to either.\n\nSame rule as the cover-letter loss: when the model omitting something yields a\nsilently wrong document rather than an error, repair it in code."
+    },
+    {
+      "sha": "0249448144526156d8a7c6f323f3d2ed46f0fdeb",
+      "shortSha": "0249448",
+      "author": "Dan Curis",
+      "date": "2026-08-10T20:56:59-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "59de68b13a70970cc89d5f1afa4d5b22034da982",
+      "shortSha": "59de68b",
+      "author": "Dan Curis",
+      "date": "2026-08-10T20:56:59-04:00",
+      "subject": "The resume is two pages, and the rule was written in four places",
+      "body": "The single-page limit was deleting Dan's best evidence. Generation had to\nchoose between the Adobe replatform, the serviceability work measured by order\ncompletion, the #2 channel at 3M+ transactions, the org built from zero to 32\nand the 500-person SAFe transformation, and it dropped four of the five. The\ndocument ran to about 1.4 pages regardless, so the rule cost content and\nbought nothing.\n\nA two-page draft carried all of them plus the vendor ownership and change\nmanagement he supplied today, with no invented figures - and surfaced material\nthat had never survived a cut, including the Akamai lead-capture fallback that\nturned a downstream billing outage into a deferred conversion rather than a\ndark storefront.\n\nLength is replaced by a bar rather than removed, because two pages with no\nconstraint is how a resume fills with adjectives and this model manufactures\nan outcome whenever it is asked to add something. At most 16 bullets, each\ncarrying a verified figure or a named system, platform, scope or organisation;\nno bare fragments where a bullet belongs; page one holds the strongest\nmaterial.\n\nThe per-title cap scales with tenure. A flat five trimmed Charter - nine years\nand five hero stories - as hard as a six-month Managing Director title. Five\nnormally, seven for a tenure of five years or more.\n\nThe rule turned out to live in four places, and changing the Profile alone\nwould have left three contradicting it: standingPreferences twice, the\ngenerate-documents tool schema plus a hard PER_ROLE/TOTAL budget in code, and\nthe review prompt, which scores against it and was calling a two-page resume\nblocking. A preference duplicated into code is not a preference.\n\nAlso recorded, from Dan: he owned all technology and strategic vendor\nrelationships at Delta across BOTH roles with scope expanding on promotion,\nall technology vendors at Charter for the ATG and Adobe stack, and change and\ntransformation management at Delta. None of it was written down anywhere,\nwhich is why the review kept raising it. It is in all four variants and the\nnarrative now, stated as ownership with no figure and no outcome, because none\nis recorded."
+    },
+    {
+      "sha": "5c3b2ffe04cf1fbd15488bea424eac7b0a18445c",
+      "shortSha": "5c3b2ff",
+      "author": "Dan Curis",
+      "date": "2026-08-10T20:15:34-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "fbbc8ef4f7080d1b2b15684ca3c855aeb594aa10",
+      "shortSha": "fbbc8ef",
+      "author": "Dan Curis",
+      "date": "2026-08-10T20:15:34-04:00",
+      "subject": "Stop the fix pass inventing an outcome for every capability it adds",
+      "body": "Running the whole loop on the Coca-Cola CRM role answered the question it was\nbuilt for, in both directions. The fixes landed: the cover letter no longer\nclaims Atlanta is home when the property is sold, it names the domain gap\nplainly instead of hedging about vendor relationships, it states the June\nrestructuring and immediate availability, and it names what Coca-Cola actually\noperates. That is a letter worth sending against one that was not.\n\nAnd the same pass invented a claim. Told to add the Workfront and Aha! work it\nwrote \"to cut cycle time and get campaigns to market faster\" - the tools are\nhis, the outcome was measured by nobody. The resume did it too, attaching\n\"measured by marketing's contribution to revenue and conversion rate\" to a\nbullet that had no measure. Roughly one per run, and always the same reflex:\nasked to add a capability, justify it with a result.\n\n\"Do not invent new claims\" had been in that prompt from the start and was\nignored every time. Naming the exact pattern with the real failing sentence,\nand saying what to do instead - name the tool and stop - took three runs of the\nsame instruction from inventing to clean. Also added: a \"measured by\" clause\nmay only name a measure present in the source, and an instruction that cannot\nbe carried out without inventing should be carried out partially rather than\ncompletely and falsely.\n\nThe letter is saved with the invented clause struck and the base resume's own\nphrasing in its place, synced to Drive, with the previous version intact\nbehind it."
+    },
+    {
+      "sha": "a13e1ee5b9ec424c4807705ad4bf150be627c93d",
+      "shortSha": "a13e1ee",
+      "author": "Dan Curis",
+      "date": "2026-08-10T19:48:17-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "17f9592868a95e19cacbe546d4e6797d023321b6",
+      "shortSha": "17f9592",
+      "author": "Dan Curis",
+      "date": "2026-08-10T19:48:16-04:00",
+      "subject": "Keep Check reachable, and stop a save from closing the document",
+      "body": "Two faults, both mine from today, both showing up as \"Check it doesn't show\nagain\" after applying a fix and saving.\n\nThe status line said \"Rewritten, not checked since\" while the only button was\nSave changes. I had made Save, Fix and Check mutually exclusive, so the moment\nthere were unsaved edits the check disappeared - exactly when the line was\ntelling him to use it. A status that names an action has to leave that action\non screen, so Check now stays as a secondary control whenever the document has\nnot been checked.\n\nAnd the document itself was closing. `open={openDoc === type}` went on the\n<details> this morning so the URL could expand one; React re-syncs that\nattribute on re-render, so the router.refresh() after saving snapped shut a\ndocument opened by hand, taking the whole editor with it. It is\n`open={... || undefined}` now: forced open when the URL asks, and otherwise\nuncontrolled exactly as it was before the URL could open one."
+    },
+    {
+      "sha": "ea7de84aff34d40a33115bead82723539505edf6",
+      "shortSha": "ea7de84",
+      "author": "Dan Curis",
+      "date": "2026-08-10T19:34:03-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "25f6e99685a710013e0f6d3b8be63166adff0500",
+      "shortSha": "25f6e99",
+      "author": "Dan Curis",
+      "date": "2026-08-10T19:34:02-04:00",
+      "subject": "Rework the document panel into a state and one action",
+      "body": "Dan: \"I don't know how I am supposed to work with this at all.\" He was right,\nand the inventory was the diagnosis - roughly twenty-six controls on one\nexpanded document, most of them added today, each a patch for the confusion\nthe previous one caused. Four words for one operation: review, check, refine,\nfix. Two of those I had introduced to disambiguate the others.\n\nIt is now one status line and one action. The status answers what to do next\n(not checked / 3 to fix, 1 needs you / rewritten, not checked since / checked,\nnothing found) and the primary button is whatever that next step is: Save\nchanges when there are unsaved edits, otherwise Fix N, otherwise Check it.\nEverything occasional - the text itself, downloads, Drive, a manual\ninstruction, versions, delete - moved behind More. Five visible controls\ninstead of twenty-six, measured on the Coca-Cola cover letter.\n\nDeleted rather than added: the compare panel's review and its duplicate Fix\nbuttons are gone, so checking exists in exactly one place, and the two \"Review\nthe ...\" links I put in the top row this morning are gone with them. They were\na patch for the review being hard to find, and the document stating its own\nstatus solves that without two more buttons.\n\nAnd the part Dan asked for, which is a safety property rather than a nicety.\nHe has no figures beyond his verified metrics, so a finding like \"add a\nmeasure to this bullet\" cannot be carried out from the record - handing it to\na rewriter is asking a model to invent a number, which is the single worst\nthing this feature could do. Findings now carry needsHim and a specific\nquestion. Those are excluded from \"Fix N\" by the code rather than by asking\nthe model nicely; answering inserts the answer verbatim, and \"I don't have\nthat\" stops the impossible question being raised again.\n\nAlso: an empty review is now confirmed with a second pass before it is shown.\n\"Nothing found\" reads as a confident verdict and is the answer most likely to\nstop him looking - and a cover letter that three consecutive runs each found\nsix problems in, including a claim that Atlanta is home when it is not, came\nback clean once."
+    },
+    {
+      "sha": "5d34679717e92f2d4e534f1c87d4d919b4dc415d",
+      "shortSha": "5d34679",
+      "author": "Dan Curis",
+      "date": "2026-08-10T19:12:10Z",
+      "subject": "Version the icon URLs, so a corrected icon actually reaches the phone",
+      "body": "The 180px touch icon shipped broken, was fixed, deployed, and the phone went\non showing the old one after the home-screen icon was deleted and re-added.\niOS caches the touch icon per URL and keeps it well past the web clip that\npulled it, so a new file at the same path is never fetched.\n\nEvery icon URL now carries ?v=2, which also clears any copy held by the CDN.\nThe manifest icons carry it too, since iOS 17 reads those as well.\n\nBump the number whenever the artwork changes. Nothing else forces a refetch."
+    },
+    {
+      "sha": "782f8e0eded0771b6985de960f3c7f0b5d533440",
+      "shortSha": "782f8e0",
+      "author": "Dan Curis",
+      "date": "2026-08-10T18:56:40-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "5a6cb54fc592a535cf4edc24f8d4c2a5f4b2d6a8",
+      "shortSha": "5a6cb54",
+      "author": "Dan Curis",
+      "date": "2026-08-10T18:56:40-04:00",
+      "subject": "Only the fix you clicked says it is running",
+      "body": "Clicking one \"Fix this\" turned every button in the list into \"Fixing...\" at\nonce, which reads as having started all of them. Only the clicked one ever\nran: the handler passes that finding's text and nothing else issues a request.\nBut the label came from a single shared flag, so there was no way to tell\nwhich fix was being applied, or that the others were merely blocked.\n\nBoth panels now track WHICH control is running rather than that one is. The\nothers still disable, because two refines racing on the same document would\noverwrite each other, but a disabled button no longer claims to be working."
+    },
+    {
+      "sha": "76fac2a46ff8e57f6de28b2029d36c6562c3ae12",
+      "shortSha": "76fac2a",
+      "author": "Dan Curis",
+      "date": "2026-08-10T18:49:24-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "05ef8fa5b5721b353f85405228c01be43b99d415",
+      "shortSha": "05ef8fa",
+      "author": "Dan Curis",
+      "date": "2026-08-10T18:49:24-04:00",
+      "subject": "Put the review where it can be found, and make its findings act everywhere",
+      "body": "Dan ran the comparison, saw blocking findings, and asked how to apply them.\nThe answer was that he was in the wrong panel - which is a design fault, not a\nuser error. Two surfaces said \"review\", the one in the top action row could\nonly report, and the one that could actually fix anything was hidden behind a\ndisclosure triangle on a document. He used the one he could see.\n\nThat is the Ask-button lesson again, from this same file: he is the only user,\nso a control he cannot see does not exist. Three changes:\n\n- \"Review the resume\" and \"Review the cover letter\" now sit in the top row\n  beside Compare. They are links carrying ?doc=<type>&review=1, so they expand\n  that document and start its review there. The URL rather than client state\n  because the top row has to reach into a component it does not own, and\n  because the back button and a link to himself on a phone both then work.\n  The effect that runs it is guarded by a ref: a review is a paid call and an\n  effect that re-fires would spend money quietly.\n- The comparison stops calling itself a review. Its button is \"What is wrong\n  with each resume\", so \"review\" means one thing in this app, and the label\n  says resumes because that is all it compares.\n- Its findings now carry working \"Fix this\" buttons, on either draft. The\n  refine route takes content explicitly rather than reading the stored row,\n  which is what lets the unsaved alternative be rewritten at all; the document\n  id only supplies the role and posting for grounding. The current draft\n  becomes editable here too and grows a \"Save these fixes\" button once one has\n  been applied, and Close reads \"Discard and close\" while a fix is unsaved.\n\nLint caught the thing worth catching: currentCoverLetter was unused, and\nkeeping the alternative writes its cover letter as well - a document the\ncomparison never shows. It now says so under the button, with both word\ncounts, rather than replacing it silently.\n\nVerified server-side: the links render, ?doc=cover_letter opens that document\nand no other. The click-through is not verified - the session cookie is\nhttpOnly and the token also authenticates production, so it does not belong in\na browser-automation transcript."
+    },
+    {
+      "sha": "09f8d428c2d0df4c936e03dd36880bc75806a3f4",
+      "shortSha": "09f8d42",
+      "author": "Dan Curis",
+      "date": "2026-08-10T18:24:53Z",
+      "subject": "Merge: fix the home screen icons",
+      "body": ""
+    },
+    {
+      "sha": "e95f67e939700b835c2749de60ca5e036628a333",
+      "shortSha": "e95f67e",
+      "author": "Dan Curis",
+      "date": "2026-08-10T18:17:40-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "71889a1795d7ab726780ee780665840e88a06b7e",
+      "shortSha": "71889a1",
+      "author": "Dan Curis",
+      "date": "2026-08-10T18:17:39-04:00",
+      "subject": "Make the review's fixes actually apply, and admit the rewrite is a proposal",
+      "body": "Dan ran a review on the Coca-Cola CRM letter, saw the blocking findings, and\nasked whether it adds in what is missing. It did not, and worse, the way to\nmake it do so was not where he was looking.\n\nTwo surfaces render findings and only one could act on them. The compare panel\nlisted the problems and threw away the `fix` the model had already written for\neach - not a design choice, an omission. It shows them now, and says where\nthey get applied, since it deliberately has no refine of its own: that view is\nfor choosing between two drafts.\n\nIn the editor, \"Use this fix\" only filled the refine box. It read like it\napplied the fix; the document was untouched until you noticed the box, ran\nrefine, and then saved. Three steps, the first of which looked like all three.\nIt is \"Fix this\" now and applies immediately, with \"Edit first\" kept for when\nthe instruction needs adjusting, and \"Fix all N blocking\" for the whole set.\nBlocking first, because offering to fix everything on a list whose tail is\nstylistic invites a rewrite nobody asked for.\n\n`refine` had to take the instruction as an argument. setInstruction is\nasynchronous, so a handler that set it and then called refine would have sent\nwhatever was in the box before, which is usually nothing.\n\nThe honest part: a refine does not reliably apply what it was asked to. The\nsame letter with the same three blocking findings, twice: one pass removed the\n\"Atlanta is home for me\" line the finding was about, the other left it in\nplace. Clearing the findings after a rewrite was already right, since they\ndescribe replaced text, but blank implied the work was done. It now says the\ndocument has been rewritten and not re-checked, and that a refine does not\nalways apply every fix.\n\nVerified the chain end to end against the live Coca-Cola letter: review\nreturned 3 blocking findings, the assembled instruction went to refine, the\nletter changed, and nothing was written to the database, which is what makes\nthe rewrite safe to read before saving."
+    },
+    {
+      "sha": "b530ba748a488fbd9fcc9695ab6ad4e0744cc750",
+      "shortSha": "b530ba7",
+      "author": "Dan Curis",
+      "date": "2026-08-10T17:32:32-04:00",
+      "subject": "Document the review pass and the cover letter loss",
+      "body": "Both are the kind of thing CLAUDE.md exists for: a design decision whose\nobvious alternative is wrong, and a data loss where every individual step\nsucceeded."
+    },
+    {
+      "sha": "1bcb7d74f30a5d3ff6c12bdfde137716d7fad02e",
+      "shortSha": "1bcb7d7",
+      "author": "Dan Curis",
+      "date": "2026-08-10T17:29:29-04:00",
+      "subject": "Restore the 56 cover letters the sign-off repair emptied, and stop it recurring",
+      "body": "The bulk review pass found three empty cover letters, which turned out to be\n56. Every one of them was two lines: \"Sincerely,\" and \"Daniel Curis\".\n\nHow it happened. Most of those letters were never written here - they were\nadopted from Drive, and an adopted Document deliberately stores content: \"\"\nbecause the file is the record. The sign-off repair rebuilt every cover letter\nas letterhead + body + sign-off without checking there was a body, so an empty\none became 26 characters. That row now had content, so the ordinary Drive sync\ndid exactly what it is designed to do and rendered those 26 characters over\nthe real .docx and .pdf. Nothing failed. The rows saved, the uploads\nsucceeded, and every letter was correctly signed.\n\nIt was survivable only because Drive keeps its own revisions, which the\none-file-per-document-type design had been quietly resting on. All 56 .docx\nfiles had a pre-incident revision.\n\nscripts/restore-cover-letters.ts puts each one back: the original .docx byte\nfor byte, its text extracted into the Document row, and the .pdf either\nrestored the same way (20 of them) or re-rendered from the recovered text (36,\nwhich had no PDF in Drive before the repair created one). All 56 recovered,\nshortest 1,952 characters, median 2,692. Nothing had gone out in the meantime:\nthe only correspondence since is one AT&T draft with no attachments.\n\nStoring the text is the durable half of the fix. These letters existed only as\nfiles, which is why a repair that rebuilt content from an empty string could\ndestroy them with nothing to compare against.\n\nTwo guards, since the empty-content check in syncDocumentToDrive did not catch\nthis - by the time the sync ran the content was not empty, it was wrong:\n\n- syncDocumentToDrive refuses to upload a resume or cover letter under 600\n  characters. The shortest real letter here is about 1,950, so the floor is\n  far below anything genuine and still catches a sign-off standing alone.\n- audit.ts gains \"Document too short to be real\", because this surfaced only\n  because a review happened to read one months later.\n\nAnd the audit check that motivated the original repair was itself wrong. It\ntested for a sign-off word anywhere in the body, so a bare \"Best,\" - how\ntwenty of the pre-Counsel letters actually close - read as unsigned. It is now\nanchored to its own line near the end. A false positive there is not cosmetic:\nit is what prompted a bulk rewrite of 69 documents."
+    },
+    {
+      "sha": "f6d94b0017b2a0216fdfe8759ca3857f496a040e",
+      "shortSha": "f6d94b0",
+      "author": "Dan Curis",
+      "date": "2026-08-10T17:03:49-04:00",
+      "subject": "Make the split verdicts reachable from the pipeline",
+      "body": "Seven roles already had one and the only way to find them was opening ninety\nroles one at a time, which is the same fault as a count that links nowhere -\nthe disagreements are the entire reason for paying for a second provider.\n\nA banner states the number and filters the list to exactly those rows, so the\ncount and its destination come from one definition and cannot drift. The\npipeline query now takes four evaluations rather than one and carries the\nmodel, because a disagreement between providers is invisible in a single row.\n\n`split` is a URL flag rather than another Stage. A stage is exclusive and a\nsplit is orthogonal: a shortlisted role can be split, and folding it into the\nenum would make it stop being shortlisted.\n\nThe filtered view says what it is filtered to and offers a way back. Without\nthat, seven rows just looked like the pipeline."
+    },
+    {
+      "sha": "e6ba06069c27d40f73719e9f13874cf96b557837",
+      "shortSha": "e6ba060",
+      "author": "Dan Curis",
+      "date": "2026-08-10T17:00:26-04:00",
+      "subject": "Cross-check a stretch verdict, and say which way the two models split",
+      "body": "The second opinion only fired on pass, on the reasoning that closing a role\nmust not rest on one opinion. That left the genuinely uncertain verdict\nunchecked, which is backwards: a confident swing needs no help, but a stretch\nis the model saying \"maybe\", and it is exactly where the other provider's read\nchanges what Dan does with his week. It now runs on stretch too. Only pass\nstill moves the status, because how promising two models find a role is not\nwhere the application actually is.\n\nThe disagreement also needed a direction. The panel showed both verdicts with\na \"disagrees\" chip, which reads identically whether the second opinion was\nwarmer or colder - and those call for opposite actions. describeSplit names\nthe action instead: swing over stretch is \"worth moving up the week\", pass\nunder stretch is \"worth a look before you spend the effort\", swing against\npass is the widest they get and gets neither.\n\nIt is derived from the evaluation rows on the page rather than returned by the\nevaluate call, so it survives the refresh that call triggers and is still\nthere tomorrow. Two runs of the SAME model differing returns null: that is\nsampling noise, not a second opinion, and presenting it as one would overstate\nwhat the app knows.\n\nSeven roles in the pipeline already have a live split, including two Coca-Cola\nroles and GoTo Foods where Gemini says swing and Sonnet says stretch."
+    },
+    {
+      "sha": "5f627dc302354ab5ab04d44a13c3f361bcd66dd9",
+      "shortSha": "5f627dc",
+      "author": "Dan Curis",
+      "date": "2026-08-10T16:54:46-04:00",
+      "subject": "A second model reviews the draft, and reports findings rather than a winner",
+      "body": "The obvious version of this was a bake-off: generate with both providers and\nask which is stronger. That is a taste judgement with no ground truth, it is\ndominated by self-preference (each model picks its own draft), and it would\nnot have caught a single defect these documents have actually shipped. Every\none of those was specific and checkable: a metric that is not on the verified\nlist, a hero story the variant had and the draft dropped, ten bullets on a\nsingle-page resume, a letter that never names what the employer operates.\n\nSo the reviewer gets the posting, the base resume the draft was tailored from\nand the house rules, and returns findings. Each carries a fix written as an\ninstruction, so it drops into the refine box that already exists: \"the posting\nnames CDP ownership three times and the resume never says CDP\" is something to\nact on, where \"version B is better\" leaves nothing to do.\n\nIt runs on the other provider. Document.model records who wrote each version\nso reviewerFor() can pick the opposite one, because a model grading its own\noutput agrees with its own choices.\n\nTwo things it caught on its first real run, both fixed in the Profile row\nrather than in prompts, and both live already since profile edits need no\ndeploy:\n\n- standingPreferences listed \"Modernised\" among the approved verbs, so the\n  house style was instructing British spelling into a US executive search.\n  Five more were in positioning, careerNarrative and evaluationFramework.\n- The verified-metrics list permits the figure 500 without saying what it may\n  attach to, so \"500-person SAFe transformation\" was being written as \"ran a\n  500-person delivery organization\" - in the resume and the cover letter both.\n  Positioning now says a figure keeps its noun. Regenerating produced the\n  correct claim in both documents.\n\nThe first draft of the prompt reported the markup as a fault: it read \"##\nDaniel Curis\" as a casing error and \" :: \" as a broken separator, when the\nrenderer applies uppercase, navy and right-alignment at render time. An audit\nthat cries wolf gets ignored, so the prompt now states the storage contract\nand rules presentation out of scope."
+    },
+    {
+      "sha": "83facbbea637ab0b771dbfdea95023fd527457f3",
+      "shortSha": "83facbb",
+      "author": "Dan Curis",
+      "date": "2026-08-10T16:40:23-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "ddc4791b70cd7b09af6aab7f134dfa09719eb320",
+      "shortSha": "ddc4791",
+      "author": "Dan Curis",
+      "date": "2026-08-10T16:40:08-04:00",
+      "subject": "Freeze changelog",
+      "body": ""
+    },
+    {
+      "sha": "6c3897864d3eb6f489d894e6c8c9d8ad6264480d",
+      "shortSha": "6c38978",
+      "author": "Dan Curis",
+      "date": "2026-08-10T16:39:54-04:00",
+      "subject": "Fix Gemini document generation, and the strict-mode schema it exposed",
+      "body": "generate-documents called getAnthropicClient() directly and handed it\nwhatever model id the picker sent, so choosing Gemini posted \"gemini-pro-\nlatest\" to Anthropic and came back an error the UI could only render as the\nmodel name in red. It now goes through generateStructured(), which is the\ndispatcher every other AI route already uses.\n\nThat surfaced a second fault. generateStructured sends strict:true, and\nstrict rejects minItems/maxItems other than 0 or 1, so the cover letter's\n3-to-5 paragraph bound failed the whole request. toGeminiSchema already\nstripped those keys; toStrictSchema now does too, and the count stays in\nthe field description where every other length rule in these schemas lives."
+    },
+    {
+      "sha": "270552d009680ef43638c2be33f18cb277c08b8f",
+      "shortSha": "270552d",
+      "author": "Dan Curis",
+      "date": "2026-08-10T13:22:50-04:00",
+      "subject": "The owed-contacts queue matched zero rows",
+      "body": "Adding a recruiter at a hospitality employer exposed two independent faults in one where\nclause, which together meant a contact owed something reached the dashboard\nqueue only if they happened to be one of five migrated warm threads.\n\napplicationId: null was written when warm threads became contacts, since those\nhave no role. It also dropped every contact who is attached to one, which is\nmost of them - a recruiter owed a reply, or Marie, who runs recruiting at\na hospitality employer and offered to walk a resume in. The single thing that had to happen\nwas invisible on the page whose only job is saying what needs doing.\n\nthreadStatus: { not: \"closed\" } compiles to SQL <> 'closed', which is NULL\nunsafe. Only the migrated threads ever had a threadStatus set, so the clause\nmeant to exclude finished threads excluded every ordinary contact instead. Both\nfaults live, the query returned nothing.\n\nFixed by spelling out null, and the same clause copied into /pipeline during the\nroute split is fixed too. Today went from \"2 things need you\" to 3, and the row\nlinks to her contact page rather than the directory.\n\nMarie is recorded with a hospitality employer as her employer, the introduction through her\nfather in the relationship field, and the resume handover as what is owed."
+    },
+    {
+      "sha": "dfb572f552cdc4cfdd84abcb4c7f056aa0ecc493",
+      "shortSha": "dfb572f",
+      "author": "Dan Curis",
+      "date": "2026-08-10T13:02:33-04:00",
+      "subject": "Answer the questions employer forms ask, and keep the answers",
+      "body": "a hospitality employer's portal asked \"in a brief statement, please explain why you are an\nideal fit for our company\", which neither the resume nor the cover letter\nanswers, and which arrives when Dan is already inside the form.\n\nAn Application questions panel on the Work tab takes the question, drafts an\nanswer grounded in that role's job description, evaluation and the profile, and\nlets him edit it before Copy. Copy is the primary control, not Save, because the\noutput is text going into their box. Keeping it is optional and worth doing: the\nsame questions recur, portals time out, and prior answers on a role feed the\nnext question so two boxes on one form do not repeat each other.\n\nApplicationAnswer rather than Document: those are the resume and cover letter,\nversioned and filed to Drive as files. These are short answers whose question is\nhalf the record.\n\nThree prompt rules, each earned by a bad draft. Do not volunteer a gap, because\na screening box is not a cover letter and naming a weakness they did not ask\nabout hands them a filter. Name what the employer actually operates using words\nfrom the job description, since a paragraph that fits any employer fails the\nonly test the question applies. And treat the word limit as a ceiling: asked for\n150 it returned 174."
+    },
+    {
+      "sha": "90e3847c46eee6ee75917b7da32dfab04609fe23",
+      "shortSha": "90e3847",
+      "author": "Dan Curis",
+      "date": "2026-08-10T12:48:27-04:00",
+      "subject": "Give the Ask panel a close control that is there from the start",
+      "body": "The Close button only rendered once there was an answer, so opening the panel\nshowed no visible exit - and because click-outside is deliberately disabled once\na conversation is on screen, the only way out was Escape, which nobody had been\ntold about. An X now sits in the panel header from the moment it opens.\n\nThis is the rule I wrote for ApplicationPicker two hours earlier and then did\nnot apply here: anything that opens needs a visible close, not just a keyboard\nshortcut. Noted in CLAUDE.md as write the close before the content.\n\nAll four exits verified in a browser: the X, Escape, click-outside while empty,\nand the trigger."
+    },
+    {
+      "sha": "93c9ab8c4a216c087ba15a859603cec239ecb667",
+      "shortSha": "93c9ab8",
+      "author": "Dan Curis",
+      "date": "2026-08-10T12:42:00-04:00",
+      "subject": "Ask can set the reminder its own advice implies",
+      "body": "\"Write to Brian\" covered advice that says act now. Advice that says wait had no\naction at all, so following \"hold off until day 10\" depended on Dan remembering\n- which is precisely what the app exists to remove. Dan spotted the gap.\n\nEvery answer about a live role now offers \"Remind me in N days\", which writes a\nreal FollowUp and therefore appears on Today and /follow-ups with no new\nplumbing behind it.\n\nThe date comes from the same cadence the advice used - day 10 minus days quiet,\nfloored at two so a reminder is never already missed - computed in the route\nrather than parsed out of the model's prose. The button and the recommendation\ncannot disagree because neither reads the other. On the real an airline question:\nadvice said hold off at 6 days quiet, button offered 4 days, 14 August.\n\nPosting twice returns the existing id rather than creating a second row; a\ndouble-click is not a second intention.\n\nTest artifacts removed: the an airline reminder I created and the verification\nasks. 23 open follow-ups, unchanged."
+    },
+    {
+      "sha": "3e4f75e061ea557472fce695a425cf726301f327",
+      "shortSha": "3e4f75e",
+      "author": "Dan Curis",
+      "date": "2026-08-10T12:33:25-04:00",
+      "subject": "Ask stops agreeing with a wrong premise, and follows a stated cadence",
+      "body": "Dan pasted back what the app actually told him: \"You wrote to Brian a search consultant 6\ndays ago... so this has been sitting a full week without a reply.\" It cited the\nright figure and then re-characterised it wrongly two clauses later, because he\nhad framed the question as \"over a week\". Agreeing with a wrong premise is the\nworst thing this tool can do, since checking an instinct against the record is\nthe entire reason to ask.\n\nTwo rules: never restate a number as words that contradict it, and never adopt\nhis framing of elapsed time - the snapshot is the only source. Five runs, five\ncorrections to \"six days\".\n\nThe deeper problem was that the same facts produced opposite advice. temperature\nis deprecated on this model so sampling cannot be turned down, and the real fix\nwas better anyway: state the cadence. Who holds the ball, under 7 days wait, 7\nto 10 a check-in is fine, over 10 chase, answer today where he owes the reply.\nThat took five consecutive runs from split (2 go / 2 hold) to unanimous hold. It\nis a default the answer may argue against, so it guides rather than dictates.\n\nOne correction to my own reporting: I flagged \"10 days ago\" as an error. It was\nright - the snapshot said 9d that morning and a day had passed."
+    },
+    {
+      "sha": "7ce9919a1610bac0c50400a0c8bbbc8a2b1f7ada",
+      "shortSha": "7ce9919",
+      "author": "Dan Curis",
+      "date": "2026-08-10T12:22:37-04:00",
+      "subject": "Ask keeps a thread you can continue and return to",
+      "body": "I got this wrong twice. First I refused persistence by arguing against a chat\nUI, which is a different thing. Then, having accepted persistence, I assumed the\nneed was a record to re-read. It was not. Dan wanted to continue the\nconversation: \"ok what should it say when I do\" means nothing without the turn\nbefore it.\n\nAskLog rows now carry a threadId. A follow-up replays up to eight prior turns\ninto the messages array, capped so a long thread cannot crowd out the snapshot\nthat keeps answers factual. The panel shows the exchange stacked oldest first,\nwith a follow-up field, and lists earlier conversations by their opening\nquestion, which is what you recognise a thread by rather than its last turn.\n\nVerified end to end: turn one recommends waiting, turn two (\"ok what should it\nsay when I do\") answers in context with the actual note text, the Earlier list\nshows the two-turn thread by its opening line, and resuming returns both turns\nwith their action buttons intact.\n\nThe migration backfills rather than drops: threadId is required, and each\npre-existing ask becomes a thread of one keyed on its own id. My verification\nasks were then cleared so the Earlier list starts empty for Dan."
+    },
+    {
+      "sha": "eb4be4ac2047905a301bc1542c39d1a838e60f2f",
+      "shortSha": "eb4be4a",
+      "author": "Dan Curis",
+      "date": "2026-08-10T12:13:28-04:00",
+      "subject": "Ask: advice reaches the action, and every exchange is kept",
+      "body": "Two things Dan pushed on, and he was right on both.\n\nA person named in this app's advice is named because he should write to them, so\na matched contact is now a primary \"Write to Brian\" button rather than a link to\na page. It points at /contacts/<id>?write=1&prompt=<the question>, and the\ncontact page opens with the composer already up and the question in Claude's\ninstruction box - so the draft is one click from the recommendation instead of\nsomething to retype. Matched roles stay quiet links; opening a role is\nnavigation, not the act.\n\nOn history I had argued no, and I was wrong in a specific way: I argued against\na chat UI and he was asking about persistence. Different things. The answers are\njudgement calls that vary run to run - the same an airline question gave \"worth a\nnudge\" once and \"wait until day 10\" the next - so without a record there is no\ntelling whether it changed its mind or he misremembered, and over a months-long\nsearch it is a decision log. AskLog stores the question, the answer and the\nsubjects it matched. The write never blocks the answer.\n\nVerified: the action button carries the question through, the contact page\narrives with editor, toolbar, signature checkbox and instruction all present,\nand the same page without the flag stays closed."
+    },
+    {
+      "sha": "775803cd01bebaf74720309cc34e4f3568c6c0e9",
+      "shortSha": "775803c",
+      "author": "Dan Curis",
+      "date": "2026-08-10T12:06:10-04:00",
+      "subject": "Fix the stacking rule that broke the header, and make Ask answers survive use",
+      "body": "The Ask panel looked transparent because it was rendering underneath the page.\nbody::before paints a fixed glow and `body > * { position: relative; z-index: 1 }`\nexisted to lift content above it - but that blanket rule also overrode the\nheader's own `sticky top-0 z-40`. The header computed to relative/1, so it was\nnever actually sticky, and main at the same z-index later in the DOM painted\nover it. The glow moves to z-index -1 and the blanket rule goes. Two visible\nfaults from one line of CSS, and the header not being sticky had gone unnoticed.\n\nThen the UX, which Dan was right to push on rather than accept.\n\nThe panel closed on click-outside, so asking \"should I chase a search firm\" and\nthen clicking the an airline role - the thing it had just told him to do -\ndestroyed the answer. The panel fought the action it advised. Click-outside now\nonly closes an empty panel; once there is an answer, dismissal is Escape or the\nexplicit control.\n\nAnd the answer was inert prose. It named an airline and Brian a search consultant, both of\nwhich are pages, and reaching them meant going to find them by hand - the same\nfault as a count that links nowhere. The route now matches tracked company and\ncontact names against the text it produced and returns them as links, shown as\n\"Open: an airline · Brian a search consultant\".\n\nVerified in a browser: closes when empty, survives an outside click once\nanswered, and the links resolve to the right role and contact."
+    },
+    {
+      "sha": "c84a02685f84179e64fe35aa220b079f79b73069",
+      "shortSha": "c84a026",
+      "author": "Dan Curis",
+      "date": "2026-08-10T11:56:15-04:00",
+      "subject": "Stop asking to schedule a meeting that is already on the calendar, and make Ask visible",
+      "body": "Two things Dan caught.\n\nThe Inbox was offering to add the AT&T 1:00 PM call to the calendar while an\ninterview note for the same role at the same minute already existed, so\nconfirming it would have booked the meeting twice. pendingTimes had rules for a\ntime that has passed and a proposal superseded later in the thread, but not for\none already booked: scheduledAt only records a booking made from that prompt, so\nanything captured by the calendar sync or by hand left the prompt standing. It\nnow matches on role plus time within half an hour, since the booking usually did\nnot come from the message. Boundaries tested - 29 minutes suppresses, 31 does\nnot, and the one live proposal that disappeared was exactly the duplicate.\n\nThe Ask box shipped as a small button between the nav and the avatar and Dan\ncould not find it. He is the only user, so a control he cannot see does not\nexist. It is a search-style field now, with the header rebalanced to make room:\nutility links drop below lg, the field collapses to a button below sm. Measured\nat 280px and 1280px, no overflow at either, and the full path verified in a\nbrowser - field opens, example fires, answer renders."
+    },
+    {
+      "sha": "c9b7c41aa959f9c61bdeee529d622c9482dbe9e9",
+      "shortSha": "c9b7c41",
+      "author": "Dan Curis",
+      "date": "2026-08-10T11:32:49-04:00",
+      "subject": "Ask: one box, the whole search, and an actual opinion",
+      "body": "Dan's example was \"should I reach out to a search firm about an airline, its been\nover a week\" - a question the per-application assistant cannot answer, because\nit spans a role, its silence, the person, and whether anything is already owed.\n\nRead only, no tools. That is what lets the entire search go over in a single\npass: buildSearchSnapshot compresses sixty roles into about 2,300 tokens by\ngiving live roles detail and closed ones a name in a list, and computes\ndays-since for every row rather than making the model subtract dates. Silence\nis what these questions are actually about.\n\nThe important part is that it does not hedge. Dan can read his own pipeline, so\na summary is worthless; the prompt demands the recommendation first and the\nreasoning after, and lets it contradict the premise. On his real question it\nopened with \"Actually it's been 6 days, not over a week\" and then argued a\nnudge was still reasonable, which is the useful answer.\n\nTwo prompt rules from the first version's slips: address him as \"you\", since\nthe snapshot is written about him, and make any stated count match the list\nbeneath it.\n\nA header box rather than a page, because the question occurs to you while\nreading something else. Not a chat, deliberately: one-shot judgement calls, no\ntranscript."
+    },
+    {
+      "sha": "1073ee733969e90b01d99090ea2706e0168763c3",
+      "shortSha": "1073ee7",
+      "author": "Dan Curis",
+      "date": "2026-08-10T11:00:57-04:00",
+      "subject": "Group forwarded mail by thread and stop repeating the chain",
+      "body": "Dan forwards ecuris threads to Gmail as they go, so each forward carries the\nwhole prior conversation quoted beneath it. The AT&T thread arrived as five\nmessages of 976, 1851, 2705, 2904 and 4204 characters - the last containing all\nof the others - and the role page showed the same sentences up to five times\nwith the newest reply buried on top of the history.\n\nmail-thread.ts does two things, and is pure so both are tested against\nfabricated bodies as well as the real ones.\n\nnewestPart keeps only the shallowest quote depth. In a Proton forward the\nmessage being forwarded sits at one \">\", the one it answers at two, so depth is\nposition in the chain and anything deeper is already its own row. The trailing\n\"On <date>, X wrote:\" attribution goes too, since it labels the history rather\nthan belonging to the message. Across the mailbox: 157 bodies, 123 trimmed, 0\nemptied, and every reduction over 20% was a Fw:.\n\ngroupByThread uses Gmail's threadId, which had already grouped them. Messages\nin a multi-message thread now carry \"thread 3 of 5\" so you can see where you\nare without reading the quoted history that was just removed.\n\nVerified on the real thread: five badges 1 of 5 through 5 of 5, and Jennifer's\nline appears once in the DOM instead of five times."
+    },
+    {
+      "sha": "9973f6eade6868f58110e3913ca4b3bd4c239a39",
+      "shortSha": "9973f6e",
+      "author": "Dan Curis",
+      "date": "2026-08-10T10:36:55-04:00",
+      "subject": "Edit a saved draft, and sign it by default",
+      "body": "Dan corrected a note in his mail client and sent it from there, because a saved\ndraft in the app offered Send, Copy and Discard and no way to change a word.\nThe app's copy then stopped matching what actually went out.\n\nEdit loads the draft back into the composer - the rich editor, Claude and the\nDrive picker are already there - and saveContactNote updates that row when the\nform carries a correspondenceId. Only a draft can be rewritten: anything with a\nGmail id, or marked sent or sent_externally, is a record of what went out, so\nit falls through to creating a new draft rather than altering history.\n\nThe signature is on by default now rather than a button to remember, with a\ncheckbox to turn it off and the exact lines shown beside it. It is appended at\nsave rather than typed into the editor, so toggling it off cannot leave a stale\ncopy behind and toggling it twice cannot produce two. Opening an existing draft\nfor editing turns it off, since that draft already carries one.\n\nVerified by driving the real server action: editing updates in place (1 row\nbefore, 1 after, same id), and the same call against a sent message leaves it\nuntouched and creates a separate draft. The throwaway contact was deleted; 23\ncontacts, and Dan's Jennifer draft is untouched."
+    },
+    {
+      "sha": "d69f6303a6433fd58853052375bc1412a76dc9d6",
+      "shortSha": "d69f630",
+      "author": "Dan Curis",
+      "date": "2026-08-10T10:19:29-04:00",
+      "subject": "Draft here, reply in Proton, and record it honestly",
+      "body": "Dan reads and writes his ecuris mail in Proton even though the domain is on\nGoogle Workspace, so sending those replies through the Gmail API would file the\ncopy in a Sent folder he never opens and leave Proton with no record of what he\nwrote. His call, and the right one: draft in the app, reply in Proton.\n\nTwo controls on a draft make that work. Copy puts subject and body on the\nclipboard ready to paste. \"I sent this myself\" records it.\n\nThat second one gets its own status rather than reusing \"sent\".\nPOST /api/correspondence/send may still be the only thing that writes \"sent\",\nbecause that word means Gmail returned an id. sent_externally is the weaker\nclaim - Dan says he sent it, gmailMessageId stays null, and the row reads \"sent\nfrom another client\". The app should never overstate what it knows.\n\nEverything that reads status was audited for which meaning it wanted: the\nactivity timeline and the role-page badge count both as gone out, the send\nroute and the discard guard accept only a real \"sent\".\n\nVerified end to end on a throwaway contact, then deleted it: draft to\nsent_externally, controls collapse, the row reads correctly. Dan's Jennifer\ndraft was not touched."
+    },
+    {
+      "sha": "42bdaabbe2cf748efe46f13454f6897c5be734e8",
+      "shortSha": "42bdaab",
+      "author": "Dan Curis",
+      "date": "2026-08-10T10:04:42-04:00",
+      "subject": "Claude's subject was going into the body, not the subject field",
+      "body": "The draft Dan saved to Jennifer began:\n\n  \"Subject: Re: AT&T Opportunity: AVP, Customer Strategy & Marketing Analytics\n   Hi Jennifer, ...\"\n\nso the subject field was empty and the word \"Subject:\" would have gone out as\nthe first visible line of the email. My doing: I removed the subject from the\ntool schema after a two-field version kept putting the salutation there, and\nnever replaced it with anything.\n\nThe model is not wrong to want a subject, only about where it puts it, so the\nleading line is lifted out and promoted rather than deleted. A subject stated\ninside the body is unambiguous about which is which, which is exactly what the\ntwo-field version could not manage.\n\nWhere the model writes none, a reply inherits the subject of what it answers,\nwith Re: added once. Fw:/Re: prefixes are stripped first - these threads arrive\nas \"Fw: Re: AT&T Opportunity...\", and replying verbatim would tell Jennifer he\nforwarded her own message to himself.\n\nDan's saved draft was repaired in place: subject set, body no longer starting\nwith the stray line."
+    },
+    {
+      "sha": "0a5e94903f7353df0264fa1c930010ea5fd43bf3",
+      "shortSha": "0a5e949",
+      "author": "Dan Curis",
+      "date": "2026-08-10T09:51:49-04:00",
+      "subject": "Reply where the sender is known, and never offer to add Dan as his own contact",
+      "body": "Two faults in yesterday's reply path, both from the shape of this mailbox.\n\nContacts were matched against the role's own contacts only. The two AT&T roles\nhold one AT&T person each, so a sender filed on the sibling role read as\nunknown. Matching is against every contact by address now.\n\nWorse: a forward of Dan's own reply has no original sender to recover, so\nfromEmail falls back to him, and the row offered \"Add sender as contact\" for\nDan on Dan's own message. Two of the four rows on Jennifer's thread said that,\nwhich is exactly why the panel read as having no way to reply at all.\n\nOwn addresses - Profile contactEmails plus the connected mailbox - are now\nexcluded from both controls, and those rows read \"You forwarded this\" instead\nof \"Received\", so the missing reply button is a statement rather than a gap.\n\nVerified in a browser on both AT&T roles: Jennifer's thread shows two \"Reply to\nJennifer a contact\" and two self-forwards with no controls, Aaron's shows\n\"Reply to a hiring contact\", and \"Add sender as contact\" appears nowhere."
+    },
+    {
+      "sha": "0052365bc92d215ac877d3ccd2662df9bc315129",
+      "shortSha": "0052365",
+      "author": "Dan Curis",
+      "date": "2026-08-10T09:40:51-04:00",
+      "subject": "Make the role picker closable, and let a received message be answered",
+      "body": "Two things Dan hit in one sitting.\n\nThe role picker opens its list in normal flow rather than as an overlay, so it\npushes the page down. With sixty roles in it, scrolling into the list put the\ntrigger off-screen above him, and there was no Escape, no click-outside and no\ncancel. It closes four ways now - Escape, click-outside, a Close control in the\nlist header, and the trigger - all six paths verified in a browser.\n\nThe Messages panel on a role showed a received email's subject, sender, date and\nClaude's summary, and offered only \"Move to this role\" and \"Send back to Inbox\".\nHe could not read Jennifer's message and could not reply to it, which is the\nwhole reason to open one.\n\nThe body now renders behind a toggle. For the reply, rather than growing a\nsecond composer beside the one that already works, the message links to its\nsender's contact page where the thread and editor live. The sender is matched on\nforwardedFromEmail first, so forwards resolve - the AT&T message is a forward\nfrom Dan's own address and correctly reaches a hiring contact. Where no contact\nmatches, the row offers \"Add sender as contact\", which is the step that makes a\nreply possible rather than a dead end wearing a different label."
+    },
+    {
+      "sha": "393feabafc709110b26eb8dc523b04cec2ca52a0",
+      "shortSha": "393feab",
+      "author": "Dan Curis",
+      "date": "2026-08-09T21:38:25-04:00",
+      "subject": "Sign the cover letters. All 69 of them were going out unsigned.",
+      "body": "buildLetterHead adds the salutation. Nothing ever added the close. So every\ncover letter this app has produced ended on the last sentence of the body with\nno \"Sincerely\" and no name, including ones already filed to Drive.\n\nIt was silent on both sides: the prompt tells the model \"the app adds his name,\ncontact details, the date and the greeting, so do not write any of those\", and\nthe model obeyed while the app forgot. Neither half was wrong on its own.\n\nbuildLetterSignOff now supplies \"Sincerely, / Daniel Curis\" using the formal\nname that matches the letterhead, and the assembly strips any close the model\nwrote anyway so a letter can never carry two. All 69 existing letters were\nrepaired by appending a corrected version, which inherits the Drive file ids,\nso the files in Drive are current and the old rows stay as history.\n\nTwo audit checks so neither can recur quietly: a cover letter with no sign-off,\nand an Earlier Experience entry whose shape differs from its neighbours (the\nLEGO line). Every other check in there is about code; these are the first two\nabout what actually reaches an employer.\n\nThe preview overlay now shows a spinner while the file renders and always\noffers \"open in a new tab\". Both preview controls work - I could not reproduce\na dead button and verified a full round trip - but Safari regularly refuses to\npaint a PDF in an iframe, and a blank overlay is indistinguishable from a\nbutton that did nothing."
+    },
+    {
+      "sha": "64a3bb37719e006335845be3bd71fe431f1f075b",
+      "shortSha": "64a3bb3",
+      "author": "Dan Curis",
+      "date": "2026-08-09T21:22:24-04:00",
+      "subject": "Make the LEGO line match the rest of Earlier Experience",
+      "body": "Earlier Experience is four lines of title, employer and dates, copied verbatim\nout of the chosen variant. When I added LEGO to the variants I wrote it with a\ntrailing description clause and a full stop, so three entries read one way and\nthe fourth read another on every resume generated since.\n\nThe detail itself is fine - \"15-person US/Denmark LEGO team\" is on the verified\nmetrics list, so it was not invented. It just does not belong dangling off a\nlist whose whole job is to be brief.\n\nFixed in all four variants and masterResume. The one already-generated resume\ncarrying it (a hospitality employer) got a corrected version appended rather than\nregenerated: append-only means the tailored bullets survive and the new row\ninherits the Drive file ids, so the link is current and the old version stays\nas history."
+    },
+    {
+      "sha": "39ac3cb421c270a5a7f070d369419432991cc2bd",
+      "shortSha": "39ac3cb",
+      "author": "Dan Curis",
+      "date": "2026-08-09T15:55:33-04:00",
+      "subject": "Pipeline footers match the sections above them, and three missed headings",
+      "body": "Dan spotted that \"Show archive\" and \"Recently deleted\" still read as the old\nstyle. They did: one was a bare link I had just added, the other was still a\nhand-rolled <details> with an SVG chevron and its own bordered panel. Both are\nnow the same object as the sticky status headers above them - full-width row,\nlabel left, count right - and Recently deleted moved behind ?deleted=1 like\neverything else, so its rows are not built until asked for. No chevron SVGs\nremain on the page.\n\nAlso: deleted the dead CollapsibleCard component, and gave contacts/[id],\nretrospective and profile the heading scale the rest of the app now uses.\nPrivacy, Terms and Releases keep theirs - a 46px statement on a boilerplate\nlegal page would be absurd."
+    },
+    {
+      "sha": "26154e397c7b7dd9460c1bc49afdac56d77951fb",
+      "shortSha": "26154e3",
+      "author": "Dan Curis",
+      "date": "2026-08-09T15:42:28-04:00",
+      "subject": "Drop the native dialogs, lighten Inbox and Pipeline, restyle their headers",
+      "body": "Three things, all of them finishing patterns started earlier.\n\nNo more window.confirm or window.prompt. They render outside the page, cannot\nbe themed, and on iOS take the whole screen - and they were on the three paths\nthat matter most: sending a draft to a real person, discarding one, adding a\nlink. The confirmations are a second state on the row now, so the address you\nare sending to stays visible while you decide. The link prompt is a field in\nthe toolbar, which also fixed a latent bug: window.prompt drops the selection\non some browsers, so the range is captured before the field opens and restored\nbefore createLink runs.\n\nTwo more instances of hidden-is-not-unrendered, both now behind the URL:\n\n  /pipeline   327 KB -> 167 KB   archive behind ?archive=1\n  /inbox      335 KB ->  71 KB   filed and noise behind ?show=\n\nThe inbox was the heaviest page in the app, rendering its entire filing history\nand noise bin on a day when there was nothing to file. Its queries are gated\ntoo, not just the markup, with separate counts so the links still say how much\nis behind them.\n\nContacts and Inbox get the headline treatment the other pages already had:\n\"23 people.\" and \"Nothing to file.\" rather than a one-word title with the count\nas a caption beside it."
+    },
+    {
+      "sha": "d5430b2e115439b5d34333d4b0e040aa9e0e7378",
+      "shortSha": "d5430b2",
+      "author": "Dan Curis",
+      "date": "2026-08-09T15:30:39-04:00",
+      "subject": "Detail page: build only the tab you are looking at",
+      "body": "The last instance of hidden-is-not-unrendered. CollapsibleSections received all\ntwelve panels as children and rendered three; the other nine were still\nserver-rendered and serialized, so standing on Work shipped Follow-ups,\nMeetings and the entire activity timeline.\n\nThe tab now lives in the URL. The page reads ?tab=, panelInTab gates each\nPanel, and the strip is links rather than buttons.\n\n  Work     242 KB -> 187 KB\n  Talk               164 KB\n  History            108 KB\n\nand none of them carries the others: Follow-ups, Meetings, Activity and\nMessages are all absent from the Work payload now, verified.\n\nPanel renders itself instead of being an inert marker whose props the parent\nread - that indirection was what forced all twelve to exist. Counts are passed\nfrom the page, since the other tabs' panels are no longer there to sum, and a\ntab you are not standing on still has to show what is behind it.\n\nThe remembered tab is gone on purpose. It already caused the bug where a role\nleft on Talk reopened on Talk and History read as empty; the URL gives back the\nback button and a shareable link to a role's Talk tab.\n\nAlso: the audit reported all twelve panels as orphans because it read the tab\nmapping from the component it had just moved out of. Repointed, and the dead\nApplicationTabs component and usePersistedTab hook are deleted."
+    },
+    {
+      "sha": "98d2906148fcb9c4e1981c4b25d5ce5fdeceedb1",
+      "shortSha": "98d2906",
+      "author": "Dan Curis",
+      "date": "2026-08-09T15:20:16-04:00",
+      "subject": "Give every count on Today a destination, and make the counts true",
+      "body": "Dan pulled on two threads and both came apart.\n\n\"23 follow-ups with no date\" linked to the first one's application, so a count\nof twenty-three took you to one arbitrary role and hid the other twenty-two.\n/follow-ups now holds the whole backlog, grouped overdue / scheduled / no date,\neach row closable in place. A list of what you owe that cannot be cleared is a\nlist you stop opening.\n\n\"19 ready to evaluate\" linked to \"/\", the page you were already standing on.\nChasing that found the worse bug: thirteen of the nineteen were\nCLOSED_REJECTED and the other six were already APPLIED. /pipeline already had a\nneeds-verdict filter meaning a decision is still pending, and by that\ndefinition the count was zero. The row was pure noise on the page whose only\njob is saying what is worth doing. Today now shares PRE_DECISION with the\npipeline filter so the two cannot drift, and the row correctly disappears."
+    },
+    {
+      "sha": "5293246a2caf6ab991260d81d6baeb18e4a031a5",
+      "shortSha": "5293246",
+      "author": "Dan Curis",
+      "date": "2026-08-09T15:12:14-04:00",
+      "subject": "Put both intake paths together on Today",
+      "body": "Dan spotted this: the route split left the paste-a-LinkedIn-link box on Today\nand stranded \"search the boards by company\" on /pipeline, which is the one page\nyou are never adding anything from. They are the same job - track this role -\ndiffering only in whether you happen to have a link.\n\nThe no-link path is now a disclosure directly under the paste box, which is\nalso the honest hierarchy: pasting is what happens almost every time, searching\nis the fallback."
+    },
+    {
+      "sha": "144fc3fbd2b4474f78237d774816894039c782e4",
+      "shortSha": "144fc3f",
+      "author": "Dan Curis",
+      "date": "2026-08-09T15:08:32-04:00",
+      "subject": "Detail page: sections separated by space, not eleven boxes",
+      "body": "Every panel was a bordered, shadowed card, so a tab read as a stack of\ncontainers and the eye had to find the content inside each one. The heading\nalready says where a section starts and whitespace already says where it ends,\nso the box was doing no work. Headings become quiet uppercase labels and the\ncontent carries the weight.\n\nOne change in CollapsibleSections covers all eleven panels across all three\ntabs.\n\nAlso documents the class of fault this rework keeps finding: hidden is not\nunrendered. The detail page still serializes all three tabs' panels and ships\nFollow-ups, Meetings and Activity while you are on Work. Fixing that means\ndriving the tab from searchParams, which is a page restructure, not a component\nchange - noted in CLAUDE.md as the next thing."
+    },
+    {
+      "sha": "37723c169b55cda6fc3d12f3b6ff177253649d72",
+      "shortSha": "37723c1",
+      "author": "Dan Curis",
+      "date": "2026-08-09T15:06:12-04:00",
+      "subject": "Pipeline: one responsive row, sticky headers instead of six accordions",
+      "body": "Two renderers drew every role - a <table> for desktop and a md:hidden list for\nmobile - so the page shipped all 96 rows twice at 555 KB. A table was also the\nwrong primitive: fixed columns fought each other, and the role title was once\nstarved to 76px by a salary string that would not wrap. It is one flex row now\nthat reflows at any width.\n\nThe six status accordions are gone. They were hand-rolled <details> with SVG\nchevrons from an older idiom, they carried six pieces of open/closed state on a\npage that is pure reference, and collapsing hid nothing expensive since the\nrows rendered either way. Sticky section headers replace them, the iOS Contacts\npattern: one continuous list, the current status always visible, scrolling as\nthe navigation.\n\n  555 KB -> 333 KB, 0 tables, 0 duplicate lists\n\nThe three remaining <details> are the hint panel, the archive and recently\ndeleted. Secondary content is what disclosure is for."
+    },
+    {
+      "sha": "6f2eb65af2a9cd65ec6be6c56a246f8825012b2b",
+      "shortSha": "6f2eb65",
+      "author": "Dan Curis",
+      "date": "2026-08-09T13:17:28-04:00",
+      "subject": "Theme 449 hardcoded colours, and show the conversations the headline counts",
+      "body": "Two faults, one found by Dan.\n\nThe headline said \"4 live conversations\" and the page never said which four.\ninterviewStage was computed, counted, folded into the queue, and never\nrendered. A count with nothing to click is worse than no count. The four now\nsit directly under the statement that counts them, as plain type between two\nrules, with the next meeting time where there is one.\n\nThe second is not a matter of taste. 449 uses of bg-neutral-*, text-neutral-*,\nborder-neutral-* and bg-white across 25 files sat alongside the token system\nthat already existed. :root[data-theme=\"dark\"] moves tokens and cannot touch a\nliteral, so a quarter of the app rendered a light interface inside a dark one -\npale borders, near-black text, timeline dots that vanished. Same family as\nbg-[var(--accent)] resolving to nothing: it type-checks, it builds, and it is\nonly visible in the theme nobody tested.\n\nAll of them now resolve through --tx, --surface and --line. The red error\nstates stay literal; they are semantic."
+    },
+    {
+      "sha": "91436aea673e24cd182f85c47e229c7e989ccadb",
+      "shortSha": "91436ae",
+      "author": "Dan Curis",
+      "date": "2026-08-09T13:09:47-04:00",
+      "subject": "IA: split the landing route into Today and Pipeline",
+      "body": "The dashboard could never be decluttered because it was four products on one\nroute: triage, intake, the mail panel, and a sixty-role table. The nav called\nit \"Pipeline\", naming the page after a quarter of its contents. Every previous\npass rearranged it, because nothing could be removed without making it\nunreachable.\n\nThe number that settled it: / shipped 96 table rows and 12 duplicate mobile\nlists to display 3 open items. 588 KB, 380 KB of it serialized payload. The\ntable was inside a collapsed <details>, and collapsed is not unrendered - every\nrow was built, sent, then hidden with CSS.\n\nNow: Today (/) is what needs you, Pipeline (/pipeline) is every role you track,\nand the 120 lines of table assembly no longer run on the landing page at all.\n\n  /           588 KB -> 71 KB,  96 rows -> 0\n  /pipeline   the table, on the page named after it\n\nNav is four destinations that each answer one question. Retrospective and\nProfile move beside sign-out; they are occasional, and were costing two of five\nprimary slots.\n\nThe Today headline is one statement set large with nothing beside it. It used\nto share a row with an Inbox button, which made the first thing on the page a\nlayout rather than a sentence."
+    },
+    {
+      "sha": "90979eb41137214ced162b4d2ed64036de996a64",
+      "shortSha": "90979eb",
+      "author": "Dan Curis",
+      "date": "2026-08-09T12:59:22-04:00",
+      "subject": "Contacts: call the no-employer group \"Other\", and sort it last",
+      "body": "\"No employer recorded\" described the database rather than the person. It also\nsorted alphabetically, landing between Optimum and a hotel group as though it\nwere a company. It is a bucket, so it goes to the bottom."
+    },
+    {
+      "sha": "0df96ed37dba136f51710327e3d386d95f4ac799",
+      "shortSha": "0df96ed",
+      "author": "Dan Curis",
+      "date": "2026-08-09T11:42:53Z",
+      "subject": "Freeze the changelog",
+      "body": ""
+    },
+    {
+      "sha": "94de84903339a1297649575bb4ee7454dd5a66b6",
+      "shortSha": "94de849",
+      "author": "Dan Curis",
+      "date": "2026-08-09T11:10:16-04:00",
+      "subject": "Sub-group contacts by role, but only where a company has more than one",
+      "body": "I argued against the role tier from a snapshot: only AT&T had contacts across\ntwo roles, so it would have made twenty headings over one person each. Dan\npointed out that is a fact about today, not about the list. The pipeline gains\nroles constantly.\n\nSo the tier is conditional rather than absent. A company with one role stays\nflat; the moment a second role appears at any employer, the headings show up on\ntheir own. People at a company who are not tied to a specific role sit under\n\"No specific role\" rather than in a separate group, and the \"on <Company> -\n<Role>\" label is suppressed under a role heading that already says it.\n\ngroupContacts moved to src/lib/contact-grouping.ts and is pure, so the rule is\ntested with fabricated rows instead of fake applications in a live pipeline.\nWriting that test found two bugs in surnameFirst, which had shipped claiming to\nhandle particles: \"Jan van der Berg\" became \"Berg, Jan van der\" because only\nthe first word of a multi-word particle was listed, and a name already in\n\"SURNAME, FIRST\" form - how corporate directories emit them, and how Jennifer's\nname actually arrived - was inverted a second time."
+    },
+    {
+      "sha": "56c681965bdb1ce10710fb098455684373358a6a",
+      "shortSha": "56c6819",
+      "author": "Dan Curis",
+      "date": "2026-08-09T10:32:31-04:00",
+      "subject": "Separate where a contact works from which role they matter to",
+      "body": "Maya a former colleague appeared twice and both said Disney. Two distinct faults.\n\nThe duplicate was mine: folding WarmThread into Contact copied the five\nthreads across without checking whether the person was already a contact, and\ntwo were. a contact had the same problem. The copies carried the better notes\nand the thread status, the originals carried the role and the application link,\nso merge-contacts.ts combines them rather than picking a winner.\n\nThe Disney part is a modelling gap. The list derived an employer from the\napplication, so a contact attached to a role was described as working there.\nMaya is a Delta colleague who introduced Dan to a VP at Disney, which is the\nmost valuable kind of contact in a search and the one the model could not\nexpress. Contact.company now holds the employer and applicationId holds the\nrole they are relevant to.\n\nThe backfill defaults to the role's company and refuses to write when the email\ndomain disagrees. That caught Brian a search consultant, listed against an airline and actually\na a search firm search consultant recruiting for it. Nobody had spotted him by eye.\n\nGrouping is by employer, with \"on <Company> - <Role>\" shown only where the two\ndiffer. Company is editable on the detail page, so the next one of these needs\nno script."
+    }
+  ]
+}

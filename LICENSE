@@ -1,0 +1,41 @@
+Copyright (c) 2026 Dan Curis. All rights reserved.
+
+This software and its source code are the intellectual property of the author.
+
+GRANT OF PERMISSION
+
+Permission is granted, to individuals expressly invited by the author, to
+deploy and run a single personal instance of this software for their own
+personal job search, at no charge.
+
+That permission includes making local modifications to their own instance.
+
+RESTRICTIONS
+
+Except as granted above, no permission is given to use, copy, modify, merge,
+publish, distribute, sublicense, or sell copies of this software.
+
+In particular, and without limiting the above:
+
+  - The software may not be offered as a service to third parties.
+  - The software may not be used for any commercial purpose.
+  - The software may not be redistributed, in whole or in substantial part,
+    whether modified or unmodified.
+
+YOUR DATA IS NOT COVERED BY THIS LICENSE
+
+An instance you deploy runs on infrastructure you control, against a database
+you create under your own account. The content you put into it is yours. The
+author holds no credentials to your deployment and has no access to it.
+
+This clause grants the author nothing and is stated so the position is not
+left to inference.
+
+NO WARRANTY
+
+The software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and noninfringement. In no event shall the
+author be liable for any claim, damages or other liability, whether in an
+action of contract, tort or otherwise, arising from, out of or in connection
+with the software or the use or other dealings in the software.

@@ -1,0 +1,52 @@
+# The gates, running somewhere other than one laptop.
+#
+# `scripts/ship.sh` already blocks on all of this, and that was the whole
+# safety story: a check that only ever runs on Dan's machine stops running the
+# first time anything is pushed from anywhere else, or the first time somebody
+# merges a pull request in the GitHub UI. Both are one click away.
+#
+# No DATABASE_URL here on purpose. Every test is a pure function over plain
+# data, and the audit runs with --static, so nothing in this workflow can touch
+# the production database. That is a safety property, not a limitation: this
+# repository's local development already writes to production, and CI must
+# never be a second way in.
+name: checks
+
+on:
+  push:
+    branches: [main, production]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # `npm ci` runs the postinstall, which is `prisma generate`. The client
+      # is generated from the schema and needs no connection.
+      - run: npm ci
+
+      - name: Tests
+        run: npm test
+
+      - name: Lint
+        run: npx eslint src
+
+      - name: Audit
+        run: npx tsx scripts/audit.ts --static | tee /tmp/audit.txt && grep -q "0 to look at\|nothing found" /tmp/audit.txt
+
+      # Last, because it is the slowest and the others localise a failure
+      # better. A type error shows up here if it escaped lint.
+      - name: Build
+        run: npm run build
+        env:
+          # The build imports modules that read these at module scope. They are
+          # never used to connect during a build, and these are not real values.
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+          SESSION_SECRET: ci-not-a-real-secret-value-for-build-only
