@@ -7,6 +7,10 @@ import { parseDriveFolderId } from "@/lib/drive-folder";
 import { TENANT_ID } from "@/lib/tenant";
 import { saveCredential, clearCredential, type CredentialKind } from "@/lib/credentials";
 import { changeOwnerPassword } from "@/lib/owner";
+import { connectFastmail, disconnectFastmail } from "@/lib/fastmail";
+import { isMailProvider } from "@/lib/mail-provider";
+
+export type FastmailResult = { ok: boolean; message: string };
 
 /**
  * The default model every AI surface uses when it is not given one.
@@ -124,4 +128,45 @@ export async function removePlatformKey(formData: FormData) {
   await clearCredential(kind);
   revalidatePath("/settings");
   revalidatePath("/instances");
+}
+
+/**
+ * Connects Fastmail with an API token.
+ *
+ * The token is checked against Fastmail before it is stored, so a typo or a
+ * token without the send scope is reported here, on the page where it can be
+ * fixed, rather than on the first sync or the first send. Like a model key it
+ * is sealed before it reaches the database and never shown back.
+ */
+export async function connectFastmailAction(_prev: FastmailResult | null, formData: FormData): Promise<FastmailResult> {
+  const token = String(formData.get("token") ?? "");
+  try {
+    const { email, canSend } = await connectFastmail(token);
+    revalidatePath("/settings");
+    revalidatePath("/inbox");
+    return {
+      ok: true,
+      message: canSend
+        ? `Connected ${email}. Counsel can read and send from it.`
+        : `Connected ${email} for reading only. The token has no Email submission scope, so nothing can be sent from it.`,
+    };
+  } catch (error) {
+    return { ok: false, message: error instanceof Error ? error.message : "That did not connect." };
+  }
+}
+
+export async function disconnectFastmailAction() {
+  await disconnectFastmail();
+  revalidatePath("/settings");
+  revalidatePath("/inbox");
+}
+
+/** Which mailbox a new message goes out through. Replies always follow their thread. */
+export async function saveSendMailVia(formData: FormData) {
+  const value = String(formData.get("sendMailVia") ?? "");
+  await prisma.profile.update({
+    where: { id: TENANT_ID },
+    data: { sendMailVia: isMailProvider(value) ? value : null },
+  });
+  revalidatePath("/settings");
 }

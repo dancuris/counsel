@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { downloadDriveFile } from "@/lib/google-drive";
-import { latestMessageRef, sendMail } from "@/lib/google-mail";
+import { connectedMailboxes, sendViaMailbox } from "@/lib/mail-provider";
 import { parseLabelled } from "@/lib/contact-block";
-import { MAIL_CONNECTION_ID } from "@/lib/google-connections";
 import { parseAttachments, renderDocumentFile } from "@/lib/document-file";
 import { TENANT_ID } from "@/lib/tenant";
 
@@ -137,7 +136,8 @@ export async function POST(request: NextRequest) {
     const own = new Set(
       [
         ...parseLabelled(profile?.contactEmails).map((e) => e.value),
-        (await prisma.googleConnection.findUnique({ where: { id: MAIL_CONNECTION_ID }, select: { email: true } }))?.email,
+        // Every connected mailbox counts as his own, Gmail and Fastmail alike.
+        ...(await connectedMailboxes()).map((b) => b.email),
       ]
         .filter((v): v is string => Boolean(v))
         .map((v) => v.toLowerCase())
@@ -150,7 +150,10 @@ export async function POST(request: NextRequest) {
       );
     }
     try {
-      await sendMail({
+      // The test goes through the mailbox the real send would use, so what he
+      // reads came from the same account the recipient will see.
+      await sendViaMailbox({
+        threadId: draft.gmailThreadId,
         to: testTo,
         subject: `[TEST] ${subject}`,
         body: content,
@@ -165,7 +168,10 @@ export async function POST(request: NextRequest) {
 
   let sent;
   try {
-    sent = await sendMail({
+    // The mailbox is chosen in lib/mail-provider: a reply follows its thread
+    // (Gmail or Fastmail), a new message uses the Settings default. Threading
+    // headers for the recipient's client are added there too.
+    sent = await sendViaMailbox({
       to,
       cc: cc || undefined,
       bcc: bcc || undefined,
@@ -173,9 +179,6 @@ export async function POST(request: NextRequest) {
       body: content,
       bodyHtml: draft.contentHtml ?? undefined,
       threadId: draft.gmailThreadId,
-      // Gmail's threadId only threads it on Dan's side. The recipient's client
-      // and the ATS thread on In-Reply-To/References, which need this.
-      threadRef: await latestMessageRef(draft.gmailThreadId),
       attachments,
     });
   } catch (e) {
@@ -197,5 +200,5 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  return NextResponse.json({ id: updated.id, sentAt: updated.sentAt, to, cc, bcc, subject });
+  return NextResponse.json({ id: updated.id, sentAt: updated.sentAt, to, cc, bcc, subject, via: sent.provider });
 }

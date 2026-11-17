@@ -7,7 +7,10 @@ import { MailboxSyncButton } from "@/components/MailboxSyncButton";
 import { AVAILABLE_MODELS, DEFAULT_MODEL } from "@/lib/models";
 import { SubmitButton } from "@/components/SubmitButton";
 import { ModelConsole } from "@/components/ModelConsole";
-import { saveDefaultModel, saveIntegrations } from "./actions";
+import { saveDefaultModel, saveIntegrations, disconnectFastmailAction, saveSendMailVia } from "./actions";
+import { getFastmailConnection } from "@/lib/fastmail";
+import { FastmailConnect } from "@/components/FastmailConnect";
+import { ConfirmButton } from "@/components/ConfirmButton";
 import { buttonClass, inputClass } from "@/lib/button";
 import { FailurePanel } from "@/components/FailurePanel";
 import { PAGE_TITLE, PAGE_LEDE, PAGE_READING, SECTION_GAP, ERROR_BLOCK, PAGE_HEADER } from "@/lib/type";
@@ -38,10 +41,10 @@ export default async function SettingsPage({
   // Null on an instance that signs in with Google, which is what hides the
   // password form there.
   const owner = await ownerEmail();
-  const [profile, recentApp, recentContact, connection, driveConnection, mailCount] = await Promise.all([
+  const [profile, recentApp, recentContact, connection, driveConnection, mailCount, fastmail] = await Promise.all([
     prisma.profile.findUnique({
       where: { id: TENANT_ID },
-      select: { preferredModel: true, icsCalendarUrl: true, driveRootFolderId: true },
+      select: { preferredModel: true, icsCalendarUrl: true, driveRootFolderId: true, sendMailVia: true },
     }),
     prisma.jobApplication.findFirst({
       where: { deletedAt: null },
@@ -52,6 +55,7 @@ export default async function SettingsPage({
     prisma.googleConnection.findUnique({ where: { id: MAIL_CONNECTION_ID } }),
     prisma.googleConnection.findUnique({ where: { id: DRIVE_CONNECTION_ID } }),
     prisma.mailMessage.count(),
+    getFastmailConnection(),
   ]);
   const driveAuthorised = hasDriveScope(driveConnection?.scopes);
 
@@ -184,8 +188,8 @@ export default async function SettingsPage({
       <section className={`${SECTION_GAP} border-t border-line pt-8`}>
         <h2 className="text-[13px] font-semibold uppercase tracking-wide text-[var(--tx-3)]">Accounts</h2>
         <p className="mt-1.5 text-[13px] leading-relaxed text-[var(--tx-2)]">
-          Two Google accounts on purpose: the search runs from a dedicated mailbox, and the document archive already
-          lives in the Drive with the storage.
+          The search runs from a dedicated mailbox, Gmail, Fastmail or both, and the document archive already lives in
+          the Drive with the storage.
         </p>
       <section className="mt-3 panel p-4 shadow-sm">
         <h2 className="text-sm font-semibold text-[var(--tx)]">Job-search mailbox</h2>
@@ -227,6 +231,70 @@ export default async function SettingsPage({
           >
             Connect a mailbox
           </a>
+        )}
+      </section>
+
+      <section className="mt-3 panel p-4 shadow-sm">
+        <h2 className="text-sm font-semibold text-[var(--tx)]">Fastmail</h2>
+        <p className="mt-0.5 text-xs text-[var(--tx-2)]">
+          A second mailbox, alongside Gmail or instead of it. Sync reads both, and a reply goes back out through the
+          mailbox its thread came from. Create a token in Fastmail under Settings, Privacy &amp; Security, API tokens,
+          with the Email scope to read and Email submission to send. Message text is sent to Claude to classify it, the
+          same as Gmail.
+        </p>
+
+        {fastmail ? (
+          <>
+            <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line px-3 py-2.5">
+              <span className="min-w-0">
+                <span className="block truncate text-sm font-medium text-[var(--tx)]">{fastmail.email}</span>
+                <span className="block text-xs text-[var(--tx-3)]">
+                  token {fastmail.hint} · {fastmail.canSend ? "reads and sends" : "read only, cannot send"} ·{" "}
+                  {fastmail.lastSyncedAt ? `last synced ${formatDateTime(fastmail.lastSyncedAt)}` : "never synced"}
+                </span>
+              </span>
+              <span className="flex items-center gap-3">
+                {!connection && <MailboxSyncButton />}
+                <ConfirmButton
+                  label="Disconnect"
+                  question={`Disconnect ${fastmail.email}? Mail already pulled stays; nothing new arrives from it.`}
+                  confirmLabel="Disconnect it"
+                  action={disconnectFastmailAction}
+                  pendingLabel="Disconnecting..."
+                />
+              </span>
+            </div>
+            <FastmailConnect replacing />
+          </>
+        ) : (
+          <FastmailConnect replacing={false} />
+        )}
+
+        {/* Only a real choice when both can send. With one mailbox there is
+            nothing to pick, and a select with one option is a control that can
+            do nothing. */}
+        {connection && fastmail?.canSend && (
+          <form action={saveSendMailVia} className="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-3">
+            <label htmlFor="sendMailVia" className="text-[13px] text-[var(--tx-2)]">
+              Send new messages from
+            </label>
+            <select
+              id="sendMailVia"
+              name="sendMailVia"
+              key={profile?.sendMailVia ?? "gmail"}
+              defaultValue={profile?.sendMailVia ?? "gmail"}
+              className={inputClass("sm")}
+            >
+              <option value="gmail">{connection.email} (Gmail)</option>
+              <option value="fastmail">{fastmail.email} (Fastmail)</option>
+            </select>
+            <SubmitButton className={buttonClass("outline", "sm")} pendingLabel="Saving...">
+              Save
+            </SubmitButton>
+            <span className="basis-full text-[11.5px] text-[var(--tx-3)]">
+              Replies always go out from the mailbox the thread came from.
+            </span>
+          </form>
         )}
       </section>
 
@@ -312,7 +380,7 @@ export default async function SettingsPage({
               name="icsCalendarUrl"
               type="url"
               defaultValue={profile?.icsCalendarUrl ?? ""}
-              placeholder="https://calendar.proton.me/api/calendar/v1/..."
+              placeholder="https://www.fastmail.com/... or any read-only .ics feed"
               className={`mt-1 ${inputClass("md")}`}
             />
             <p className="mt-1 text-xs text-[var(--tx-3)]">

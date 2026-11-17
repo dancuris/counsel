@@ -30,6 +30,10 @@ export function MailboxSyncButton() {
       if (data.leads > 0) parts.push(`${data.leads} need${data.leads === 1 ? "s" : ""} filing`);
       if (data.matched > 0) parts.push(`${data.matched} filed against a role`);
       setMoves(Array.isArray(data.statusChanges) ? data.statusChanges : []);
+      // One mailbox failing while the other worked is a partial sync, and it
+      // has to read as one rather than as a clean "Nothing new".
+      const partial = Array.isArray(data.errors) ? data.errors.filter((e: unknown) => typeof e === "string") : [];
+      setError(partial.length ? partial.join(" ") : null);
       setResult(
         data.new === 0
           ? "Nothing new."

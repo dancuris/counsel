@@ -1,7 +1,8 @@
 import { prisma } from "@/lib/prisma";
 import { TENANT_ID } from "@/lib/tenant";
 import { credentialStatuses } from "@/lib/credentials";
-import { MAIL_CONNECTION_ID, DRIVE_CONNECTION_ID } from "@/lib/google-connections";
+import { DRIVE_CONNECTION_ID } from "@/lib/google-connections";
+import { connectedMailboxes } from "@/lib/mail-provider";
 import { hasDriveScope } from "@/lib/drive-links";
 import { NOT_DELETED } from "@/lib/data/applications";
 
@@ -44,19 +45,20 @@ export type SetupStep = {
 };
 
 export async function setupSteps(): Promise<SetupStep[]> {
-  const [profile, credentials, mail, drive, applications, variants] = await Promise.all([
+  const [profile, credentials, mailboxes, drive, applications, variants] = await Promise.all([
     prisma.profile.findUnique({
       where: { id: TENANT_ID },
       select: { contactName: true, masterResume: true, icsCalendarUrl: true },
     }),
     credentialStatuses(),
-    prisma.googleConnection.findUnique({ where: { id: MAIL_CONNECTION_ID }, select: { email: true } }),
+    connectedMailboxes(),
     prisma.googleConnection.findUnique({ where: { id: DRIVE_CONNECTION_ID }, select: { email: true, scopes: true } }),
     prisma.jobApplication.count({ where: NOT_DELETED }),
     prisma.resumeVariant.count(),
   ]);
 
   const provider = credentials.find((c) => c.configured);
+  const mailEmails = mailboxes.map((b) => b.email).join(", ");
   const hasContact = Boolean(profile?.contactName?.trim());
   const hasResume = variants > 0 || Boolean(profile?.masterResume?.trim());
 
@@ -106,17 +108,17 @@ export async function setupSteps(): Promise<SetupStep[]> {
     {
       id: "mailbox",
       title: "Connect a job-search mailbox",
-      why: "Read-only, and best pointed at a dedicated address rather than your personal one.",
-      connected: Boolean(mail?.email),
+      why: "Gmail or Fastmail. Best pointed at a dedicated address rather than your personal one.",
+      connected: mailboxes.length > 0,
       unlocks: "Recruiter mail filed against the right role, rejections and invitations moving the pipeline by themselves, and follow-up timing that knows when anyone last wrote.",
       href: "/settings",
-      action: mail?.email ? "Connected" : "Connect",
-      detail: mail?.email ?? undefined,
+      action: mailboxes.length ? "Connected" : "Connect",
+      detail: mailEmails || undefined,
     },
     {
       id: "calendar",
       title: "Subscribe to your calendar",
-      why: "A read-only feed URL from Google, Proton or anything else that publishes one.",
+      why: "A read-only feed URL from Google, Fastmail, Proton or anything else that publishes one.",
       connected: Boolean(profile?.icsCalendarUrl?.trim()),
       unlocks: "Meetings booked elsewhere appearing on Today, and a warning when a proposed interview time clashes.",
       href: "/settings",

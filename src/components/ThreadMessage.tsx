@@ -443,7 +443,9 @@ export function ThreadMessage({
           </button>
         )}
 
-        {entry.gmailId && (
+        {/* Gmail ids only. A Fastmail message is stored as "fastmail:<id>", and
+            pointing that at Gmail would open a search that finds nothing. */}
+        {entry.gmailId && !entry.gmailId.startsWith("fastmail:") && (
           <a
             href={`https://mail.google.com/mail/u/0/#all/${entry.gmailId}`}
             target="_blank"

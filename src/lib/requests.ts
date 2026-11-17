@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { TENANT_ID } from "@/lib/tenant";
 import { ownerEmail } from "@/lib/owner";
-import { sendMail } from "@/lib/google-mail";
+import { sendViaMailbox as sendMail } from "@/lib/mail-provider";
 import { recordFailure } from "@/lib/failures";
 import { parseLabelled } from "@/lib/contact-block";
 

@@ -4,7 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { forwardedSender, tidySenderName } from "@/lib/forwarded-mail";
 import { MAIL_CONNECTION_ID } from "@/lib/google-connections";
 import { statusFromMail } from "@/lib/mail-status";
-import { fetchRecentMessages } from "@/lib/google-mail";
+import { fetchRecentMessages, type FetchedMessage } from "@/lib/google-mail";
+import { fetchRecentFastmailMessages, getFastmailConnection, markFastmailSynced } from "@/lib/fastmail";
 import { generateStructured } from "@/lib/ai";
 import { recordFailure } from "@/lib/failures";
 import { MAIL_CATEGORIES } from "@/lib/constants";
@@ -85,17 +86,57 @@ function forwarded(m: { body: string; fromEmail: string }) {
   return forwardedCache.get(m) ?? null;
 }
 
+/**
+ * Marks every mailbox that was actually read as synced.
+ *
+ * Only the ones that were read: a Fastmail failure alongside a working Gmail
+ * must leave Fastmail's "last synced" where it was, or the page claims a fetch
+ * that never happened.
+ */
+async function markSynced(read: { gmail: boolean; fastmail: boolean }) {
+  if (read.gmail) {
+    await prisma.googleConnection.update({ where: { id: MAIL_CONNECTION_ID }, data: { lastSyncedAt: new Date() } });
+  }
+  if (read.fastmail) await markFastmailSynced();
+}
+
 export async function POST() {
-  const connection = await prisma.googleConnection.findUnique({ where: { id: MAIL_CONNECTION_ID } });
-  if (!connection) {
-    return NextResponse.json({ error: "No mailbox connected. Connect one from the Profile page." }, { status: 400 });
+  const [connection, fastmail] = await Promise.all([
+    prisma.googleConnection.findUnique({ where: { id: MAIL_CONNECTION_ID } }),
+    getFastmailConnection(),
+  ]);
+  if (!connection && !fastmail) {
+    return NextResponse.json({ error: "No mailbox connected. Connect Gmail or Fastmail from Settings." }, { status: 400 });
   }
 
-  let fetched;
-  try {
-    fetched = await fetchRecentMessages();
-  } catch (e) {
-    return NextResponse.json({ error: (e as Error).message }, { status: 502 });
+  /**
+   * Each mailbox is fetched on its own. One failing must not hide the other's
+   * mail, but it must not pass silently either: the failure is recorded and
+   * returned, and only when every connected mailbox failed is the sync a 502.
+   */
+  const fetched: FetchedMessage[] = [];
+  const read = { gmail: false, fastmail: false };
+  const errors: string[] = [];
+  if (connection) {
+    try {
+      fetched.push(...(await fetchRecentMessages()));
+      read.gmail = true;
+    } catch (e) {
+      errors.push(`Gmail: ${(e as Error).message}`);
+      await recordFailure("mailbox/sync gmail", e);
+    }
+  }
+  if (fastmail) {
+    try {
+      fetched.push(...(await fetchRecentFastmailMessages()));
+      read.fastmail = true;
+    } catch (e) {
+      errors.push(`Fastmail: ${(e as Error).message}`);
+      await recordFailure("mailbox/sync fastmail", e);
+    }
+  }
+  if (!read.gmail && !read.fastmail) {
+    return NextResponse.json({ error: errors.join(" ") }, { status: 502 });
   }
 
   // Dedup against what has already been pulled, so re-syncing is cheap and safe.
@@ -150,8 +191,8 @@ export async function POST() {
     await recordFailure("refreshCalendarCache", error);
   }
 
-  await prisma.googleConnection.update({ where: { id: MAIL_CONNECTION_ID }, data: { lastSyncedAt: new Date() } });
-    return NextResponse.json({ fetched: fetched.length, new: 0, matched: 0 });
+  await markSynced(read);
+    return NextResponse.json({ fetched: fetched.length, new: 0, matched: 0, errors });
   }
 
   const applications = await prisma.jobApplication.findMany({
@@ -169,7 +210,7 @@ export async function POST() {
       toolName: "classify_messages",
       schema: CLASSIFY_TOOL.input_schema as unknown as Record<string, unknown>,
       system:
-        `You are triaging a dedicated job-search mailbox. For each message decide what it is, identify the employer and role it concerns, and attribute it to a tracked application only when both line up.
+        `You are triaging the user's job-search mail, which may come from more than one mailbox. For each message decide what it is, identify the employer and role it concerns, and attribute it to a tracked application only when both line up.
 
 Rules:
 - Attribute ONLY when the employer and the role both match a tracked application. Same employer but a different job is NOT a match: return an empty applicationId and fill detectedCompany and detectedRole. That case usually means an opportunity that is not being tracked yet, which is more valuable to surface than to bury under a sibling role.
@@ -287,7 +328,7 @@ Rules:
     }
   }
 
-  await prisma.googleConnection.update({ where: { id: MAIL_CONNECTION_ID }, data: { lastSyncedAt: new Date() } });
+  await markSynced(read);
 
   /**
    * Write the classifications for messages a previous sync could not sort.
@@ -333,6 +374,8 @@ Rules:
     // The UI says so rather than reporting a clean sync that sorted nothing.
     classifierDown,
     reclassified: healed,
+    // A mailbox that failed while another worked. Empty on a clean sync.
+    errors,
   });
 }
 

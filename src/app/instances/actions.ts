@@ -7,7 +7,7 @@ import { getLiveVersion } from "@/lib/release";
 import { recordFailure } from "@/lib/failures";
 import { nameProblem, platformKeys, provisionInstance, updateInstance } from "@/lib/provision";
 import { buildInvitation } from "@/lib/invite";
-import { sendMail } from "@/lib/google-mail";
+import { sendViaMailbox as sendMail } from "@/lib/mail-provider";
 
 /**
  * Handing out instances, and keeping them up to date afterwards.
