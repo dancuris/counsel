@@ -508,6 +508,15 @@ export const STORIES: Story[] = [
     problem:
       "Setting up meant environment variables and a console, which is fine for the person who built it and impossible for anyone else. And one instance per person, which is what makes the data isolation real, means nobody can push a fix to somebody else's deployment: there was no way for an instance to know it was behind.",
   },
+  {
+    subject: "Connect Fastmail as a second mailbox",
+    area: "Inbox",
+    title: "Read and send from Fastmail, beside Gmail",
+    story:
+      "As someone whose own-domain mail now lives in Fastmail, I want to connect it next to Gmail, so that recruiter mail there is filed against the right role and my replies go out from the address the conversation started on.",
+    problem:
+      "Proton had no API, so that mail only reached Counsel as forwards into Gmail and every reply had to be copied out and marked sent by hand. Fastmail speaks JMAP, so a pasted API token is enough: sync reads both mailboxes, a reply follows its thread, and Settings picks which address new messages come from.",
+  },
 ];
 
 /** The story for a shipped commit, if one was written. */

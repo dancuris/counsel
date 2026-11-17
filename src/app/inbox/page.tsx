@@ -7,7 +7,7 @@ import { toEasternInput } from "@/lib/local-time";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { FILED_MAIL, UNFILED_MAIL } from "@/lib/mail-filing";
-import { MAIL_CONNECTION_ID } from "@/lib/google-connections";
+import { connectedMailboxes, oldestSync } from "@/lib/mail-provider";
 import { formatDateTime } from "@/lib/format";
 import { MAIL_CATEGORY_LABELS, type MailCategory } from "@/lib/constants";
 import { createApplicationFromMail, attachMailToApplication, dismissMail, markMailJobRelated, addContactFromMail, fileMailToCompany, fileMailToContact } from "./actions";
@@ -54,7 +54,7 @@ export default async function InboxPage({ searchParams }: { searchParams: Promis
       where: { dismissedAt: null, OR: [{ category: "not_job_related" }, { category: null }] },
     }),
   ]);
-  const [leads, applications, connection, noise, filed, times, signature, companies, knownContacts] = await Promise.all([
+  const [leads, applications, mailboxes, noise, filed, times, signature, companies, knownContacts] = await Promise.all([
     prisma.mailMessage.findMany({
       where: UNFILED_MAIL,
       orderBy: { receivedAt: "desc" },
@@ -64,7 +64,7 @@ export default async function InboxPage({ searchParams }: { searchParams: Promis
       include: { company: true },
       orderBy: { updatedAt: "desc" },
     }),
-    prisma.googleConnection.findUnique({ where: { id: MAIL_CONNECTION_ID } }),
+    connectedMailboxes(),
     show === "noise"
       ? prisma.mailMessage.findMany({
           where: { dismissedAt: null, OR: [{ category: "not_job_related" }, { category: null }] },
@@ -99,8 +99,12 @@ export default async function InboxPage({ searchParams }: { searchParams: Promis
     knownContacts.filter((c) => c.email).map((c) => [c.email!.trim().toLowerCase(), c])
   );
 
+  // Gmail and Fastmail are one inbox here: sync pulls both, so the page reports
+  // the oldest of their sync times, the only one that is true of all the mail.
+  const connection = mailboxes.length ? { lastSyncedAt: oldestSync(mailboxes) } : null;
+
   const ownAddresses = new Set(
-    [...(signature?.emails ?? []).map((e) => e.value), connection?.email ?? ""]
+    [...(signature?.emails ?? []).map((e) => e.value), ...mailboxes.map((b) => b.email)]
       .map((v) => v.trim().toLowerCase())
       .filter(Boolean)
   );
@@ -148,8 +152,8 @@ export default async function InboxPage({ searchParams }: { searchParams: Promis
       {!connection && (
         <p className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
           No mailbox connected.{" "}
-          <Link href="/profile" className="font-medium underline">
-            Connect one
+          <Link href="/settings" className="font-medium underline">
+            Connect Gmail or Fastmail
           </Link>{" "}
           to start pulling mail.
         </p>

@@ -4,7 +4,7 @@ import { StatusForm } from "@/components/StatusForm";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { MAIL_CONNECTION_ID } from "@/lib/google-connections";
+import { connectedMailboxes } from "@/lib/mail-provider";
 import { newestPart, groupByThread } from "@/lib/mail-thread";
 import { DOCUMENT_FILENAME_LABELS, type DocumentType } from "@/lib/constants";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -126,7 +126,7 @@ export default async function ApplicationDetailPage({
   // One round trip, not five. These queries do not depend on each other, and
   // run in series they simply added their latencies together before anything
   // could render.
-  const [application, profile, activity, allApplications, allContacts, mailConnection] = await Promise.all([
+  const [application, profile, activity, allApplications, allContacts, mailboxes] = await Promise.all([
     prisma.jobApplication.findUnique({
       where: { id },
       include: {
@@ -167,7 +167,7 @@ export default async function ApplicationDetailPage({
     // Every contact, not just this role's: the same recruiter writes about
     // more than one role, and a sender filed elsewhere is still reachable.
     prisma.contact.findMany({ where: { email: { not: null } }, select: { id: true, name: true, email: true } }),
-    prisma.googleConnection.findUnique({ where: { id: MAIL_CONNECTION_ID }, select: { email: true } }),
+    connectedMailboxes(),
   ]);
 
   if (!application) notFound();
@@ -206,7 +206,7 @@ export default async function ApplicationDetailPage({
   const ownAddresses = new Set(
     parseLabelled(profile?.contactEmails)
       .map((e) => e.value.trim().toLowerCase())
-      .concat(mailConnection?.email?.trim().toLowerCase() ?? [])
+      .concat(mailboxes.map((b) => b.email.trim().toLowerCase()))
       .filter(Boolean)
   );
 

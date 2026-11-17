@@ -1,3 +1,4 @@
+import { getFastmailConnection } from "@/lib/fastmail";
 import { prisma } from "@/lib/prisma";
 import { parseLabelled } from "@/lib/contact-block";
 import { deriveFollowUpInput, followUpState, type FollowUpState } from "@/lib/follow-up-state";
@@ -30,12 +31,13 @@ export const FOLLOW_UP_INCLUDE = {
  * job-search account and he forwards from the Workspace one.
  */
 export async function ownAddresses(): Promise<Set<string>> {
-  const [profile, connections] = await Promise.all([
+  const [profile, connections, fastmail] = await Promise.all([
     prisma.profile.findUnique({ where: { id: TENANT_ID }, select: { contactEmails: true } }),
     prisma.googleConnection.findMany({ select: { email: true } }),
+    getFastmailConnection(),
   ]);
   return new Set(
-    [...parseLabelled(profile?.contactEmails ?? null).map((e) => e.value), ...connections.map((c) => c.email ?? "")]
+    [...parseLabelled(profile?.contactEmails ?? null).map((e) => e.value), ...connections.map((c) => c.email ?? ""), fastmail?.email ?? ""]
       .map((s) => s.trim().toLowerCase())
       .filter(Boolean)
   );

@@ -39,6 +39,10 @@ model Profile {
   defaultEmailLabel    String?
   icsCalendarUrl       String? // read-only calendar subscription (e.g. Proton Calendar), used for interview conflict checks
   preferredModel       String? // Claude model id used for evaluations/drafting; falls back to CLAUDE_MODEL env var when unset
+  /// "gmail" | "fastmail": which connected mailbox a NEW message goes out
+  /// through. A reply always follows its thread. Null means Gmail when both are
+  /// connected, which is what every deployment did before Fastmail existed.
+  sendMailVia          String?
   // Drive folder generated documents are filed under: the existing "Jobs"
   // folder, so Counsel files into the company folders already there. Also the
   // boundary on an account-wide Drive grant, since nothing is written outside
@@ -251,6 +255,26 @@ model GoogleConnection {
   lastHistoryId String? // Gmail history cursor, so a sync only fetches what is new
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+}
+
+/// A Fastmail mailbox, read and sent through JMAP with an API token.
+///
+/// Its own table rather than a GoogleConnection row: there is no OAuth refresh
+/// dance, and the token is a secret sealed the same way as a model key, never a
+/// bearer token held in plaintext. Ids it produces are stored with a
+/// "fastmail:" prefix in the existing gmail* columns; see lib/fastmail.ts.
+model FastmailConnection {
+  id           String    @id @default("singleton")
+  email        String
+  /// Base64 of iv:ciphertext:authTag, produced by lib/secrets.
+  sealedToken  String
+  /// Last four characters, so Settings can say which token is in use.
+  hint         String
+  /// False when the token was created without the Email submission scope.
+  canSend      Boolean   @default(false)
+  lastSyncedAt DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 }
 
 // Raw mail pulled from Gmail. Kept as its own record rather than forced into
